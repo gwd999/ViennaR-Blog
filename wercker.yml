@@ -1,0 +1,14 @@
+box: debian
+build:
+  steps:
+    - arjen/hugo-build:
+      version: 0.14
+      flags: --buildDrafts=true
+deploy:
+  steps:
+    # Execute the s3sync deploy step, a step provided by wercker
+    - s3sync:
+      key_id: $AWS_ACCESS_KEY_ID
+      key_secret: $AWS_SECRET_ACCESS_KEY
+      bucket_url: $AWS_BUCKET_URL
+      source_dir: public/
