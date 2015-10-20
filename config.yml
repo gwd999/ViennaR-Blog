@@ -1,4 +1,4 @@
-#BaseUrl: "http://www.viennar.org"
+BaseUrl: "/"
 LanguageCode: "en-us"
 Title: "Vienna R User Group"
 theme: "beg"
