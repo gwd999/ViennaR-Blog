@@ -13,7 +13,8 @@ deploy:
       bucket_url: $AWS_BUCKET_URL
       source_dir: public/
     # Deploy to world4you server
-    - duleorlovic/ftp-deploy@1.0.1:
-      destination: ftp84.world4you.com
-      username: $FTPUSER
-      password: $FTPPASSWORD
+    - install-packages:
+        packages: lftp
+    - script:
+        name: sync with remote
+        code: lftp -e "open -u $FTPUSER,$FTPPASSWORD ftp84.world4you.com; mirror -c -R public /;quit"
