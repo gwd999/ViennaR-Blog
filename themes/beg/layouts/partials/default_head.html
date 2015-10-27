@@ -26,6 +26,13 @@
                     </ul>
 
                     <ul class="nav navbar-nav navbar-right">
+                        {{ if isset .Site.Params "Meetup" }}
+                        <li>
+                            <a href="https://www.meetup.com/{{ .Site.Params.Meetup }}" target="_blank">
+                                <i class="fa fa-smile-o"></i>
+                                Meetup</a>
+                        </li>
+                        {{ end }}
                         {{ if isset .Site.Params "Facebook" }}
                         <li>
                             <a href="https://www.facebook.com/{{ .Site.Params.Facebook }}" target="_blank">
