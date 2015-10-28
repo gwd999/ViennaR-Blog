@@ -1,5 +1,5 @@
 ---
-title: "Meetup 10/2015"
+title: "Meetup 10-2015"
 description: "Next meetup announcement with more features and collaboration."
 tags: [ "Meetup" ]
 date: "2015-10-20T21:31:57+02:00"
