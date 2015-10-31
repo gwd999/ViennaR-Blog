@@ -1,7 +1,7 @@
 ---
 title: "Population Densities in Vienna"
 description: "Introduction to OpenGovernmentVienna and plot to show population densities"
-tags: [ "OpenGovernmentVienna", "Vienna", "Population"]
+tags: [ "OpenGovernmentVienna", "rstudy"]
 categories: [ "OpenGovernmentVienna" ]
 date: "2015-10-30T22:20:00+02:00"
 Author: Christian, Mario

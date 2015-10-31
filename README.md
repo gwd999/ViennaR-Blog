@@ -4,3 +4,6 @@
 
 Blog has been created using Hugo, see https://gohugo.io.
 
+RSS Feed is available at http://www.viennar.org/index.xml.
+
+RSS Feed for posts tagged as RStudy is available at http://www.viennar.org/tags/rstudy/index.xml as is published to [R-Bloggers](http://www.r-bloggers.com).
