@@ -6,7 +6,7 @@ theme: "beg"
 Params:
   Author: "Vienna-R"
   DateForm: "Mon, Jan 2, 2006"
-  #GoogleAnalyticsUserID: "UA-55005303-5"
+  GoogleAnalyticsUserID: "UA-69538956-1"
   #Facebook: "daisuke.tsuji.735"
   Meetup: "viennar"
   Twitter: "ViennaR"
