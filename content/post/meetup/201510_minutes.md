@@ -9,6 +9,8 @@ date: "2015-10-21T21:00:00+02:00"
 
 After a fruitful discussion regarding the future direction of the R User Group just a little summary of the **HOT** topics. The discussion started  with a very nice and detailed introduction of new *ViennaR* participants and was followed by an interesting and---as expected and encouraged---controversial discussion about project goals, project management and topics.
 
+<!--more-->
+
 ## Organisation
 Our goal is to have monthly Meetups. Currently they are scheduled by the end of each month, however, this may change depending on the availability of the room. A big thank you to [Matthias](http://www.statistik.tuwien.ac.at/public/templ) who makes this Meetup at the Institute of Computational Statistics [1] possible! 
 

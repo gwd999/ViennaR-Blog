@@ -15,6 +15,7 @@ Main focus this time will be to discuss future directions/projects for ViennaR:
 2. Evaluate interest in active preparation of short analytical topics  (monthly or bi-monthly) to be worked off individually or in groups (alternative: as a hackathon)  
 e.g. run a short analysis on some topic based on publicly available data;  present these @ meetup, compare approaches to project solution. 
 
+<!--more-->
 
 Example topics could cover
 
