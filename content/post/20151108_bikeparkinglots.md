@@ -129,7 +129,7 @@ image(x=colseq,y=1,z=matrix(seq_along(colseq)), col=colfunc(10), main=expression
 axis(1)  
 ```
 
-![plot of chunk bikedensity-plot1](/img//bikedensity-plot1-1.svg) 
+<img src="/img/bikedensity-plot1-1.png" style='width:100%;' border="0" alt="Null">
 
 # Plot 2 - Vienna Map with Bike Parking Lots (Continous Density)  
 
@@ -155,7 +155,7 @@ ggplot(data=test1) +
   theme_bw() 
 ```
 
-![plot of chunk bikedensity-plot2](/img/bikedensity-plot2-1.svg) 
+<img src="/img/bikedensity-plot2-1.png" style='width:100%;' border="0" alt="Null">
 
 Comments/Pull Requests welcome!
 

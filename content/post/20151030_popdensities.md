@@ -91,6 +91,6 @@ abline(h=c(5000,10000,15000,20000),lty=2)
 legend("topright",pch=c(15,15),col=c("darkred","lightblue"),c("high","low"),bg="white") 
 ```
 
-![plot of chunk popdensity](/img/popdensity-1.svg) 
+<img src="/img/popdensity-1.png" style='width:100%;' border="0" alt="Null">
 
 Authors: Christian Brandstaetter with small additions by Mario Annau
