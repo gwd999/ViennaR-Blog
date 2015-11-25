@@ -2,7 +2,7 @@
 <hr>
 
 <footer class="container copy">
-    <p>&copy; {{ .Site.LastChange.Year }} {{ if isset .Site.Params "Author" }} {{ .Site.Params.Author }} {{ else }} {{ .Site.Title }} {{ end }}</p>
+    <p>&copy; {{ .Site.LastChange.Year }} {{ if isset .Site.Params "Author" }} <a href="mailto:host@viennar.org">{{ .Site.Params.Author }}</a> {{ else }} {{ .Site.Title }} {{ end }}</p>
 </footer>
 
 <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
