@@ -31,7 +31,7 @@ Mateuz covered all important topics about *modern* R package creation including 
 - Include continous integration
 - Include code coverage
 
-Materials available soon! 
+Materials are available at http://zozlak.org/Setting_up_a_first_R_project.html.
 
 ## Organisational
 - If you have any questions, ideas and want to share just drop a message on http://www.meetup.com/ViennaR or [host@viennar.org](mailto:host@viennar.com).
