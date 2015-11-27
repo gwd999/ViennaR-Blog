@@ -5,7 +5,7 @@ tags: [ "Meetup" ]
 date: "2015-11-25T21:00:00+02:00"
 ---
 
-During the last meetup a few interesting ideas/discussions came up like interactive visualizations of [Open Government Data](https://github.com/ViennaR/OpenGovernmentVienna), Geocoding APIs, derstandard.at datasets and Hadoop vs Spark. During the second part of the meetup Mateuz held a great talk covering R-package creation with RStudio, GitHub and CI (travis).
+During the last meetup a few interesting ideas/discussions came up like interactive visualizations of [Open Government Data](https://github.com/ViennaR/OpenGovernmentVienna), Geocoding APIs, derstandard.at datasets and Hadoop vs Spark. During the second part of the meetup Mateuz held a great talk covering R-package creation, Github and CI.
 
 <!--more-->
 
@@ -17,7 +17,7 @@ Even without my full memory capacity I'll try to sum them up by project ;):
 	- Mateuz also introduced us to the topic of Geocoding and its numerous APIs (e.g. from [Google](https://developers.google.com/maps/documentation/geocoding/intro)) and suggested to write a package for it.
 - [Text Mining Vienna](https://github.com/ViennaR/TextMiningVienna)
 	- After the discussion about puclic newspapers in Vienna Bernhard already provided a small [dataset](https://github.com/ViennaR/TextMiningVienna/tree/master/NewspapersAustria) to play around with. We'll get our hands dirty and provide ideas (topic modelling, mood index, popular words, etc.) next time!
-	- Bernhard & Roland expressed interest to talk about Hadoop -> Spark -> SparkR; how to set things up, integrate, etc. which sounds like a great topic for next years first meetup.
+	- Bernhard & Co (insert name) would also like to talk about Hadoop -> Spark and how to set it up, integrate R, etc. which sounds like a great talk for the next year.
 	- Hillary Clintons E-mails: Some ideas are [there](https://github.com/ViennaR/TextMiningVienna/tree/master/HillaryClinton) - focus will be on the newspapers project for now.
 - [Fantasy Sports](https://en.wikipedia.org/wiki/Fantasy_sport), looks abandoned by Daniel?
 
