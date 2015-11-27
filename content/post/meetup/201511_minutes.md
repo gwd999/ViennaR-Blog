@@ -17,13 +17,14 @@ Even without my full memory capacity I'll try to sum them up by project ;):
 	- Mateuz also introduced us to the topic of Geocoding and its numerous APIs (e.g. from [Google](https://developers.google.com/maps/documentation/geocoding/intro)) and suggested to write a package for it.
 - [Text Mining Vienna](https://github.com/ViennaR/TextMiningVienna)
 	- After the discussion about puclic newspapers in Vienna Bernhard already provided a small [dataset](https://github.com/ViennaR/TextMiningVienna/tree/master/NewspapersAustria) to play around with. We'll get our hands dirty and provide ideas (topic modelling, mood index, popular words, etc.) next time!
-	- Bernhard & Co (insert name) would also like to talk about Hadoop -> Spark and how to set it up, integrate R, etc. which sounds like a great talk for the next year.
+	- Bernhard & Roland mentioned interest to talk about Hadoop -> Spark -> SparkR. How to set things up, integrate R, etc. 
+	  Sounds like a great topic next years first meetup.
 	- Hillary Clintons E-mails: Some ideas are [there](https://github.com/ViennaR/TextMiningVienna/tree/master/HillaryClinton) - focus will be on the newspapers project for now.
 - [Fantasy Sports](https://en.wikipedia.org/wiki/Fantasy_sport), looks abandoned by Daniel?
 
 ## Talk
 
-Mateuz covered all important topics about *modern* R package creation including the following points:
+Mateusz covered all important topics about *modern* R package creation including the following points:
 
 - Setting up Github repo for [startup package](https://github.com/ViennaR/startupPackage).
 - Create R package skeleton
