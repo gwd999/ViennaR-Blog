@@ -37,7 +37,7 @@ Materials are available at http://zozlak.org/Setting_up_a_first_R_project.html.
 ## Organisational
 - If you have any questions, ideas and want to share just drop a message on http://www.meetup.com/ViennaR or [host@viennar.org](mailto:host@viennar.com).
 - Also just let us know if you need access to a github repo at https://github.com/ViennaR.
-- The next R-meetup will take place directly at the [Christkindlmarkt Karlsplatz](http://www.artadvent.at) on 22nd December, 7pm. Meeting point will be in front of Karlskirche.
+- The next R-meetup will take place directly at the [Christkindlmarkt Karlsplatz](http://www.artadvent.at) on 22nd December, 7pm. Meeting point will be in front of ~~Karlskirche~~ *Goldenes Lamm*.
 
 See you next time for a punchR!
 
