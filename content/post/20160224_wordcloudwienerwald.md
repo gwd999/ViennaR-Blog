@@ -9,7 +9,7 @@ tags: [ "Text Mining", "rstudy"]
 
 <img src="/img/wordcloudwienerwald.png" title="**Wordcloud** \
 *Ödön von Horvath - Geschichten aus dem Wienerwald*" alt="**Wordcloud** \
-*Ödön von Horvath - Geschichten aus dem Wienerwald*" style="margin: auto;" />
+*Ödön von Horvath - Geschichten aus dem Wienerwald*" style='width:100%;' border="0" />
 
 After a very nice hands-on introduction in yesterday's Vienna R meetup meeting from Mario Annau, I created an example of textmining ending with a wordcloud. As the blog is called ViennaR, I chose to use a play strongly related to Vienna - Ödön von Horváth - Geschichten aus dem Wienerwald. 
 <!--more-->
