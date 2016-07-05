@@ -11,8 +11,8 @@ The last meetup before the summer break concluded the igraph session with a talk
 
 <!--more-->
 
-## Rainer Stuetz: Igraph Applications
-Rainer presented interesting [**igraph**](https://cran.r-project.org/web/packages/igraph/index.html) applications with an example to extract Austrian highways (starting and endpoints) from geodata. 
+## Rainer Stuetz: igraph Applications
+Rainer presented interesting [igraph](https://cran.r-project.org/web/packages/igraph/index.html) applications with an example to extract (clean) subnetworks, e.g. motorways, from the Austrian [graph integration platform](http://gip.gv.at). The routing graph was parsed using the [readr](https://cran.r-project.org/web/packages/readr/index.html) package and pre-processed with [dplyr](https://cran.r-project.org/web/packages/dplyr/index.html). For the extraction of the subnetworks, shortest path algorithms from igraph were used.
 
 ## Mario Annau: R/Finance 2016 Impressions
 
