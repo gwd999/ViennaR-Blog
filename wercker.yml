@@ -13,6 +13,9 @@ deploy:
       bucket_url: $AWS_BUCKET_URL
       source_dir: public/
     # Deploy to world4you server
+    - script:
+        name: update apt source mirror
+        code: sed -i 's/httpredir.debian.org/cloudfront.debian.net/g' /etc/apt/sources.list
     - install-packages:
         packages: lftp
     - script:
