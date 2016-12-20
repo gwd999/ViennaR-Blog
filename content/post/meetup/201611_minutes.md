@@ -26,7 +26,9 @@ Finally, Mario showed some time series forecasting examples already discussing d
   - **forecast** package: <https://CRAN.R-project.org/package=forecast>
   - Forecasting: principles and practice book: <https://www.otexts.org/fpp>
 
-Best,
+Merry Christmas and a happy new coding year!
 
-  -ViennaR
+Yours,
+
+ViennaR
  
