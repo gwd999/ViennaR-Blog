@@ -1,0 +1,25 @@
+BaseUrl: "http://www.viennar.org/"
+LanguageCode: "en-us"
+Title: "Vienna R User Group"
+theme: "beg"
+
+Params:
+  Author: "Vienna-R"
+  DateForm: "Mon, Jan 2, 2006"
+  GoogleAnalyticsUserID: "UA-69538956-1"
+  #Facebook: "daisuke.tsuji.735"
+  Meetup: "viennar"
+  Twitter: "ViennaR"
+  Github: "ViennaR"
+  Linkedin: "viennar"
+  ShowRelatedPost: True
+  Disqus: "viennar"
+  SyntaxHighlightTheme: "github.min.css"
+
+Indexes:
+  tag: "tags"
+
+permalinks:
+  post: /blog/:year/:month/:day/:slug/
+
+MetadataFormat: "yaml"
