@@ -5,7 +5,8 @@ Prerequisites
 -   Current version of R
 -   Git, Github account
 -   R-Packages: blogdown, rmarkdown, …
--   Hugo (can also be installed interactively within R Console later)
+-   Hugo 0.55.6 (can also be installed interactively within R Console
+    later)
 
 <!-- -->
 
@@ -39,3 +40,16 @@ Or in the console:
 
 Add new post
 ------------
+
+In RStudio: Run Addins -&gt; New Post
+
+Publish
+-------
+
+To publish site to viennar.org use the following steps:
+
+1.  Turn off hugo build server, if running using `servr::daemon_stop()`
+2.  In case README.Rmd has changed: knit README.Rmd
+3.  Run `blogdown::hugo_build()`
+4.  Commit all changes to master
+5.  Run `git push origin master` or simply push **Push** button

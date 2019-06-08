@@ -47,6 +47,17 @@ blogdown:::serve_site()
 
 ## Add new post
 
+In RStudio: Run Addins -> New Post
+
+## Publish
+
+To publish site to viennar.org use the following steps:
+
+1. Turn off hugo build server, if running using `servr::daemon_stop()`
+1. In case README.Rmd has changed: knit README.Rmd
+1. Run `blogdown::hugo_build()`
+1. Commit all changes to master
+1. Run `git push origin master` or simply push **Push** button
 
 
 
