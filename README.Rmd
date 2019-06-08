@@ -1,0 +1,53 @@
+---
+title: "README"
+author: "ViennaR"
+date: "6/8/2019"
+output: md_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+## Prerequisites
+
+- Current version of RStudio
+- Current version of R
+- Git, Github account
+- R-Packages: blogdown, rmarkdown, ...
+- Hugo (can also be installed interactively within R Console later)
+
+```{r, eval = FALSE}
+blogdown::install_hugo()
+```
+
+## Create new Project
+
+In Rstudio, create new project
+
+1. File -> New Project -> Version Control
+1. Use the following URL: https://github.com/ViennaR/ViennaR-Blog.git
+1. Create new Project
+
+## Folder Structure
+
+- content/post: Posts of the blog
+- static: Images, slides, etc
+- themes: Theme of the blog, should not be touched
+
+## Serve Sites
+
+In RStudio: Addins -> Serve Site
+
+Or in the console:
+```{r, eval = FALSE}
+blogdown:::serve_site()
+```
+
+## Add new post
+
+
+
+
+

@@ -2,6 +2,7 @@ BaseUrl: "http://www.viennar.org/"
 LanguageCode: "en-us"
 Title: "Vienna R User Group"
 theme: "beg"
+publishDir: "docs"
 
 Params:
   Author: "Vienna-R"
@@ -15,7 +16,7 @@ Params:
   ShowRelatedPost: True
   Disqus: "viennar"
   SyntaxHighlightTheme: "github.min.css"
-
+  
 Indexes:
   tag: "tags"
 
