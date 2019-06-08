@@ -16,7 +16,7 @@ knitr::opts_chunk$set(echo = TRUE)
 - Current version of R
 - Git, Github account
 - R-Packages: blogdown, rmarkdown, ...
-- Hugo (can also be installed interactively within R Console later)
+- Hugo 0.55.6 (can also be installed interactively within R Console later)
 
 ```{r, eval = FALSE}
 blogdown::install_hugo()

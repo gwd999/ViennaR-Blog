@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Vienna R User Group </title>
@@ -41,10 +40,10 @@ Yes, to many CPU&amp;rsquo;s -&amp;gt; Large Server&lt;/p&gt;
 C++?&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;How much?&lt;/strong&gt;&lt;br&gt;
-€5195 per user per year, see also&lt;/p&gt;
+€5195 per user per year, see also &lt;a href=&#34;https://www.alteryx.com/products/platform-details/pricing&#34;&gt;https://www.alteryx.com/products/platform-details/pricing&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Who are the competitors?&lt;/strong&gt;&lt;br&gt;
-Knime (Open Source), Data Iku&lt;/p&gt;
+&lt;a href=&#34;https://www.knime.com&#34;&gt;Knime&lt;/a&gt; (Open Source), &lt;a href=&#34;https://www.dataiku.com&#34;&gt;Dataiku&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;grpc-xmlrpc-in-r&#34;&gt;grpc + xmlrpc in R&lt;/h2&gt;
 
