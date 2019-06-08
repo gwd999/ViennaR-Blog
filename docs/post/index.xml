@@ -30,8 +30,7 @@ Peter presented Alteryx, a platform built for Business Analysts to master tasks 
       <description>
 
 
-&lt;p&gt;&amp;lt;img src=“/img/deepnet.png” title=“&lt;strong&gt;Deep Neural Network&lt;/strong&gt;”&lt;br /&gt;
-alt=“&lt;strong&gt;Deep Neural Network&lt;/strong&gt;” border=“0” /&amp;gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.viennar.org/img/deepnet.png&#34; title=&#34;**Deep Neural Network**&#34; alt=&#34;**Deep Neural Network**&#34; border=&#34;0&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Deep learning with R using &lt;strong&gt;mxnet&lt;/strong&gt;&lt;/p&gt;
 </description>
     </item>
@@ -45,8 +44,7 @@ alt=“&lt;strong&gt;Deep Neural Network&lt;/strong&gt;” border=“0” /&amp;
       <description>
 
 
-&lt;p&gt;&amp;lt;img src=“/img/meetup_201610_small.jpg” title=“&lt;strong&gt;sparklyr&lt;/strong&gt;”&lt;br /&gt;
-alt=“&lt;strong&gt;sparklyr&lt;/strong&gt;” style=‘width:70%;’ border=“0” /&amp;gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.viennar.org/img/meetup_201610_small.jpg&#34; title=&#34;**sparklyr**&#34; alt=&#34;**sparklyr**&#34; style=&#39;width:70%;&#39; border=&#34;0&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;A &lt;strong&gt;sparklyr&lt;/strong&gt; introduction by Roland Boubela.&lt;/p&gt;
 </description>
     </item>
@@ -60,8 +58,7 @@ alt=“&lt;strong&gt;sparklyr&lt;/strong&gt;” style=‘width:70%;’ border=�
       <description>
 
 
-&lt;p&gt;&amp;lt;img src=“/img/meetup_201609_small.jpg” title=“&lt;strong&gt;Brainstorm Forecasting&lt;/strong&gt;”&lt;br /&gt;
-alt=“&lt;strong&gt;Brainstorm Forecasting&lt;/strong&gt;” style=‘width:70%;’ border=“0” /&amp;gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.viennar.org/img/meetup_201609_small.jpg&#34; title=&#34;**Brainstorm Forecasting**&#34; alt=&#34;**Brainstorm Forecasting**&#34; style=&#39;width:70%;&#39; border=&#34;0&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;A brainstorming session about forecasting time series in R.&lt;/p&gt;
 </description>
     </item>

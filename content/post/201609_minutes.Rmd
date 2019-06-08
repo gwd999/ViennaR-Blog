@@ -5,8 +5,7 @@ tags: [ "Meetup" ]
 date: "2016-09-27T13:00:00+02:00"
 ---
 
-<img src="/img/meetup_201609_small.jpg" title="**Brainstorm Forecasting**" \
-alt="**Brainstorm Forecasting**" style='width:70%;' border="0" />
+<img src="/img/meetup_201609_small.jpg" title="**Brainstorm Forecasting**" alt="**Brainstorm Forecasting**" style='width:70%;' border="0" />
 
 A brainstorming session about forecasting time series in R.  
 

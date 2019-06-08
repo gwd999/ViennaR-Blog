@@ -5,8 +5,7 @@ tags: [ "Meetup" ]
 date: "2016-10-19T13:00:00+02:00"
 ---
 
-<img src="/img/meetup_201610_small.jpg" title="**sparklyr**" \
-alt="**sparklyr**" style='width:70%;' border="0" />
+<img src="/img/meetup_201610_small.jpg" title="**sparklyr**" alt="**sparklyr**" style='width:70%;' border="0" />
 
 A **sparklyr** introduction by Roland Boubela.
 
