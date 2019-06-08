@@ -5,7 +5,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
-<meta property="og:url" content="/">
+<meta property="og:url" content="http://www.viennar.org/">
 
 
 <meta property="og:type" content="article">
@@ -24,16 +24,16 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="//yandex.st/highlightjs/8.0/styles/github.min.css">
-<link rel="stylesheet" href="//css/styles.css">
-<link rel="stylesheet" href="//css/custom.css">
+<link rel="stylesheet" href="http://www.viennar.org//css/styles.css">
+<link rel="stylesheet" href="http://www.viennar.org//css/custom.css">
 
 <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto' rel='stylesheet' type='text/css'>
 
 
-<link rel="shortcut icon" href="//assets/favicon.ico">
+<link rel="shortcut icon" href="http://www.viennar.org//assets/favicon.ico">
 
 
-<link rel="alternate" type="application/rss+xml" title="RSS" href="//index.xml">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://www.viennar.org//index.xml">
 
 
 <script type="text/x-mathjax-config">
@@ -60,7 +60,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="/">Vienna R User Group</a>
+                    <a class="navbar-brand" href="http://www.viennar.org/">Vienna R User Group</a>
                 </div>
 
                 <div class="collapse navbar-collapse" id="navbar-collapse">
@@ -119,21 +119,12 @@
                     </time>
                 </div>
                 <h1 class="post-title">
-                    <a href="/blog/2015/11/08/bike-parking-lots-in-vienna/">Bike Parking Lots in Vienna</a>
+                    <a href="http://www.viennar.org/blog/2015/11/08/bike-parking-lots-in-vienna/">Bike Parking Lots in Vienna</a>
                 </h1>
             </header>
 
             <div class="post-content">
-                <p>Another addition to the  <a href="https://github.com/ViennaR/OpenGovernmentVienna">OpenGovernmentVienna</a> repo by Christian Brandstaetter showing the density of bike parking lots in Vienna.</p>
-
-<p>The script executes the following steps:</p>
-
-<ol>
-<li>Download Vienna map including district boundaries and bike parking lots from <a href="http://data.wien.gv.at">http://data.wien.gv.at</a>.</li>
-<li>Plot two Vienna maps showing bike parking lots and density per district.</li>
-</ol>
-
-<pre><code class="language-r">library(rgdal) 
+                <pre class="r"><code>library(rgdal) 
 library(rgeos) 
 library(XML)
 library(RCurl)
@@ -142,61 +133,46 @@ library(plotrix)
 library(maptools)
 
 download.vienna.shape &lt;- function(shapename, outdir = &quot;data&quot;) {
-	baseurl &lt;- &quot;http://data.wien.gv.at/daten/geo?service=WFS&amp;request=GetFeature&amp;version=1.1.0&amp;typeName=ogdwien:&quot;
-	urlparam &lt;- &quot;&amp;srsName=EPSG:4326&amp;outputFormat=shape-zip&quot;	
-	url &lt;- sprintf(&quot;%s%s%s&quot;, baseurl, shapename, urlparam)
-	
-	dir.create(outdir, showWarnings = FALSE)
-	destfile = file.path(outdir, sprintf(&quot;%s.zip&quot;, shapename))
-	download.file(url, destfile = destfile)
-	unzip(destfile, exdir = file.path(outdir, shapename))
-	invisible(file.remove(destfile))
-}
-</code></pre>
-
-<h1 id="retrieve-data">Retrieve Data</h1>
-
-<pre><code class="language-r">## Read District Boundaries
+    baseurl &lt;- &quot;http://data.wien.gv.at/daten/geo?service=WFS&amp;request=GetFeature&amp;version=1.1.0&amp;typeName=ogdwien:&quot;
+    urlparam &lt;- &quot;&amp;srsName=EPSG:4326&amp;outputFormat=shape-zip&quot; 
+    url &lt;- sprintf(&quot;%s%s%s&quot;, baseurl, shapename, urlparam)
+    
+    dir.create(outdir, showWarnings = FALSE)
+    destfile = file.path(outdir, sprintf(&quot;%s.zip&quot;, shapename))
+    download.file(url, destfile = destfile)
+    unzip(destfile, exdir = file.path(outdir, shapename))
+    invisible(file.remove(destfile))
+}</code></pre>
+<div id="retrieve-data" class="section level1">
+<h1>Retrieve Data</h1>
+<pre class="r"><code>## Read District Boundaries
 download.vienna.shape(&quot;BEZIRKSGRENZEOGD&quot;)
-wmap &lt;- readOGR(&quot;data/BEZIRKSGRENZEOGD&quot;, layer=&quot;BEZIRKSGRENZEOGDPolygon&quot;) 
-</code></pre>
-
+wmap &lt;- readOGR(&quot;data/BEZIRKSGRENZEOGD&quot;, layer=&quot;BEZIRKSGRENZEOGDPolygon&quot;) </code></pre>
 <pre><code>## OGR data source with driver: ESRI Shapefile 
 ## Source: &quot;data/BEZIRKSGRENZEOGD&quot;, layer: &quot;BEZIRKSGRENZEOGDPolygon&quot;
 ## with 23 features
-## It has 15 fields
-</code></pre>
-
-<pre><code class="language-r">## Read Streets
+## It has 15 fields</code></pre>
+<pre class="r"><code>## Read Streets
 download.vienna.shape(&quot;STRASSENGRAPHOGD&quot;)
-smap &lt;- readOGR(&quot;data/STRASSENGRAPHOGD&quot;, layer=&quot;STRASSENGRAPHOGD&quot;) 
-</code></pre>
-
+smap &lt;- readOGR(&quot;data/STRASSENGRAPHOGD&quot;, layer=&quot;STRASSENGRAPHOGD&quot;) </code></pre>
 <pre><code>## OGR data source with driver: ESRI Shapefile 
 ## Source: &quot;data/STRASSENGRAPHOGD&quot;, layer: &quot;STRASSENGRAPHOGD&quot;
 ## with 28293 features
-## It has 18 fields
-</code></pre>
-
-<pre><code class="language-r">## Read bike parking lots
+## It has 18 fields</code></pre>
+<pre class="r"><code>## Read bike parking lots
 download.vienna.shape(&quot;FAHRRADABSTELLANLAGEOGD&quot;)
-bmap &lt;- readOGR(&quot;data/FAHRRADABSTELLANLAGEOGD&quot;, layer=&quot;FAHRRADABSTELLANLAGEOGDPoint&quot;) 
-</code></pre>
-
+bmap &lt;- readOGR(&quot;data/FAHRRADABSTELLANLAGEOGD&quot;, layer=&quot;FAHRRADABSTELLANLAGEOGDPoint&quot;) </code></pre>
 <pre><code>## OGR data source with driver: ESRI Shapefile 
 ## Source: &quot;data/FAHRRADABSTELLANLAGEOGD&quot;, layer: &quot;FAHRRADABSTELLANLAGEOGDPoint&quot;
 ## with 4061 features
-## It has 5 fields
-</code></pre>
-
-<pre><code class="language-r">## Download Size of Each district
+## It has 5 fields</code></pre>
+<pre class="r"><code>## Download Size of Each district
 distsize &lt;- download.vienna.bydistrict(&quot;lebensraum/tabellen/nutzungsklassen-bez&quot;, skip.row = 2)
-distsizekm2 &lt;- distsize[, 1] / 100
-</code></pre>
-
-<h1 id="calculate-stuff">Calculate stuff</h1>
-
-<pre><code class="language-r">## Number of bike parking lots per district
+distsizekm2 &lt;- distsize[, 1] / 100</code></pre>
+</div>
+<div id="calculate-stuff" class="section level1">
+<h1>Calculate stuff</h1>
+<pre class="r"><code>## Number of bike parking lots per district
 bikelotsperdistrict &lt;- table(bmap$BEZIRK)
 lotdensity &lt;- bikelotsperdistrict / distsizekm2
 
@@ -210,14 +186,13 @@ bezirksfarben &lt;- colfunc100[normdichte]
 # km to degree (einfache Umrechnung) 
 hundm &lt;- (1/111.1)/10 
 # 100 m for Radius of Punkte  
-centroids &lt;- gCentroid(wmap, byid=TRUE) # Mittelpunkt/Bezirk
-</code></pre>
-
-<h1 id="plots">Plots</h1>
-
-<h2 id="plot-1-vienna-map-with-bike-parking-lots-discrete-density">Plot 1 - Vienna Map with Bike Parking Lots (Discrete Density)</h2>
-
-<pre><code class="language-r">layout(1:2, heights=c(5,1)) 
+centroids &lt;- gCentroid(wmap, byid=TRUE) # Mittelpunkt/Bezirk</code></pre>
+</div>
+<div id="plots" class="section level1">
+<h1>Plots</h1>
+<div id="plot-1---vienna-map-with-bike-parking-lots-discrete-density" class="section level2">
+<h2>Plot 1 - Vienna Map with Bike Parking Lots (Discrete Density)</h2>
+<pre class="r"><code>layout(1:2, heights=c(5,1)) 
 par(mar=c(0.5,0.5,1,0.5), oma=rep(3, 4), las=1) 
 plot(wmap, main=&quot;Bike Parking Lots in Vienna&quot;, col=bezirksfarben[wmap$BEZNR]) 
 
@@ -230,14 +205,13 @@ text(as.character(wmap$BEZ_RZ), x = centroids@coords[,1], y = centroids@coords[,
 par(mar=c(1,0.5,3,0.5)) 
 colseq &lt;- seq(range(lotdensity)[1],range(lotdensity)[2],20) 
 image(x=colseq,y=1,z=matrix(seq_along(colseq)), col=colfunc(10), main=expression(paste(&quot;Bike parking lot density per district km&quot;^-2)),axes=F) 
-axis(1)  
-</code></pre>
-
+axis(1)  </code></pre>
 <p><img src="/img/bikedensity-plot1-1.png" style='width:100%;' border="0" alt="Null"></p>
-
-<h1 id="plot-2-vienna-map-with-bike-parking-lots-continous-density">Plot 2 - Vienna Map with Bike Parking Lots (Continous Density)</h1>
-
-<pre><code class="language-r"># Transformation of bike parking lots shape to data.frame for ggplot2
+</div>
+</div>
+<div id="plot-2---vienna-map-with-bike-parking-lots-continous-density" class="section level1">
+<h1>Plot 2 - Vienna Map with Bike Parking Lots (Continous Density)</h1>
+<pre class="r"><code># Transformation of bike parking lots shape to data.frame for ggplot2
 RK &lt;- data.frame(coordinates(bmap)) 
 colnames(RK) &lt;- c(&quot;long&quot;,&quot;lat&quot;) 
 ws2 &lt;- fortify(smap,region=&quot;OBJECTID&quot;)  
@@ -254,14 +228,12 @@ ggplot(data=test1) +
   geom_line(data=ws2,aes(group=group))+ xlab(&quot;longitude&quot;)+ylab(&quot;latitude&quot;) + 
   stat_density2d(data=RK,aes(fill = ..level..),size=1,bins=200,alpha=0.1, geom=&quot;polygon&quot;,n=100) +  
   ggtitle(&quot;Bike Parking Lots in Vienna 2015&quot;)+ scale_fill_continuous(name = &quot;Kernel Density&quot;) + 
-  theme_bw() 
-</code></pre>
-
+  theme_bw() </code></pre>
 <p><img src="/img/bikedensity-plot2-1.png" style='width:100%;' border="0" alt="Null"></p>
-
 <p>Comments/Pull Requests welcome!</p>
-
 <p>Authors: Christian Brandstaetter with minor modifications by Mario Annau</p>
+</div>
+
             </div>
 
             <aside>
@@ -269,14 +241,14 @@ ggplot(data=test1) +
                 <ul class="list-inline post-tags">
                     
                     <li>
-                        <a href="//tags/opengovernmentvienna">
+                        <a href="http://www.viennar.org//tags/opengovernmentvienna">
                             <i class="fa fa-tags"></i>
                             OpenGovernmentVienna
                         </a>
                     </li>
                     
                     <li>
-                        <a href="//tags/rstudy">
+                        <a href="http://www.viennar.org//tags/rstudy">
                             <i class="fa fa-tags"></i>
                             rstudy
                         </a>
@@ -342,7 +314,23 @@ ggplot(data=test1) +
                     
                     
                     
-                    <li><a href="/blog/2016/08/24/igraph-applications-for-transportation-networks/">igraph Applications for Transportation Networks</a></li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="http://www.viennar.org/blog/2016/02/24/wordcloud-wienerwald/">Wordcloud Wienerwald</a></li>
                     
                     
                     
@@ -372,37 +360,11 @@ ggplot(data=test1) +
                     
                     
                     
-                    <li><a href="/blog/2016/02/24/wordcloud-wienerwald/">Wordcloud Wienerwald</a></li>
                     
                     
                     
                     
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    <li><a href="/blog/2015/10/30/population-densities-in-vienna/">Population Densities in Vienna</a></li>
+                    <li><a href="http://www.viennar.org/blog/2015/10/30/population-densities-in-vienna/">Population Densities in Vienna</a></li>
                     
                     
                     
@@ -423,13 +385,13 @@ ggplot(data=test1) +
                     <ul class="pager">
 
                         
-                        <li class="previous"><a href="/blog/2015/10/30/population-densities-in-vienna/"><span aria-hidden="true">&larr;</span> Older</a></li>
+                        <li class="previous"><a href="http://www.viennar.org/blog/2015/10/30/population-densities-in-vienna/"><span aria-hidden="true">&larr;</span> Older</a></li>
                         
 
-                        <li><a href="//post">All Posts</a></li>
+                        <li><a href="http://www.viennar.org//post">All Posts</a></li>
 
                         
-                        <li class="next"><a href="/blog/2015/11/22/meetup-11-2015/">Newer <span aria-hidden="true">&rarr;</span></a></li>
+                        <li class="next"><a href="http://www.viennar.org/blog/2015/11/22/meetup-11-2015/">Newer <span aria-hidden="true">&rarr;</span></a></li>
                         
 
                     </ul>
@@ -485,43 +447,37 @@ ggplot(data=test1) +
                     
                     
                     
-                    <a href="//tags/igraph" class="list-group-item">
-                        <span class="badge">1</span>
-                        igraph
-                    </a>
-                    
-                    
-                    <a href="//tags/meetup" class="list-group-item">
+                    <a href="http://www.viennar.org//tags/meetup" class="list-group-item">
                         <span class="badge">12</span>
                         meetup
                     </a>
                     
                     
-                    <a href="//tags/opengovernmentvienna" class="list-group-item">
+                    <a href="http://www.viennar.org//tags/opengovernmentvienna" class="list-group-item">
                         <span class="badge">2</span>
                         opengovernmentvienna
                     </a>
                     
                     
-                    <a href="//tags/rstudy" class="list-group-item">
-                        <span class="badge">4</span>
+                    <a href="http://www.viennar.org//tags/rstudy" class="list-group-item">
+                        <span class="badge">3</span>
                         rstudy
                     </a>
                     
                     
-                    <a href="//tags/serverless" class="list-group-item">
+                    <a href="http://www.viennar.org//tags/serverless" class="list-group-item">
                         <span class="badge">1</span>
                         serverless
                     </a>
                     
                     
-                    <a href="//tags/text-mining" class="list-group-item">
+                    <a href="http://www.viennar.org//tags/text-mining" class="list-group-item">
                         <span class="badge">1</span>
                         text-mining
                     </a>
                     
                     
-                    <a href="//tags/tools" class="list-group-item">
+                    <a href="http://www.viennar.org//tags/tools" class="list-group-item">
                         <span class="badge">1</span>
                         tools
                     </a>

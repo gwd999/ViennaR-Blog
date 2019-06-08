@@ -5,7 +5,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
-<meta property="og:url" content="/">
+<meta property="og:url" content="http://www.viennar.org/">
 
 
 <meta property="og:type" content="article">
@@ -24,16 +24,16 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="//yandex.st/highlightjs/8.0/styles/github.min.css">
-<link rel="stylesheet" href="//css/styles.css">
-<link rel="stylesheet" href="//css/custom.css">
+<link rel="stylesheet" href="http://www.viennar.org//css/styles.css">
+<link rel="stylesheet" href="http://www.viennar.org//css/custom.css">
 
 <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto' rel='stylesheet' type='text/css'>
 
 
-<link rel="shortcut icon" href="//assets/favicon.ico">
+<link rel="shortcut icon" href="http://www.viennar.org//assets/favicon.ico">
 
 
-<link rel="alternate" type="application/rss+xml" title="RSS" href="//index.xml">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://www.viennar.org//index.xml">
 
 
 <script type="text/x-mathjax-config">
@@ -60,7 +60,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="/">Vienna R User Group</a>
+                    <a class="navbar-brand" href="http://www.viennar.org/">Vienna R User Group</a>
                 </div>
 
                 <div class="collapse navbar-collapse" id="navbar-collapse">
@@ -119,39 +119,33 @@
                     </time>
                 </div>
                 <h1 class="post-title">
-                    <a href="/blog/2015/11/25/meetup-11-2015-minutes/">Meetup 11-2015 Minutes</a>
+                    <a href="http://www.viennar.org/blog/2015/11/25/meetup-11-2015-minutes/">Meetup 11-2015 Minutes</a>
                 </h1>
             </header>
 
             <div class="post-content">
-                <p>During the last meetup a few interesting ideas/discussions came up like interactive visualizations of <a href="https://github.com/ViennaR/OpenGovernmentVienna">Open Government Data</a>, Geocoding APIs, derstandard.at datasets and Hadoop vs Spark. During the second part of the meetup Mateuz held a great talk covering R-package creation, Github and CI.</p>
-
-<h2 id="projects">Projects</h2>
-
-<p>Even without my full memory capacity I&rsquo;ll try to sum them up by project ;):</p>
-
+                <div id="projects" class="section level2">
+<h2>Projects</h2>
+<p>Even without my full memory capacity I’ll try to sum them up by project ;):</p>
 <ul>
 <li><a href="https://github.com/ViennaR/OpenGovernmentVienna">Open Government Data Vienna</a>
-
 <ul>
-<li>With the nice visualizations from Christian in mind (<a href="/blog/2015/10/30/population-densities-in-vienna">Population Densities</a> and <a href="/blog/2015/11/08/bike-parking-lots-in-vienna">Bike Parking Lots</a>) it would be nice to make up a list of features to be plotted from <a href="https://www.data.gv.at">https://www.data.gv.at</a> and make this visualization interactive (e.g. using <a href="http://shiny.rstudio.com/">Shiny</a>).</li>
-<li>Mateuz also introduced us to the topic of Geocoding and its numerous APIs (e.g. from <a href="https://developers.google.com/maps/documentation/geocoding/intro">Google</a>) and suggested to write a package for it.</li>
+<li>With the nice visualizations from Christian in mind (<a href="/blog/2015/10/30/population-densities-in-vienna">Population Densities</a> and <a href="/blog/2015/11/08/bike-parking-lots-in-vienna">Bike Parking Lots</a>) it would be nice to make up a list of features to be plotted from <a href="https://www.data.gv.at" class="uri">https://www.data.gv.at</a> and make this visualization interactive (e.g. using <a href="http://shiny.rstudio.com/">Shiny</a>).</li>
+<li>Mateuz also introduced us to the topic of Geocoding and its numerous APIs (e.g. from <a href="https://developers.google.com/maps/documentation/geocoding/intro">Google</a>) and suggested to write a package for it.</li>
 </ul></li>
 <li><a href="https://github.com/ViennaR/TextMiningVienna">Text Mining Vienna</a>
-
 <ul>
-<li>After the discussion about puclic newspapers in Vienna Bernhard already provided a small <a href="https://github.com/ViennaR/TextMiningVienna/tree/master/NewspapersAustria">dataset</a> to play around with. We&rsquo;ll get our hands dirty and provide ideas (topic modelling, mood index, popular words, etc.) next time!</li>
+<li>After the discussion about puclic newspapers in Vienna Bernhard already provided a small <a href="https://github.com/ViennaR/TextMiningVienna/tree/master/NewspapersAustria">dataset</a> to play around with. We’ll get our hands dirty and provide ideas (topic modelling, mood index, popular words, etc.) next time!</li>
 <li>Bernhard &amp; Roland mentioned interest to talk about Hadoop -&gt; Spark -&gt; SparkR. How to set things up, integrate R, etc.
 Sounds like a great topic next years first meetup.</li>
 <li>Hillary Clintons E-mails: Some ideas are <a href="https://github.com/ViennaR/TextMiningVienna/tree/master/HillaryClinton">there</a> - focus will be on the newspapers project for now.</li>
 </ul></li>
 <li><a href="https://en.wikipedia.org/wiki/Fantasy_sport">Fantasy Sports</a>, looks abandoned by Daniel?</li>
 </ul>
-
-<h2 id="talk">Talk</h2>
-
+</div>
+<div id="talk" class="section level2">
+<h2>Talk</h2>
 <p>Mateusz covered all important topics about <em>modern</em> R package creation including the following points:</p>
-
 <ul>
 <li>Setting up Github repo for <a href="https://github.com/ViennaR/startupPackage">startup package</a>.</li>
 <li>Create R package skeleton</li>
@@ -159,22 +153,20 @@ Sounds like a great topic next years first meetup.</li>
 <li>Include continous integration</li>
 <li>Include code coverage</li>
 </ul>
-
-<p>Materials are available at <a href="http://zozlak.org/Setting_up_a_first_R_project.html">http://zozlak.org/Setting_up_a_first_R_project.html</a>.</p>
-
-<h2 id="organisational">Organisational</h2>
-
+<p>Materials are available at <a href="http://zozlak.org/Setting_up_a_first_R_project.html" class="uri">http://zozlak.org/Setting_up_a_first_R_project.html</a>.</p>
+</div>
+<div id="organisational" class="section level2">
+<h2>Organisational</h2>
 <ul>
-<li>If you have any questions, ideas and want to share just drop a message on <a href="http://www.meetup.com/ViennaR">http://www.meetup.com/ViennaR</a> or <a href="mailto:host@viennar.com">host@viennar.org</a>.</li>
-<li>Also just let us know if you need access to a github repo at <a href="https://github.com/ViennaR">https://github.com/ViennaR</a>.</li>
+<li>If you have any questions, ideas and want to share just drop a message on <a href="http://www.meetup.com/ViennaR" class="uri">http://www.meetup.com/ViennaR</a> or <a href="mailto:host@viennar.com">host@viennar.org</a>.</li>
+<li>Also just let us know if you need access to a github repo at <a href="https://github.com/ViennaR" class="uri">https://github.com/ViennaR</a>.</li>
 <li>The next R-meetup will take place directly at the <a href="http://www.artadvent.at">Christkindlmarkt Karlsplatz</a> on 22nd December, 7pm. Meeting point will be in front of <del>Karlskirche</del> <em>Goldenes Lamm</em>.</li>
 </ul>
-
 <p>See you next time for a punchR!</p>
-
 <p>Best,</p>
-
 <p>-ViennaR</p>
+</div>
+
             </div>
 
             <aside>
@@ -182,7 +174,7 @@ Sounds like a great topic next years first meetup.</li>
                 <ul class="list-inline post-tags">
                     
                     <li>
-                        <a href="//tags/meetup">
+                        <a href="http://www.viennar.org//tags/meetup">
                             <i class="fa fa-tags"></i>
                             Meetup
                         </a>
@@ -228,19 +220,19 @@ Sounds like a great topic next years first meetup.</li>
                     
                     
                     
-                    <li><a href="/blog/2016/11/22/meetup-11-2016-minutes/">Meetup 11-2016 Minutes</a></li>
+                    <li><a href="http://www.viennar.org/blog/2016/11/22/meetup-11-2016-minutes/">Meetup 11-2016 Minutes</a></li>
                     
                     
                     
                     
                     
-                    <li><a href="/blog/2016/10/19/meetup-10-2016-minutes/">Meetup 10-2016 Minutes</a></li>
+                    <li><a href="http://www.viennar.org/blog/2016/10/19/meetup-10-2016-minutes/">Meetup 10-2016 Minutes</a></li>
                     
                     
                     
                     
                     
-                    <li><a href="/blog/2016/09/27/meetup-09-2016-minutes/">Meetup 09-2016 Minutes</a></li>
+                    <li><a href="http://www.viennar.org/blog/2016/09/27/meetup-09-2016-minutes/">Meetup 09-2016 Minutes</a></li>
                     
                     
                     
@@ -250,31 +242,31 @@ Sounds like a great topic next years first meetup.</li>
                     
                     
                     
+                    <li><a href="http://www.viennar.org/blog/2016/06/28/meetup-06-2016-minutes/">Meetup 06-2016 Minutes</a></li>
                     
                     
                     
                     
                     
+                    <li><a href="http://www.viennar.org/blog/2016/05/24/meetup-05-2016-minutes/">Meetup 05-2016 Minutes</a></li>
                     
                     
                     
                     
                     
+                    <li><a href="http://www.viennar.org/blog/2016/05/06/meetup-04-2016-minutes/">Meetup 04-2016 Minutes</a></li>
                     
                     
-                    <li><a href="/blog/2016/06/28/meetup-06-2016-minutes/">Meetup 06-2016 Minutes</a></li>
                     
                     
                     
                     
                     
-                    <li><a href="/blog/2016/05/24/meetup-05-2016-minutes/">Meetup 05-2016 Minutes</a></li>
                     
                     
                     
                     
                     
-                    <li><a href="/blog/2016/05/06/meetup-04-2016-minutes/">Meetup 04-2016 Minutes</a></li>
                     
                     
                     
@@ -284,22 +276,23 @@ Sounds like a great topic next years first meetup.</li>
                     
                     
                     
+                    <li><a href="http://www.viennar.org/blog/2016/02/22/meetup-02-2016-minutes/">Meetup 02-2016 Minutes</a></li>
                     
                     
                     
                     
                     
+                    <li><a href="http://www.viennar.org/blog/2016/02/03/meetup-01-2016-minutes/">Meetup 01-2016 Minutes</a></li>
                     
                     
                     
-                    <li><a href="/blog/2016/02/22/meetup-02-2016-minutes/">Meetup 02-2016 Minutes</a></li>
                     
                     
                     
                     
                     
-                    <li><a href="/blog/2016/02/03/meetup-01-2016-minutes/">Meetup 01-2016 Minutes</a></li>
                     
+                    <li><a href="http://www.viennar.org/blog/2015/11/22/meetup-11-2015/">Meetup 11-2015</a></li>
                     
                     
                     
@@ -308,7 +301,6 @@ Sounds like a great topic next years first meetup.</li>
                     
                     
                     
-                    <li><a href="/blog/2015/11/22/meetup-11-2015/">Meetup 11-2015</a></li>
                     
                     
                     
@@ -318,21 +310,13 @@ Sounds like a great topic next years first meetup.</li>
                     
                     
                     
+                    <li><a href="http://www.viennar.org/blog/2015/10/21/meetup-10-2015-minutes-kick-off/">Meetup 10-2015 Minutes, Kick-Off!</a></li>
                     
                     
                     
                     
                     
-                    
-                    
-                    
-                    <li><a href="/blog/2015/10/21/meetup-10-2015-minutes-kick-off/">Meetup 10-2015 Minutes, Kick-Off!</a></li>
-                    
-                    
-                    
-                    
-                    
-                    <li><a href="/blog/2015/10/20/meetup-10-2015/">Meetup 10-2015</a></li>
+                    <li><a href="http://www.viennar.org/blog/2015/10/20/meetup-10-2015/">Meetup 10-2015</a></li>
                     
                     
                 </ul>
@@ -345,13 +329,13 @@ Sounds like a great topic next years first meetup.</li>
                     <ul class="pager">
 
                         
-                        <li class="previous"><a href="/blog/2015/11/22/meetup-11-2015/"><span aria-hidden="true">&larr;</span> Older</a></li>
+                        <li class="previous"><a href="http://www.viennar.org/blog/2015/11/22/meetup-11-2015/"><span aria-hidden="true">&larr;</span> Older</a></li>
                         
 
-                        <li><a href="//post">All Posts</a></li>
+                        <li><a href="http://www.viennar.org//post">All Posts</a></li>
 
                         
-                        <li class="next"><a href="/blog/2016/02/03/meetup-01-2016-minutes/">Newer <span aria-hidden="true">&rarr;</span></a></li>
+                        <li class="next"><a href="http://www.viennar.org/blog/2016/02/03/meetup-01-2016-minutes/">Newer <span aria-hidden="true">&rarr;</span></a></li>
                         
 
                     </ul>
@@ -407,43 +391,37 @@ Sounds like a great topic next years first meetup.</li>
                     
                     
                     
-                    <a href="//tags/igraph" class="list-group-item">
-                        <span class="badge">1</span>
-                        igraph
-                    </a>
-                    
-                    
-                    <a href="//tags/meetup" class="list-group-item">
+                    <a href="http://www.viennar.org//tags/meetup" class="list-group-item">
                         <span class="badge">12</span>
                         meetup
                     </a>
                     
                     
-                    <a href="//tags/opengovernmentvienna" class="list-group-item">
+                    <a href="http://www.viennar.org//tags/opengovernmentvienna" class="list-group-item">
                         <span class="badge">2</span>
                         opengovernmentvienna
                     </a>
                     
                     
-                    <a href="//tags/rstudy" class="list-group-item">
-                        <span class="badge">4</span>
+                    <a href="http://www.viennar.org//tags/rstudy" class="list-group-item">
+                        <span class="badge">3</span>
                         rstudy
                     </a>
                     
                     
-                    <a href="//tags/serverless" class="list-group-item">
+                    <a href="http://www.viennar.org//tags/serverless" class="list-group-item">
                         <span class="badge">1</span>
                         serverless
                     </a>
                     
                     
-                    <a href="//tags/text-mining" class="list-group-item">
+                    <a href="http://www.viennar.org//tags/text-mining" class="list-group-item">
                         <span class="badge">1</span>
                         text-mining
                     </a>
                     
                     
-                    <a href="//tags/tools" class="list-group-item">
+                    <a href="http://www.viennar.org//tags/tools" class="list-group-item">
                         <span class="badge">1</span>
                         tools
                     </a>

@@ -1,0 +1,47 @@
+---
+title: "Meetup 09-2016 Minutes"
+description: "September 2016 Meetup Minutes - Forecast Time Series Brainstorming"
+tags: [ "Meetup" ]
+date: "2016-09-27T13:00:00+02:00"
+---
+
+
+
+<p>&lt;img src=“/img/meetup_201609_small.jpg” title=“<strong>Brainstorm Forecasting</strong>”<br />
+alt=“<strong>Brainstorm Forecasting</strong>” style=‘width:70%;’ border=“0” /&gt;</p>
+<p>A brainstorming session about forecasting time series in R.</p>
+<!--more-->
+<p>First we discussed the topic data structures. Regular time series data can be represented using the <em>ts</em> class which is already included in the basic R installation (as part of the <strong>stats</strong> package). By contrast, irregular time series data can be represented by the popular <strong>zoo</strong> objects (or <strong>xts</strong>). Most (ARIMA-)forecasting methods require regular time series.</p>
+<p>The following R packages have been identified to support time series forecasting:</p>
+<ul>
+<li><a href="https://CRAN.R-project.org/package=forecast"><strong>forecast</strong></a>: Excellent package by Rob Hyndman supporting all kinds of ARIMA models; even includes an automatic forecasting function (<em>auto.arima</em>).</li>
+<li><a href="https://CRAN.R-project.org/package=tseries"><strong>tseries</strong></a>: Package supporting basic ARIMA model but also includes GARCH for volatility forecasting.</li>
+<li><a href="https://cran.r-project.org/package=x12"><strong>x12</strong></a>: Interface package to the X12-ARIMA program for sesonal adjustment</li>
+<li><a href="https://cran.r-project.org/package=seasonal"><strong>seasonal</strong></a>: Interface package to the X-13-ARIMA-SEATS program for sesonal adjustment.</li>
+</ul>
+<div id="projects" class="section level2">
+<h2>Projects</h2>
+<p>The following potential projects covering simple time series forecasting examples have been discussed/requested:</p>
+<ul>
+<li>Google Trends data (e.g. <em>Influenza</em>)</li>
+<li>Company data, e.g. Revenues</li>
+<li>Bike Traffic in Vienna</li>
+<li>Stock Prices, Volatility (GARCH)</li>
+<li>Birdlife data, see data for Bavaria e.g.
+<a href="http://www.stunde-der-wintervoegel.de/index.php?id=auswertung&amp;land=Bayern">2016</a>,
+<a href="http://sdw2015.lbv.de/index.php?id=auswertung&amp;land=Bayern">2015</a>,
+<a href="http://sdw2014.lbv.de/index.php?id=auswertung&amp;land=Bayern">2014</a>,
+<a href="http://sdw2013.lbv.de/index.php?id=auswertung&amp;land=Bayern">2013</a>,
+<a href="http://sdw2012.lbv.de/index.php?id=auswertung&amp;land=Bayern">2012</a>,
+<a href="http://sdw2011.lbv.de/index.php?id=auswertung&amp;land=Bayern">2011</a>,
+<a href="http://sdw2010.lbv.de/index.php?id=auswertung&amp;land=Bayern">2010</a>,
+<a href="http://sdw2009.lbv.de/index.php?id=auswertung&amp;land=Bayern">2009</a></li>
+</ul>
+<p>The projects will be presented during the November R-Meetup (contributions welcome!).</p>
+</div>
+<div id="announcements" class="section level2">
+<h2>Announcements</h2>
+<p>The next meetup will cover the <a href="http://spark.rstudio.com"><strong>sparklyr</strong></a> package presented by Roland Boubela.</p>
+<p>Best,</p>
+<p>-ViennaR</p>
+</div>

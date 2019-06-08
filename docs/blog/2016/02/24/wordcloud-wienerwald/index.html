@@ -5,7 +5,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
-<meta property="og:url" content="/">
+<meta property="og:url" content="http://www.viennar.org/">
 
 
 <meta property="og:type" content="article">
@@ -24,16 +24,16 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="//yandex.st/highlightjs/8.0/styles/github.min.css">
-<link rel="stylesheet" href="//css/styles.css">
-<link rel="stylesheet" href="//css/custom.css">
+<link rel="stylesheet" href="http://www.viennar.org//css/styles.css">
+<link rel="stylesheet" href="http://www.viennar.org//css/custom.css">
 
 <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto' rel='stylesheet' type='text/css'>
 
 
-<link rel="shortcut icon" href="//assets/favicon.ico">
+<link rel="shortcut icon" href="http://www.viennar.org//assets/favicon.ico">
 
 
-<link rel="alternate" type="application/rss+xml" title="RSS" href="//index.xml">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://www.viennar.org//index.xml">
 
 
 <script type="text/x-mathjax-config">
@@ -60,7 +60,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="/">Vienna R User Group</a>
+                    <a class="navbar-brand" href="http://www.viennar.org/">Vienna R User Group</a>
                 </div>
 
                 <div class="collapse navbar-collapse" id="navbar-collapse">
@@ -119,31 +119,22 @@
                     </time>
                 </div>
                 <h1 class="post-title">
-                    <a href="/blog/2016/02/24/wordcloud-wienerwald/">Wordcloud Wienerwald</a>
+                    <a href="http://www.viennar.org/blog/2016/02/24/wordcloud-wienerwald/">Wordcloud Wienerwald</a>
                 </h1>
             </header>
 
             <div class="post-content">
-                <p><img src="/img/wordcloudwienerwald.png" title="**Wordcloud** \
-*Ödön von Horvath - Geschichten aus dem Wienerwald*" alt="**Wordcloud** \
-*Ödön von Horvath - Geschichten aus dem Wienerwald*" style='width:70%;' border="0" /></p>
-
-<p>After a very nice hands-on introduction in yesterday&rsquo;s Vienna R meetup meeting from Mario Annau, I created an example of textmining ending with a wordcloud. As the blog is called ViennaR, I chose to use a play strongly related to Vienna - Ödön von Horváth - Geschichten aus dem Wienerwald.</p>
-
+                </p>
 <p>The code documentation is in German, but with a little R-experience it should be easily understood.
 In a first step all the required libraries are loaded.</p>
-
-<pre><code class="language-r">library(knitr) # Erzeugen eines HTML-Dokument
+<pre class="r"><code>library(knitr) # Erzeugen eines HTML-Dokument
 library(rvest) # Einlesen von HTML-Dokumenten
 library(tm) # Erzeugen und Manipulieren von Textcorpora 
 library(stringi) # Umwandeln von schlecht kodierten Sonderzeichen 
 library(SnowballC) # Wortstammoperationen 
-library(wordcloud) # Erzeugen der Wordcloud
-</code></pre>
-
+library(wordcloud) # Erzeugen der Wordcloud</code></pre>
 <p>As of next, the textparts are loaded from the project Gutenberg homepage. As the play was divided this had to be repeated four times. A function was defined for the import from each url with the appropriate CSS-node and ideal encoding. However, the forced transformation to UTF-8 did not do anything actually.</p>
-
-<pre><code class="language-r"># Ödön von Horváth - Geschichten aus dem Wienerwald 
+<pre class="r"><code># Ödön von Horváth - Geschichten aus dem Wienerwald 
 url1 &lt;- &quot;http://gutenberg.spiegel.de/buch/geschichten-aus-dem-wiener-wald-volksstuck-in-drei-teilen-2900/1&quot;
 url2 &lt;- &quot;http://gutenberg.spiegel.de/buch/geschichten-aus-dem-wiener-wald-volksstuck-in-drei-teilen-2900/2&quot;
 url3 &lt;- &quot;http://gutenberg.spiegel.de/buch/geschichten-aus-dem-wiener-wald-volksstuck-in-drei-teilen-2900/3&quot;
@@ -154,15 +145,11 @@ url4 &lt;- &quot;http://gutenberg.spiegel.de/buch/geschichten-aus-dem-wiener-wal
     step1 &lt;- read_html(x, encoding = &quot;ISO-8859-1&quot;)
     step2 &lt;- html_nodes(step1,&quot;#gutenb&quot;)
     step3 &lt;- iconv(html_text(step2),from = &quot;ISO-8859-1&quot;, to = &quot;UTF-8&quot;)
-    return(step3)}
-</code></pre>
-
+    return(step3)}</code></pre>
 <p>Next the four text parts were integrated into one Corpus, a data type used in the tm package. In this case, the corpus was created from four char-vectors. Afterwards steps to clean up the text were performed. As in the presentation from Mario discussed, the order of these operations should be considered thoroughly.
 First, I adapted the wrongly encoded signs with the function stri_replace_all_fixed(). German Umlaute are a real pain, I really can say that, as I have one in my surname. Then the names of the figures had to be removed, otherwise they would have overwhelmed the output.</p>
-
-<p>Typical steps for allowing for meaningful text operation are alse the removal of Whitespace, unifying to lower cases, removing punctuations, stopwords (&rdquo;<em>meaningless</em>&rdquo; words as conjunctions) and word endings. All four texts are still in the corpus, which can be adressed like list items. They were though recoded as PlainTextDocument, which was a necessary step for being used in the wordcloud() function.</p>
-
-<pre><code class="language-r"># Verbinden der 4 Texte zu einem Corpus 
+<p>Typical steps for allowing for meaningful text operation are alse the removal of Whitespace, unifying to lower cases, removing punctuations, stopwords (“<em>meaningless</em>” words as conjunctions) and word endings. All four texts are still in the corpus, which can be adressed like list items. They were though recoded as PlainTextDocument, which was a necessary step for being used in the wordcloud() function.</p>
+<pre class="r"><code># Verbinden der 4 Texte zu einem Corpus 
 GWW_corp &lt;- Corpus(VectorSource(c(gut_les(url1),gut_les(url2),gut_les(url3),gut_les(url4))))
 
 # Kodierungsfehler 
@@ -183,22 +170,18 @@ gwwc3 &lt;- tm_map(gwwc2, tolower) # Kleinschrift
 gwwc4 &lt;- tm_map(gwwc3, PlainTextDocument) # Umcodierung der Char-Vektoren zu Textdokumenten (für Wordlcloud)
 gwwc5 &lt;- tm_map(gwwc4, removeWords, stopwords(&quot;german&quot;)) # Entfernen von Füllwörtern
 gwwc6 &lt;- tm_map(gwwc5, removePunctuation) # Entfernen von Sonderzeichen 
-gwwc7 &lt;- tm_map(gwwc6, stemDocument) # Entfernen der Endungen 
-</code></pre>
-
+gwwc7 &lt;- tm_map(gwwc6, stemDocument) # Entfernen der Endungen </code></pre>
 <p>After all this cleanup the wordcloud can be drawn. I used a variety of twelve rather light colors with a black background. It is not possible to access the background color inside the wordcloud function, but with the par-options.</p>
-
-<p>Et voilà - l&rsquo;illustration!</p>
-
-<pre><code class="language-r">farbs &lt;- brewer.pal(12,&quot;Set3&quot;) # Farbpalette für die Wordcloud
+<p>Et voilà - l’illustration!</p>
+<pre class="r"><code>farbs &lt;- brewer.pal(12,&quot;Set3&quot;) # Farbpalette für die Wordcloud
 
 par(mar=c(0,0,0,0),bg=&quot;black&quot;) # Ausfüllen des Plotfensters, Hintergrund schwarz
 # Die eigentliche Wordcloud
 wordcloud(gwwc6, max.words=180, 
           random.order=FALSE,random.color=FALSE, # Farben und Reihenfolge nach Anzahl der Wörter geordnet 
           rot.per=0.35, # 35 % der Wörter sind senkrecht  
-          colors=(farbs))
-</code></pre>
+          colors=(farbs))</code></pre>
+
             </div>
 
             <aside>
@@ -206,14 +189,14 @@ wordcloud(gwwc6, max.words=180,
                 <ul class="list-inline post-tags">
                     
                     <li>
-                        <a href="//tags/text-mining">
+                        <a href="http://www.viennar.org//tags/text-mining">
                             <i class="fa fa-tags"></i>
                             Text Mining
                         </a>
                     </li>
                     
                     <li>
-                        <a href="//tags/rstudy">
+                        <a href="http://www.viennar.org//tags/rstudy">
                             <i class="fa fa-tags"></i>
                             rstudy
                         </a>
@@ -279,7 +262,6 @@ wordcloud(gwwc6, max.words=180,
                     
                     
                     
-                    <li><a href="/blog/2016/08/24/igraph-applications-for-transportation-networks/">igraph Applications for Transportation Networks</a></li>
                     
                     
                     
@@ -320,6 +302,7 @@ wordcloud(gwwc6, max.words=180,
                     
                     
                     
+                    <li><a href="http://www.viennar.org/blog/2015/11/08/bike-parking-lots-in-vienna/">Bike Parking Lots in Vienna</a></li>
                     
                     
                     
@@ -329,17 +312,7 @@ wordcloud(gwwc6, max.words=180,
                     
                     
                     
-                    <li><a href="/blog/2015/11/08/bike-parking-lots-in-vienna/">Bike Parking Lots in Vienna</a></li>
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    <li><a href="/blog/2015/10/30/population-densities-in-vienna/">Population Densities in Vienna</a></li>
+                    <li><a href="http://www.viennar.org/blog/2015/10/30/population-densities-in-vienna/">Population Densities in Vienna</a></li>
                     
                     
                     
@@ -360,13 +333,13 @@ wordcloud(gwwc6, max.words=180,
                     <ul class="pager">
 
                         
-                        <li class="previous"><a href="/blog/2016/02/22/meetup-02-2016-minutes/"><span aria-hidden="true">&larr;</span> Older</a></li>
+                        <li class="previous"><a href="http://www.viennar.org/blog/2016/02/22/meetup-02-2016-minutes/"><span aria-hidden="true">&larr;</span> Older</a></li>
                         
 
-                        <li><a href="//post">All Posts</a></li>
+                        <li><a href="http://www.viennar.org//post">All Posts</a></li>
 
                         
-                        <li class="next"><a href="/about/">Newer <span aria-hidden="true">&rarr;</span></a></li>
+                        <li class="next"><a href="http://www.viennar.org/about/">Newer <span aria-hidden="true">&rarr;</span></a></li>
                         
 
                     </ul>
@@ -422,43 +395,37 @@ wordcloud(gwwc6, max.words=180,
                     
                     
                     
-                    <a href="//tags/igraph" class="list-group-item">
-                        <span class="badge">1</span>
-                        igraph
-                    </a>
-                    
-                    
-                    <a href="//tags/meetup" class="list-group-item">
+                    <a href="http://www.viennar.org//tags/meetup" class="list-group-item">
                         <span class="badge">12</span>
                         meetup
                     </a>
                     
                     
-                    <a href="//tags/opengovernmentvienna" class="list-group-item">
+                    <a href="http://www.viennar.org//tags/opengovernmentvienna" class="list-group-item">
                         <span class="badge">2</span>
                         opengovernmentvienna
                     </a>
                     
                     
-                    <a href="//tags/rstudy" class="list-group-item">
-                        <span class="badge">4</span>
+                    <a href="http://www.viennar.org//tags/rstudy" class="list-group-item">
+                        <span class="badge">3</span>
                         rstudy
                     </a>
                     
                     
-                    <a href="//tags/serverless" class="list-group-item">
+                    <a href="http://www.viennar.org//tags/serverless" class="list-group-item">
                         <span class="badge">1</span>
                         serverless
                     </a>
                     
                     
-                    <a href="//tags/text-mining" class="list-group-item">
+                    <a href="http://www.viennar.org//tags/text-mining" class="list-group-item">
                         <span class="badge">1</span>
                         text-mining
                     </a>
                     
                     
-                    <a href="//tags/tools" class="list-group-item">
+                    <a href="http://www.viennar.org//tags/tools" class="list-group-item">
                         <span class="badge">1</span>
                         tools
                     </a>

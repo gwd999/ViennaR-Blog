@@ -1,0 +1,80 @@
+---
+title: "Population Densities in Vienna"
+description: "Introduction to OpenGovernmentVienna and plot to show population densities"
+tags: [ "OpenGovernmentVienna", "rstudy"]
+categories: [ "OpenGovernmentVienna" ]
+date: "2015-10-30T22:20:00+02:00"
+Author: Christian, Mario
+---
+
+
+
+<p>The new Github repository <a href="https://github.com/ViennaR/OpenGovernmentVienna">OpenGovernmentVienna</a> has already been created including a very nice addition by Christian.</p>
+<p>The script executes the following steps:</p>
+<ol style="list-style-type: decimal">
+<li>Download Vienna map including district boundaries from <a href="http://data.wien.gv.at" class="uri">http://data.wien.gv.at</a>.</li>
+<li>Download population and district size from <a href="https://www.wien.gv.at/statistik" class="uri">https://www.wien.gv.at/statistik</a>, calculate population density.</li>
+<li>Plot Vienna map coloured by population density.</li>
+</ol>
+<!--more-->
+<pre class="r"><code>library(rgdal) 
+library(rgeos) 
+library(XML)
+library(RCurl)
+
+download.vienna.bydistrict &lt;- function(tablename, skip.row = 3) {
+    baseurl &lt;- &quot;https://www.wien.gv.at/statistik&quot;
+    popurl &lt;- sprintf(&quot;%s/%s.html&quot;, baseurl, tablename)
+
+    poptable &lt;- readHTMLTable(getURL(popurl))[[1]]
+    poptable &lt;- poptable[-c(1:skip.row), ]
+    poptable &lt;- poptable[, -1]
+    row.names(poptable) &lt;- NULL
+    poptable &lt;- sapply(poptable, function(x) gsub(&quot;.&quot;, &quot;&quot;, x, fixed = TRUE))
+    poptable &lt;- gsub(&quot;,&quot;, &quot;.&quot;, poptable, fixed = TRUE)
+    poptable &lt;- matrix(as.numeric(poptable), nrow = nrow(poptable))
+    poptable
+}
+
+# Download Data Shape Data District Boundaries
+mapdata &lt;- &quot;http://data.wien.gv.at/daten/geo?service=WFS&amp;request=GetFeature&amp;version=1.1.0&amp;typeName=ogdwien:BEZIRKSGRENZEOGD&amp;srsName=EPSG:4326&amp;outputFormat=shape-zip&quot;
+
+dir.create(&quot;data&quot;, showWarnings = FALSE)
+destfile &lt;- &quot;data/BEZIRKSGRENZEOGD.zip&quot;
+download.file(mapdata, destfile = destfile)
+unzip(destfile, exdir = &quot;data/BEZIRKSGRENZEOGD&quot;)
+file.remove(destfile)</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre class="r"><code># Read District Boundaries
+wmap &lt;- readOGR(&quot;data/BEZIRKSGRENZEOGD&quot;, layer=&quot;BEZIRKSGRENZEOGDPolygon&quot;) </code></pre>
+<pre><code>## OGR data source with driver: ESRI Shapefile 
+## Source: &quot;data/BEZIRKSGRENZEOGD&quot;, layer: &quot;BEZIRKSGRENZEOGDPolygon&quot;
+## with 23 features
+## It has 15 fields</code></pre>
+<pre class="r"><code># Download Population per district
+distpop &lt;- download.vienna.bydistrict(&quot;bevoelkerung/tabellen/bevoelkerung-alter-geschl-bez&quot;)
+distpopsum &lt;- rowSums(as.matrix(distpop))
+
+# Download Size of Each district
+distsize &lt;- download.vienna.bydistrict(&quot;lebensraum/tabellen/nutzungsklassen-bez&quot;, skip.row = 2)
+distsizekm2 &lt;- distsize[, 1] / 100
+
+wd &lt;- data.frame(distpopsum / distsizekm2)
+
+centroids &lt;- gCentroid(wmap, byid=TRUE) 
+colfunc &lt;- colorRampPalette(c(&quot;lightblue&quot;, &quot;darkred&quot;)) 
+colnames(wd) &lt;- &quot;inh&quot; 
+wd$district &lt;- seq(1,23) 
+anstieg_pop &lt;- wd$district[order(wd$inh)] 
+colsort &lt;- colfunc(23)[order(anstieg_pop)] 
+layout(matrix(c(1,2), byrow = TRUE),height=c(1.3, 0.7)) 
+par(mar=c(0,0,0,0)) 
+plot(wmap,col=colsort[wmap$BEZNR]) 
+text(as.character(wmap$BEZ_RZ), x = centroids@coords[,1], y = centroids@coords[,2],cex=0.8) 
+par(mar=c(3,4,4,2),mgp=c(2,0.7,0)) 
+barplot(wd$inh,main=&quot;Population Density Vienna 2014&quot;,yaxt=&quot;n&quot;,col=colsort,xlab=&quot;District&quot;,beside=T, ylab=expression(paste(&quot;1.000 Inhabitants km&quot;^-2)),names.arg=as.roman(wd$district),las=2) 
+axis(2,labels=c(&quot;0&quot;,&quot;5&quot;,&quot;10&quot;,&quot;15&quot;,&quot;20&quot;),at=c(0,5000,10000,15000,20000),las=1) 
+abline(h=c(5000,10000,15000,20000),lty=2) 
+legend(&quot;topright&quot;,pch=c(15,15),col=c(&quot;darkred&quot;,&quot;lightblue&quot;),c(&quot;high&quot;,&quot;low&quot;),bg=&quot;white&quot;) </code></pre>
+<p><img src="/img/popdensity-1.png" style='width:100%;' border="0" alt="Null"></p>
+<p>Authors: Christian Brandstaetter with small additions by Mario Annau</p>

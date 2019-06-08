@@ -1,0 +1,72 @@
+---
+title: "Wordcloud Wienerwald"
+description: "Wordcloud covering 'Geschichten aus dem Wienerwald'"
+author: "Christian Brandstätter"
+date: "2016-02-24T22:20:00+02:00"
+output: html_document 
+tags: [ "Text Mining", "rstudy"]
+---
+
+
+
+<p><img src="/img/wordcloudwienerwald.png" title="**Wordcloud** \
+*Ödön von Horvath - Geschichten aus dem Wienerwald*" alt="**Wordcloud** \
+*Ödön von Horvath - Geschichten aus dem Wienerwald*" style='width:70%;' border="0" /></p>
+<p>After a very nice hands-on introduction in yesterday’s Vienna R meetup meeting from Mario Annau, I created an example of textmining ending with a wordcloud. As the blog is called ViennaR, I chose to use a play strongly related to Vienna - Ödön von Horváth - Geschichten aus dem Wienerwald.
+<!--more--></p>
+<p>The code documentation is in German, but with a little R-experience it should be easily understood.
+In a first step all the required libraries are loaded.</p>
+<pre class="r"><code>library(knitr) # Erzeugen eines HTML-Dokument
+library(rvest) # Einlesen von HTML-Dokumenten
+library(tm) # Erzeugen und Manipulieren von Textcorpora 
+library(stringi) # Umwandeln von schlecht kodierten Sonderzeichen 
+library(SnowballC) # Wortstammoperationen 
+library(wordcloud) # Erzeugen der Wordcloud</code></pre>
+<p>As of next, the textparts are loaded from the project Gutenberg homepage. As the play was divided this had to be repeated four times. A function was defined for the import from each url with the appropriate CSS-node and ideal encoding. However, the forced transformation to UTF-8 did not do anything actually.</p>
+<pre class="r"><code># Ödön von Horváth - Geschichten aus dem Wienerwald 
+url1 &lt;- &quot;http://gutenberg.spiegel.de/buch/geschichten-aus-dem-wiener-wald-volksstuck-in-drei-teilen-2900/1&quot;
+url2 &lt;- &quot;http://gutenberg.spiegel.de/buch/geschichten-aus-dem-wiener-wald-volksstuck-in-drei-teilen-2900/2&quot;
+url3 &lt;- &quot;http://gutenberg.spiegel.de/buch/geschichten-aus-dem-wiener-wald-volksstuck-in-drei-teilen-2900/3&quot;
+url4 &lt;- &quot;http://gutenberg.spiegel.de/buch/geschichten-aus-dem-wiener-wald-volksstuck-in-drei-teilen-2900/4&quot;
+
+# Einlesefunktion des Textes; Kodierung zu UTF-8
+  gut_les &lt;-   function(x){
+    step1 &lt;- read_html(x, encoding = &quot;ISO-8859-1&quot;)
+    step2 &lt;- html_nodes(step1,&quot;#gutenb&quot;)
+    step3 &lt;- iconv(html_text(step2),from = &quot;ISO-8859-1&quot;, to = &quot;UTF-8&quot;)
+    return(step3)}</code></pre>
+<p>Next the four text parts were integrated into one Corpus, a data type used in the tm package. In this case, the corpus was created from four char-vectors. Afterwards steps to clean up the text were performed. As in the presentation from Mario discussed, the order of these operations should be considered thoroughly.
+First, I adapted the wrongly encoded signs with the function stri_replace_all_fixed(). German Umlaute are a real pain, I really can say that, as I have one in my surname. Then the names of the figures had to be removed, otherwise they would have overwhelmed the output.</p>
+<p>Typical steps for allowing for meaningful text operation are alse the removal of Whitespace, unifying to lower cases, removing punctuations, stopwords (“<em>meaningless</em>” words as conjunctions) and word endings. All four texts are still in the corpus, which can be adressed like list items. They were though recoded as PlainTextDocument, which was a necessary step for being used in the wordcloud() function.</p>
+<pre class="r"><code># Verbinden der 4 Texte zu einem Corpus 
+GWW_corp &lt;- Corpus(VectorSource(c(gut_les(url1),gut_les(url2),gut_les(url3),gut_les(url4))))
+
+# Kodierungsfehler 
+sz_fehler &lt;- c(&quot;Ã¼&quot;,&quot;Ã¶&quot;,&quot;Ã¤&quot;,&quot;Ã\u009f&quot;,&quot;â\u0080\u0093&quot;,&quot;Â&quot;)
+sz_korrekt &lt;- c(&quot;ü&quot;,&quot;ö&quot;,&quot;ä&quot;,&quot;ß&quot;,&quot;–&quot;,&quot;&quot;)
+
+# Ersetzen der Kodierungsfehler; deshalb das Stringi Package 
+gwwc0 &lt;- tm_map(GWW_corp, function(x) stri_replace_all_fixed(x, sz_fehler, sz_korrekt, vectorize_all = FALSE))
+
+# Die Personen werden bei einem Theaterstrück sinnvollerweise entfernt. 
+gwwc1 &lt;- tm_map(gwwc0, removeWords, 
+        c(&quot;Alfred&quot;,&quot;Die Mutter&quot;,&quot;Die Großmutter&quot;,&quot;Der Hierlinger Ferdinand&quot;,
+          &quot;Valerie&quot;,&quot;Oskar&quot;,&quot;Ida&quot;,&quot;Havlitschek&quot;,&quot;Rittmeister&quot;,&quot;Eine gnädige Frau&quot;,
+          &quot;Marianne&quot;,&quot;Zauberkönig&quot;,&quot;Zwei Tanten&quot;,&quot;Erich&quot;,&quot;Emma&quot;,&quot;Helene&quot;,
+          &quot;Der Dienstbot&quot;,&quot;Baronin&quot;,&quot;Beichtvater&quot;, &quot;Der Mister&quot;,&quot;Der Conferencier&quot;))
+gwwc2 &lt;- tm_map(gwwc1, stripWhitespace) # Entfernen von Leerzeichen
+gwwc3 &lt;- tm_map(gwwc2, tolower) # Kleinschrift
+gwwc4 &lt;- tm_map(gwwc3, PlainTextDocument) # Umcodierung der Char-Vektoren zu Textdokumenten (für Wordlcloud)
+gwwc5 &lt;- tm_map(gwwc4, removeWords, stopwords(&quot;german&quot;)) # Entfernen von Füllwörtern
+gwwc6 &lt;- tm_map(gwwc5, removePunctuation) # Entfernen von Sonderzeichen 
+gwwc7 &lt;- tm_map(gwwc6, stemDocument) # Entfernen der Endungen </code></pre>
+<p>After all this cleanup the wordcloud can be drawn. I used a variety of twelve rather light colors with a black background. It is not possible to access the background color inside the wordcloud function, but with the par-options.</p>
+<p>Et voilà - l’illustration!</p>
+<pre class="r"><code>farbs &lt;- brewer.pal(12,&quot;Set3&quot;) # Farbpalette für die Wordcloud
+
+par(mar=c(0,0,0,0),bg=&quot;black&quot;) # Ausfüllen des Plotfensters, Hintergrund schwarz
+# Die eigentliche Wordcloud
+wordcloud(gwwc6, max.words=180, 
+          random.order=FALSE,random.color=FALSE, # Farben und Reihenfolge nach Anzahl der Wörter geordnet 
+          rot.per=0.35, # 35 % der Wörter sind senkrecht  
+          colors=(farbs))</code></pre>

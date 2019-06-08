@@ -5,7 +5,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
-<meta property="og:url" content="/">
+<meta property="og:url" content="http://www.viennar.org/">
 
 
 <meta property="og:type" content="article">
@@ -24,16 +24,16 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="//yandex.st/highlightjs/8.0/styles/github.min.css">
-<link rel="stylesheet" href="//css/styles.css">
-<link rel="stylesheet" href="//css/custom.css">
+<link rel="stylesheet" href="http://www.viennar.org//css/styles.css">
+<link rel="stylesheet" href="http://www.viennar.org//css/custom.css">
 
 <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto' rel='stylesheet' type='text/css'>
 
 
-<link rel="shortcut icon" href="//assets/favicon.ico">
+<link rel="shortcut icon" href="http://www.viennar.org//assets/favicon.ico">
 
 
-<link rel="alternate" type="application/rss+xml" title="RSS" href="//index.xml">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://www.viennar.org//index.xml">
 
 
 <script type="text/x-mathjax-config">
@@ -60,7 +60,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="/">Vienna R User Group</a>
+                    <a class="navbar-brand" href="http://www.viennar.org/">Vienna R User Group</a>
                 </div>
 
                 <div class="collapse navbar-collapse" id="navbar-collapse">
@@ -119,38 +119,28 @@
                     </time>
                 </div>
                 <h1 class="post-title">
-                    <a href="/blog/2015/10/30/population-densities-in-vienna/">Population Densities in Vienna</a>
+                    <a href="http://www.viennar.org/blog/2015/10/30/population-densities-in-vienna/">Population Densities in Vienna</a>
                 </h1>
             </header>
 
             <div class="post-content">
-                <p>The new Github repository <a href="https://github.com/ViennaR/OpenGovernmentVienna">OpenGovernmentVienna</a> has already been created including a very nice addition by Christian.</p>
-
-<p>The script executes the following steps:</p>
-
-<ol>
-<li>Download Vienna map including district boundaries from <a href="http://data.wien.gv.at">http://data.wien.gv.at</a>.</li>
-<li>Download population and district size from <a href="https://www.wien.gv.at/statistik">https://www.wien.gv.at/statistik</a>, calculate population density.</li>
-<li>Plot Vienna map coloured by population density.</li>
-</ol>
-
-<pre><code class="language-r">library(rgdal) 
+                <pre class="r"><code>library(rgdal) 
 library(rgeos) 
 library(XML)
 library(RCurl)
 
 download.vienna.bydistrict &lt;- function(tablename, skip.row = 3) {
-	baseurl &lt;- &quot;https://www.wien.gv.at/statistik&quot;
-	popurl &lt;- sprintf(&quot;%s/%s.html&quot;, baseurl, tablename)
+    baseurl &lt;- &quot;https://www.wien.gv.at/statistik&quot;
+    popurl &lt;- sprintf(&quot;%s/%s.html&quot;, baseurl, tablename)
 
-	poptable &lt;- readHTMLTable(getURL(popurl))[[1]]
-	poptable &lt;- poptable[-c(1:skip.row), ]
-	poptable &lt;- poptable[, -1]
-	row.names(poptable) &lt;- NULL
-	poptable &lt;- sapply(poptable, function(x) gsub(&quot;.&quot;, &quot;&quot;, x, fixed = TRUE))
-	poptable &lt;- gsub(&quot;,&quot;, &quot;.&quot;, poptable, fixed = TRUE)
-	poptable &lt;- matrix(as.numeric(poptable), nrow = nrow(poptable))
-	poptable
+    poptable &lt;- readHTMLTable(getURL(popurl))[[1]]
+    poptable &lt;- poptable[-c(1:skip.row), ]
+    poptable &lt;- poptable[, -1]
+    row.names(poptable) &lt;- NULL
+    poptable &lt;- sapply(poptable, function(x) gsub(&quot;.&quot;, &quot;&quot;, x, fixed = TRUE))
+    poptable &lt;- gsub(&quot;,&quot;, &quot;.&quot;, poptable, fixed = TRUE)
+    poptable &lt;- matrix(as.numeric(poptable), nrow = nrow(poptable))
+    poptable
 }
 
 # Download Data Shape Data District Boundaries
@@ -160,23 +150,15 @@ dir.create(&quot;data&quot;, showWarnings = FALSE)
 destfile &lt;- &quot;data/BEZIRKSGRENZEOGD.zip&quot;
 download.file(mapdata, destfile = destfile)
 unzip(destfile, exdir = &quot;data/BEZIRKSGRENZEOGD&quot;)
-file.remove(destfile)
-</code></pre>
-
-<pre><code>## [1] TRUE
-</code></pre>
-
-<pre><code class="language-r"># Read District Boundaries
-wmap &lt;- readOGR(&quot;data/BEZIRKSGRENZEOGD&quot;, layer=&quot;BEZIRKSGRENZEOGDPolygon&quot;) 
-</code></pre>
-
+file.remove(destfile)</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre class="r"><code># Read District Boundaries
+wmap &lt;- readOGR(&quot;data/BEZIRKSGRENZEOGD&quot;, layer=&quot;BEZIRKSGRENZEOGDPolygon&quot;) </code></pre>
 <pre><code>## OGR data source with driver: ESRI Shapefile 
 ## Source: &quot;data/BEZIRKSGRENZEOGD&quot;, layer: &quot;BEZIRKSGRENZEOGDPolygon&quot;
 ## with 23 features
-## It has 15 fields
-</code></pre>
-
-<pre><code class="language-r"># Download Population per district
+## It has 15 fields</code></pre>
+<pre class="r"><code># Download Population per district
 distpop &lt;- download.vienna.bydistrict(&quot;bevoelkerung/tabellen/bevoelkerung-alter-geschl-bez&quot;)
 distpopsum &lt;- rowSums(as.matrix(distpop))
 
@@ -200,12 +182,10 @@ par(mar=c(3,4,4,2),mgp=c(2,0.7,0))
 barplot(wd$inh,main=&quot;Population Density Vienna 2014&quot;,yaxt=&quot;n&quot;,col=colsort,xlab=&quot;District&quot;,beside=T, ylab=expression(paste(&quot;1.000 Inhabitants km&quot;^-2)),names.arg=as.roman(wd$district),las=2) 
 axis(2,labels=c(&quot;0&quot;,&quot;5&quot;,&quot;10&quot;,&quot;15&quot;,&quot;20&quot;),at=c(0,5000,10000,15000,20000),las=1) 
 abline(h=c(5000,10000,15000,20000),lty=2) 
-legend(&quot;topright&quot;,pch=c(15,15),col=c(&quot;darkred&quot;,&quot;lightblue&quot;),c(&quot;high&quot;,&quot;low&quot;),bg=&quot;white&quot;) 
-</code></pre>
-
+legend(&quot;topright&quot;,pch=c(15,15),col=c(&quot;darkred&quot;,&quot;lightblue&quot;),c(&quot;high&quot;,&quot;low&quot;),bg=&quot;white&quot;) </code></pre>
 <p><img src="/img/popdensity-1.png" style='width:100%;' border="0" alt="Null"></p>
-
 <p>Authors: Christian Brandstaetter with small additions by Mario Annau</p>
+
             </div>
 
             <aside>
@@ -213,14 +193,14 @@ legend(&quot;topright&quot;,pch=c(15,15),col=c(&quot;darkred&quot;,&quot;lightbl
                 <ul class="list-inline post-tags">
                     
                     <li>
-                        <a href="//tags/opengovernmentvienna">
+                        <a href="http://www.viennar.org//tags/opengovernmentvienna">
                             <i class="fa fa-tags"></i>
                             OpenGovernmentVienna
                         </a>
                     </li>
                     
                     <li>
-                        <a href="//tags/rstudy">
+                        <a href="http://www.viennar.org//tags/rstudy">
                             <i class="fa fa-tags"></i>
                             rstudy
                         </a>
@@ -286,7 +266,23 @@ legend(&quot;topright&quot;,pch=c(15,15),col=c(&quot;darkred&quot;,&quot;lightbl
                     
                     
                     
-                    <li><a href="/blog/2016/08/24/igraph-applications-for-transportation-networks/">igraph Applications for Transportation Networks</a></li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li><a href="http://www.viennar.org/blog/2016/02/24/wordcloud-wienerwald/">Wordcloud Wienerwald</a></li>
                     
                     
                     
@@ -312,33 +308,7 @@ legend(&quot;topright&quot;,pch=c(15,15),col=c(&quot;darkred&quot;,&quot;lightbl
                     
                     
                     
-                    
-                    
-                    
-                    
-                    <li><a href="/blog/2016/02/24/wordcloud-wienerwald/">Wordcloud Wienerwald</a></li>
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    <li><a href="/blog/2015/11/08/bike-parking-lots-in-vienna/">Bike Parking Lots in Vienna</a></li>
+                    <li><a href="http://www.viennar.org/blog/2015/11/08/bike-parking-lots-in-vienna/">Bike Parking Lots in Vienna</a></li>
                     
                     
                     
@@ -367,13 +337,13 @@ legend(&quot;topright&quot;,pch=c(15,15),col=c(&quot;darkred&quot;,&quot;lightbl
                     <ul class="pager">
 
                         
-                        <li class="previous"><a href="/blog/2015/10/21/meetup-10-2015-minutes-kick-off/"><span aria-hidden="true">&larr;</span> Older</a></li>
+                        <li class="previous"><a href="http://www.viennar.org/blog/2015/10/21/meetup-10-2015-minutes-kick-off/"><span aria-hidden="true">&larr;</span> Older</a></li>
                         
 
-                        <li><a href="//post">All Posts</a></li>
+                        <li><a href="http://www.viennar.org//post">All Posts</a></li>
 
                         
-                        <li class="next"><a href="/blog/2015/11/08/bike-parking-lots-in-vienna/">Newer <span aria-hidden="true">&rarr;</span></a></li>
+                        <li class="next"><a href="http://www.viennar.org/blog/2015/11/08/bike-parking-lots-in-vienna/">Newer <span aria-hidden="true">&rarr;</span></a></li>
                         
 
                     </ul>
@@ -429,43 +399,37 @@ legend(&quot;topright&quot;,pch=c(15,15),col=c(&quot;darkred&quot;,&quot;lightbl
                     
                     
                     
-                    <a href="//tags/igraph" class="list-group-item">
-                        <span class="badge">1</span>
-                        igraph
-                    </a>
-                    
-                    
-                    <a href="//tags/meetup" class="list-group-item">
+                    <a href="http://www.viennar.org//tags/meetup" class="list-group-item">
                         <span class="badge">12</span>
                         meetup
                     </a>
                     
                     
-                    <a href="//tags/opengovernmentvienna" class="list-group-item">
+                    <a href="http://www.viennar.org//tags/opengovernmentvienna" class="list-group-item">
                         <span class="badge">2</span>
                         opengovernmentvienna
                     </a>
                     
                     
-                    <a href="//tags/rstudy" class="list-group-item">
-                        <span class="badge">4</span>
+                    <a href="http://www.viennar.org//tags/rstudy" class="list-group-item">
+                        <span class="badge">3</span>
                         rstudy
                     </a>
                     
                     
-                    <a href="//tags/serverless" class="list-group-item">
+                    <a href="http://www.viennar.org//tags/serverless" class="list-group-item">
                         <span class="badge">1</span>
                         serverless
                     </a>
                     
                     
-                    <a href="//tags/text-mining" class="list-group-item">
+                    <a href="http://www.viennar.org//tags/text-mining" class="list-group-item">
                         <span class="badge">1</span>
                         text-mining
                     </a>
                     
                     
-                    <a href="//tags/tools" class="list-group-item">
+                    <a href="http://www.viennar.org//tags/tools" class="list-group-item">
                         <span class="badge">1</span>
                         tools
                     </a>
