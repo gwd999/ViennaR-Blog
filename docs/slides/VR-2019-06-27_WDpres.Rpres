@@ -64,7 +64,8 @@ A batch file that writes .Renviron and .Rprofile could look like this.
 
 
 ```{r, eval = TRUE}
-quote(:: change from home dir to a to NON-UNC path folder since these are NOT much appreciated by WIN+R
+quote(
+:: change from home dir to a to NON-UNC path folder since these are NOT much appreciated by WIN+R
 cd C:\Users\%USERNAME%\ 
 copy /v /Y P:\0702_01960721_managedCode\R\setup\Makeconf_i386modified.txt "C:\Program Files\RWin\R-3.4.2\etc\i386\Makeconf"                     
 :: copy predefined modified Makeconf files into the R_HOME Program Files folder
