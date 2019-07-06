@@ -9,7 +9,6 @@ font-family: 'Helvetica'
 The Environment
 ========================================================
 
-
 - WINDOWS 10 Enterprise (1803) 
 - proxy internet servers   
 - firewalls all over the place 
@@ -34,12 +33,12 @@ Dealing with the obstacles
 Define the http_proxy 
 ========================================================
 
-First thing after starting RStudio type 
+First thing - after starting RStudio - type into Console  
 
 ```{r, eval = FALSE}
 file.edit("~/.Renviron")
 ```
-and define the proxy which you can usually hack somewhere in your company browsers settings.      
+and define the proxy-address which you can usually find out somewhere in your browsers settings.      
 While at it, ask your company IT to install a decent browser (usually Firefox or Chrome will be offered by most company IT depts as IE alternatives). 
 
 ```{eval = FALSE}
@@ -60,13 +59,12 @@ Of course it is much more "elegant" to do these things programmatically as shown
 
 .Rprofile   
 ========================================================
-<font size="6">
+
 Adjust .Rprofile of the team via distributing a link to a WIN .bat file (placed on network folder), they are supposed to run/double-click. 
 A batch file that writes .Renviron and .Rprofile could look like this. 
 </font> 
 
- <font size="4">
-```{bash, eval = FALSE, }
+```{, eval = FALSE, }
 :: change from home dir to a to NON-UNC path folder since these are NOT much appreciated by WIN+R
 cd C:\Users\%USERNAME%\ 
 copy /v /Y P:\0702_01960721_managedCode\R\setup\Makeconf_i386modified.txt "C:\Program Files\RWin\R-3.4.2\etc\i386\Makeconf"                     
@@ -104,15 +102,12 @@ echo on
 set /p DUMMY=Hit ENTER to finish ...
 
 ```
-</font> 
-
 
 Hijack some Network Drive space for a local mini-CRAN 
 ========================================================
 
 The last lines of the prior file modified the default CRAN mirror(s) via the user .Rprofile to point to a local network drive folder. 
 
- <font size="6">
 ```{}
 echo.>> \\p1at.s-group.cc\0702\USERS\%username%\Daten\.Rprofile
 echo|set /p="pth <- 'DriveLetter:/Path/to/R/localCRAN'">> \\p1at.s-group.cc\0702\USERS\%USERNAME%\Daten\.Rprofile 
@@ -127,13 +122,10 @@ echo.>> \\p1at.s-group.cc\0702\USERS\%username%\Daten\.Rprofile
 echo|set /p="rm(localCRANuri); rm(oldRepos);rm(pth)">> \\p1at.s-group.cc\0702\USERS\%username%\Daten\.Rprofile
 
 ```
-</font>
 
-
-Build package for the team and publish it on localCRAN
+Build package for the team and publish it on a 'localCRAN' 
 ========================================================
 After the "infrastructure" was dealt with, lets build a package to wrap a lot of R functions into one-liners respectively functions with a lot of "useful" defaults.    
-
 
 ***Package development challenges:*** 
 * The firewall ports are user specific - this was solved via RCurl ie overwriting the standard (ie standard setup) PORT config (this usually needs to happen once after every new package install or update) via scraping the PORT Gateway homepage on the intranet (in the background) once the user runs certain package-functions.   
