@@ -22,24 +22,24 @@ The Environment
 Dealing with the obstacles 
 ========================================================
 
-## - the OS -> we will have to live with     
-## - the Internet Proxy -> ~/.Renviron 
-## - modify R/etc/.../Makeconf 
-## - enhance the .Rprofile of (your) colleagues -> ~/.Rprofile
-## - build a dedicated 'Accounting' utilities package on a network drive incl. local CRAN repo 
-## - Misc 
+### - the OS -> we will have to live with     
+### - Internet Proxy -> ~/.Renviron 
+### - modify R/etc/.../Makeconf 
+### - enhance the .Rprofile of (your) colleagues -> ~/.Rprofile
+### - build a dedicated 'Accounting' utilities package on a network drive incl. local CRAN repo 
+### - Misc 
 
 
-Define the http_proxy 
+Define http_proxy 
 ========================================================
 
-First thing - after starting RStudio - type into Console  
+Immediately - after starting RStudio - type into Console  
 
 ```{r, eval = FALSE}
 file.edit("~/.Renviron")
 ```
-and define the proxy-address which you can usually find out somewhere in your browsers settings.      
-While at it, ask your company IT to install a decent browser (usually Firefox or Chrome will be offered by most company IT depts as IE alternatives). 
+to create/modify the .Renviron file in your HOME folder. Define the proxy variable, the value of which you can usually find out somewhere in your browsers settings.      
+While at it, also rememeber to request a decent browser (usually Firefox or Chrome will be offered by most IT depts as IE alternatives) from your company's IT dept. 
 
 ```{eval = FALSE}
 http_proxy=proxy-some.proxy.net:PORT
@@ -59,7 +59,7 @@ Of course it is much more "elegant" to do these things programmatically as shown
 Modify .Rprofile via .bat 
 ========================================================
 
-Adjust thw .Rprofile files of the team memebers via distributing a link to a WIN .bat file (placed on network folder), they are supposed to run/double-click. 
+Adjust the .Rprofile files of the team memebers via distributing a link to a WIN .bat file (placed on network folder), they are supposed to run/double-click. 
 A batch file that writes .Renviron and .Rprofile could look like this. 
 
 
@@ -123,9 +123,10 @@ Build package for the team and publish it on a 'localCRAN'
 ========================================================
 After the "infrastructure" was dealt with, lets build a package to wrap a lot of R functions into one-liners respectively functions with a lot of "useful" defaults.    
 
-***Package development challenges:*** 
+***Package development challenges:***     
+
 * The firewall ports are user specific - this was solved via RCurl ie overwriting the standard (ie standard setup) PORT config (this usually needs to happen once after every new package install or update) via scraping the PORT Gateway homepage on the intranet (in the background) once the user runs certain package-functions.   
-* A lot of SQL had to be included in the PACKAGE/inst folder that is being dynamically modified with wrapper function parameters (or defaults), since noone is even SQL intermediate.   
+* A lot of SQL had to be included in the PACKAGE/inst folder that is being dynamically modified with wrapper function parameters (or defaults), since team members are only SQL beginners at best.    
 
 
 Package dev challenges continued
