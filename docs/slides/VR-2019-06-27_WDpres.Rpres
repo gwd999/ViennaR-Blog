@@ -63,7 +63,7 @@ Adjust thw .Rprofile files of the team memebers via distributing a link to a WIN
 A batch file that writes .Renviron and .Rprofile could look like this. 
 
 
-```bat
+```{sh, eval=FALSE}
 :: change from home dir to a to NON-UNC path folder since these are NOT much appreciated by WIN+R
 cd C:\Users\%USERNAME%\ 
 copy /v /Y P:\0702_01960721_managedCode\R\setup\Makeconf_i386modified.txt "C:\Program Files\RWin\R-3.4.2\etc\i386\Makeconf"                     
@@ -105,7 +105,7 @@ Hijack some Network Drive space for a local mini-CRAN
 
 The last lines of the prior file modified the default CRAN mirror(s) via the user .Rprofile to point to a local network drive folder. 
 
-```bat
+```{sh, eval=FALSE}
 echo.>> \\p1at.s-group.cc\0702\USERS\%username%\Daten\.Rprofile
 echo|set /p="pth <- 'DriveLetter:/Path/to/R/localCRAN'">> \\p1at.s-group.cc\0702\USERS\%USERNAME%\Daten\.Rprofile 
 
