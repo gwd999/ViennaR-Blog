@@ -45,7 +45,7 @@ While at it, ask your company IT to install a decent browser (usually Firefox or
 http_proxy=proxy-some.proxy.net:PORT
 ```
 
-Change BINPREF in Makeconf  
+Change BINPREF in Makeconf
 ========================================================
 
 Go to  ```R.home()/etc/i386|x64/Makeconf```  and     
@@ -56,15 +56,14 @@ otherwise installing from source will become a pain in the neck.
 
 Of course it is much more "elegant" to do these things programmatically as shown in the next slide. 
 
-Modified .Rprofile   
+Modify .Rprofile via .bat 
 ========================================================
 
 Adjust thw .Rprofile files of the team memebers via distributing a link to a WIN .bat file (placed on network folder), they are supposed to run/double-click. 
 A batch file that writes .Renviron and .Rprofile could look like this. 
 
 
-```{r, eval = TRUE}
-quote(
+```bat
 :: change from home dir to a to NON-UNC path folder since these are NOT much appreciated by WIN+R
 cd C:\Users\%USERNAME%\ 
 copy /v /Y P:\0702_01960721_managedCode\R\setup\Makeconf_i386modified.txt "C:\Program Files\RWin\R-3.4.2\etc\i386\Makeconf"                     
@@ -98,7 +97,7 @@ echo|set /p="options( repos = c(localCRAN = localCRANuri) )else options( repos =
 echo on
 
 @ECHO The Package mirror should now be localCRAN and PACKAGE 'XXXXX' can now be installed via RStudio Packages tab - Install functionality!   
-set /p DUMMY=Hit ENTER to finish ...)
+set /p DUMMY=Hit ENTER to finish ...
 ```
 
 Hijack some Network Drive space for a local mini-CRAN 
@@ -106,7 +105,7 @@ Hijack some Network Drive space for a local mini-CRAN
 
 The last lines of the prior file modified the default CRAN mirror(s) via the user .Rprofile to point to a local network drive folder. 
 
-```{eval=FALSE}
+```bat
 echo.>> \\p1at.s-group.cc\0702\USERS\%username%\Daten\.Rprofile
 echo|set /p="pth <- 'DriveLetter:/Path/to/R/localCRAN'">> \\p1at.s-group.cc\0702\USERS\%USERNAME%\Daten\.Rprofile 
 
