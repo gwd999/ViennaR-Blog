@@ -23,4 +23,6 @@ Indexes:
 permalinks:
   post: /blog/:year/:month/:day/:slug/
 
+ignoreFiles: ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
+
 MetadataFormat: "yaml"
