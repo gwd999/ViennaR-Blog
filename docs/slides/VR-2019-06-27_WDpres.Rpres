@@ -56,15 +56,15 @@ otherwise installing from source will become a pain in the neck.
 
 Of course it is much more "elegant" to do these things programmatically as shown in the next slide. 
 
-
-.Rprofile   
+Modified .Rprofile   
 ========================================================
 
-Adjust .Rprofile of the team via distributing a link to a WIN .bat file (placed on network folder), they are supposed to run/double-click. 
+Adjust thw .Rprofile files of the team memebers via distributing a link to a WIN .bat file (placed on network folder), they are supposed to run/double-click. 
 A batch file that writes .Renviron and .Rprofile could look like this. 
 
-```{eval = FALSE}
-:: change from home dir to a to NON-UNC path folder since these are NOT much appreciated by WIN+R
+
+```{r, eval = TRUE}
+quote(:: change from home dir to a to NON-UNC path folder since these are NOT much appreciated by WIN+R
 cd C:\Users\%USERNAME%\ 
 copy /v /Y P:\0702_01960721_managedCode\R\setup\Makeconf_i386modified.txt "C:\Program Files\RWin\R-3.4.2\etc\i386\Makeconf"                     
 :: copy predefined modified Makeconf files into the R_HOME Program Files folder
@@ -85,9 +85,9 @@ echo off
 :: a Sys.sleep work-around to manage cannot move from temporary folder error ... usually b/c of AV-SW 
 echo|set /p="trace(utils:::unpackPkgZip, quote(Sys.sleep(2)), at = which(grepl("Sys.sleep", body(utils:::unpackPkgZip), fixed = TRUE)))">\\p1at.s-group.cc\0702\USERS\%username%\Daten\.Rprofile
 echo.>> \\p1at.s-group.cc\0702\USERS\%username%\Daten\.Rprofile
-echo|set /p="oldRepos <- getOption('repos')">>\\p1at.s-group.cc\0702\USERS\%username%\Daten\.Rprofile
+echo|set /p="oldRepos <- getOption("repos")">>\\p1at.s-group.cc\0702\USERS\%username%\Daten\.Rprofile
 echo.>> \\p1at.s-group.cc\0702\USERS\%username%\Daten\.Rprofile
-echo|set /p="pth <- 'DriveLetter:/Path/to/R/localCRAN'">>\\p1at.s-group.cc\0702\USERS\%username%\Daten\.Rprofile
+echo|set /p="pth <- 'DriveLetter:/Path/to/R/localCRAN'>>\\p1at.s-group.cc\0702\USERS\%username%\Daten\.Rprofile
 echo.>> \\p1at.s-group.cc\0702\USERS\%username%\Daten\.Rprofile
 echo|set /p="localCRANuri <- paste( 'file:', normalizePath(pth, winslash = '/'), sep = '' )">>\\p1at.s-group.cc\0702\USERS\%username%\Daten\.Rprofile
 echo.>> \\p1at.s-group.cc\0702\USERS\%username%\Daten\.Rprofile
@@ -96,9 +96,8 @@ echo|set /p="options( repos = c(localCRAN = localCRANuri) )else options( repos =
  echo|set /p="rm(localCRANuri); rm(pth)">>\\p1at.s-group.cc\0702\USERS\%username%\Daten\.Rprofile
 echo on
 
-
 @ECHO The Package mirror should now be localCRAN and PACKAGE 'XXXXX' can now be installed via RStudio Packages tab - Install functionality!   
-set /p DUMMY=Hit ENTER to finish ...
+set /p DUMMY=Hit ENTER to finish ...)
 ```
 
 Hijack some Network Drive space for a local mini-CRAN 
