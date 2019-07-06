@@ -19,8 +19,8 @@
 
 
 
-&lt;div id=&#34;r-in-corporate-busniness-enivroments&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;R in corporate (busniness) enivroments&lt;/h2&gt;
+&lt;div id=&#34;r-in-corporate-enivroments-finance-depts.&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;R in corporate enivroments (finance depts.)&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.linkedin.com/in/walterdjuric/&#34;&gt;&lt;strong&gt;Walter Djuric&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Walter did a short presentation, on the potential and real life uses of R (and RStudio) in a typical business (ie Accounting) departmentn in a large Austrian financial institution.&lt;br /&gt;
 He discussed common pitfalls (mostly linked to infrastructure problems eg firewalls, non-admin user-rights, AV software, etc) and what tactics can be applied to cope with these challenges (eg a local CRAN, package building for the team, enhanced .Rprofiles, etc).&lt;/p&gt;

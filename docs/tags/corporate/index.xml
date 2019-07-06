@@ -17,7 +17,7 @@
       <pubDate>Thu, 27 Jun 2019 00:00:00 +0000</pubDate>
       
       <guid>http://www.viennar.org/blog/2019/06/27/june-2019-meetup/</guid>
-      <description>R in corporate (busniness) enivromentsWalter Djuric
+      <description>R in corporate enivroments (finance depts.)Walter Djuric
 Walter did a short presentation, on the potential and real life uses of R (and RStudio) in a typical business (ie Accounting) departmentn in a large Austrian financial institution.
 He discussed common pitfalls (mostly linked to infrastructure problems eg firewalls, non-admin user-rights, AV software, etc) and what tactics can be applied to cope with these challenges (eg a local CRAN, package building for the team, enhanced .</description>
     </item>
