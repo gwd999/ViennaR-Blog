@@ -9,15 +9,13 @@ tags:
   - corporate
 --- 
 
-## R in corporate (busniness) enivroments 
+## R in corporate enivroments (finance depts.) 
 [**Walter Djuric**](https://www.linkedin.com/in/walterdjuric/)
 
 Walter did a short presentation, on the potential and real life uses of R (and RStudio) in a typical business (ie Accounting) departmentn in a large Austrian financial institution.     
-He discussed common pitfalls (mostly linked to infrastructure problems eg firewalls, non-admin user-rights, AV software, etc) and how thea managed to cope with these challenges (eg local CRAN, Package building for the team, enanced .Rprofiles, etc).   
+He discussed common pitfalls (mostly linked to infrastructure problems eg firewalls, non-admin user-rights, AV software, etc) and what tactics can be applied to cope with these challenges (eg a local CRAN, package building for the team, enhanced .Rprofiles, etc).   
 
-You can find the **html slides/pages** of his presentation [here](/slides/Alteryx Corporate Intro Presentation.pptx).
-
-### Questions
+You can find the **html slides/pages** of his presentation [here](/slides/VR-2019-06-27_WDpres.html).
 
 
 ## NLP in R

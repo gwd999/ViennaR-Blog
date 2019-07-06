@@ -133,7 +133,8 @@ require(data.table)
 require(ggplot2)</code></pre>
 <div id="centrality---what-is-it" class="section level1">
 <h1>Centrality - What is it?</h1>
-<p>Network Centrality gives you an idea of how important a vertex/node and edge/link in your network/graph <span class="math inline">\(N(V,E)\)</span> respectively <span class="math inline">\(G(N,L)\)</span> is. Examples:</p>
+<p>Network Centrality gives you an idea of how important a vertex/node and edge/link in your network/graph <span class="math inline">\(N(V,E)\)</span> respectively <span class="math inline">\(G(N,L)\)</span> is.
+Examples:</p>
 <ul>
 <li>Closeness</li>
 <li>Betweenness</li>
@@ -143,11 +144,17 @@ require(ggplot2)</code></pre>
 </ul>
 <p>Some formulas:</p>
 <ul>
-<li>Closeness Centrality <span class="math display">\[ C^{node}(n) = \frac{1}{\sum_{m \in N \setminus \{n\}}d(n,m)} \]</span></li>
-<li>Betweenness centrality <span class="math display">\[ B^{node}(n) = \sum_{m\neq o \in N\backslash \{n\} } \frac{\sigma_{mo}(n)}{\sigma_{mo}} \]</span></li>
-<li>Node-based Closeness for a link <span class="math display">\[ \ddot{C}^{link}(l_{n,m}) = \frac{C^{node}(n) + C^{node}(m)}{2} \]</span></li>
-<li>Node-based Betweenness for a link <span class="math display">\[ \ddot{B}^{link}(l_{n,m}) = \frac{B^{node}(n) + B^{node}(m)}{2} \]</span></li>
-<li>Link-based Betweenness for a link <span class="math display">\[ B^{link}(l) = \sum_{n \neq m \in N } \frac{\sigma_{nm}(l)}{\sigma_{nm}} \]</span> *<span class="math inline">\(\sigma\)</span> is the number of traversing OD relations, and <span class="math inline">\(d(n,m)\)</span> is the distance of the shortest route from <span class="math inline">\(n\)</span> to <span class="math inline">\(m\)</span></li>
+<li>Closeness Centrality
+<span class="math display">\[ C^{node}(n) = \frac{1}{\sum_{m \in N \setminus \{n\}}d(n,m)} \]</span></li>
+<li>Betweenness centrality
+<span class="math display">\[ B^{node}(n) = \sum_{m\neq o \in N\backslash \{n\} } \frac{\sigma_{mo}(n)}{\sigma_{mo}} \]</span></li>
+<li>Node-based Closeness for a link
+<span class="math display">\[ \ddot{C}^{link}(l_{n,m}) = \frac{C^{node}(n) + C^{node}(m)}{2} \]</span></li>
+<li>Node-based Betweenness for a link
+<span class="math display">\[ \ddot{B}^{link}(l_{n,m}) = \frac{B^{node}(n) + B^{node}(m)}{2} \]</span></li>
+<li>Link-based Betweenness for a link
+<span class="math display">\[ B^{link}(l) = \sum_{n \neq m \in N } \frac{\sigma_{nm}(l)}{\sigma_{nm}} \]</span>
+*<span class="math inline">\(\sigma\)</span> is the number of traversing OD relations, and <span class="math inline">\(d(n,m)\)</span> is the distance of the shortest route from <span class="math inline">\(n\)</span> to <span class="math inline">\(m\)</span></li>
 </ul>
 <p>What to select, <span class="math inline">\(\ddot{B}^{link}(l_{n,m})\)</span> or <span class="math inline">\(B^{link}(l)\)</span>?</p>
 </div>
@@ -173,7 +180,7 @@ bg &lt;- edge_betweenness(g, directed=F)
 plot(g, edge.label = bg)</code></pre>
 <p><img src="/post/20160524_igraph_applications_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
 </div>
-<div id="local-vs.global" class="section level2">
+<div id="local-vs.-global" class="section level2">
 <h2>Local vs. Global</h2>
 <pre class="r"><code>g &lt;- make_graph(c(1, 2, 2, 3,#horizontal connections
                   4,5,5,6,6,7,
@@ -213,7 +220,7 @@ title(&quot;(b) Local Betweenness&quot;, cex.main = cm)</code></pre>
 title(&quot;(c) Global Betweenness&quot;, cex.main = cm)</code></pre>
 <p><img src="/post/20160524_igraph_applications_files/figure-html/unnamed-chunk-4-3.png" width="672" /></p>
 </div>
-<div id="node-based-vs.link-based-betweenness-for-links" class="section level2">
+<div id="node-based-vs.-link-based-betweenness-for-links" class="section level2">
 <h2>Node-based vs. link-based Betweenness for Links</h2>
 <pre class="r"><code>g &lt;- make_graph(c(1,2, 2,3, 3,4, 4,5,#horizontal connections
                   6,7, 7,8, 8,9, 9,10,
@@ -283,7 +290,7 @@ title(&quot;(c) Node based Betweenness&quot; ,cex.main=cm)</code></pre>
 <p>github project: <a href="https://github.com/maxar/igraph_testing/blob/master/test_vertex_betweenness_local.R" class="uri">https://github.com/maxar/igraph_testing/blob/master/test_vertex_betweenness_local.R</a></p>
 <pre class="r"><code>require(igraph)
 packageVersion(&quot;igraph&quot;) # my installed version is 1.0.1</code></pre>
-<pre><code>## [1] &#39;1.2.2&#39;</code></pre>
+<pre><code>## [1] &#39;1.2.4.1&#39;</code></pre>
 <pre class="r"><code>#----------------------------------------------------------------------------------------
 #---------------    EXAMPLE 1    --------------------------------------------------------
 #----------------------------------------------------------------------------------------
@@ -717,6 +724,18 @@ title(&quot;(c) local closeness&quot;, cex.main = cm)</code></pre>
                     
                     
                     
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                 </ul>
             </aside>
             
@@ -756,7 +775,9 @@ title(&quot;(c) local closeness&quot;, cex.main = cm)</code></pre>
                 </div>
                 <div class="list-group">
                     
-                    <a href="/blog/2019/02/12/february-2019-meetup/" class="list-group-item">Meetup 02-2019 Minutes</a>
+                    <a href="/blog/2019/06/27/june-2019-meetup/" class="list-group-item">Meetup 07-2019 Minutes</a>
+                    
+                    <a href="/tags/nlp/" class="list-group-item">NLP</a>
                     
                     <a href="/post/" class="list-group-item">Posts</a>
                     
@@ -764,17 +785,15 @@ title(&quot;(c) local closeness&quot;, cex.main = cm)</code></pre>
                     
                     <a href="/" class="list-group-item">Vienna R User Group</a>
                     
+                    <a href="/tags/corporate/" class="list-group-item">corporate</a>
+                    
+                    <a href="/blog/2019/02/12/february-2019-meetup/" class="list-group-item">Meetup 02-2019 Minutes</a>
+                    
                     <a href="/tags/serverless/" class="list-group-item">serverless</a>
                     
                     <a href="/tags/tools/" class="list-group-item">tools</a>
                     
                     <a href="/tags/meetup/" class="list-group-item">Meetup</a>
-                    
-                    <a href="/blog/2016/11/22/meetup-11-2016-minutes/" class="list-group-item">Meetup 11-2016 Minutes</a>
-                    
-                    <a href="/blog/2016/10/19/meetup-10-2016-minutes/" class="list-group-item">Meetup 10-2016 Minutes</a>
-                    
-                    <a href="/blog/2016/09/27/meetup-09-2016-minutes/" class="list-group-item">Meetup 09-2016 Minutes</a>
                     
                 </div>
             </div>
@@ -789,9 +808,21 @@ title(&quot;(c) local closeness&quot;, cex.main = cm)</code></pre>
                     
                     
                     
+                    <a href="http://www.viennar.org//tags/corporate" class="list-group-item">
+                        <span class="badge">1</span>
+                        corporate
+                    </a>
+                    
+                    
                     <a href="http://www.viennar.org//tags/meetup" class="list-group-item">
                         <span class="badge">12</span>
                         meetup
+                    </a>
+                    
+                    
+                    <a href="http://www.viennar.org//tags/nlp" class="list-group-item">
+                        <span class="badge">1</span>
+                        nlp
                     </a>
                     
                     

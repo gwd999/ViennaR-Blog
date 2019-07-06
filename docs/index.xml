@@ -5,8 +5,39 @@
     <language>en-us</language>
     <author>Vienna-R</author>
     <rights>(C) 2019</rights>
-    <updated>2019-02-12 00:00:00 &#43;0000 UTC</updated>
+    <updated>2019-06-27 00:00:00 &#43;0000 UTC</updated>
 
+    
+      
+        <item>
+          <title>Meetup 07-2019 Minutes</title>
+          <link>http://www.viennar.org/blog/2019/06/27/june-2019-meetup/</link>
+          <pubDate>Thu, 27 Jun 2019 00:00:00 UTC</pubDate>
+          <author>Vienna-R</author>
+          <guid>http://www.viennar.org/blog/2019/06/27/june-2019-meetup/</guid>
+          <description> 
+
+
+
+&lt;div id=&#34;r-in-corporate-busniness-enivroments&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;R in corporate (busniness) enivroments&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.linkedin.com/in/walterdjuric/&#34;&gt;&lt;strong&gt;Walter Djuric&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Walter did a short presentation, on the potential and real life uses of R (and RStudio) in a typical business (ie Accounting) departmentn in a large Austrian financial institution.&lt;br /&gt;
+He discussed common pitfalls (mostly linked to infrastructure problems eg firewalls, non-admin user-rights, AV software, etc) and what tactics can be applied to cope with these challenges (eg a local CRAN, package building for the team, enhanced .Rprofiles, etc).&lt;/p&gt;
+&lt;p&gt;You can find the &lt;strong&gt;html slides/pages&lt;/strong&gt; of his presentation &lt;a href=&#34;http://www.viennar.org/slides/VR-2019-06-27_WDpres.html&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;nlp-in-r&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;NLP in R&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.wu.ac.at/statmath/faculty-staff/faculty/fschwendinger&#34;&gt;&lt;strong&gt;Florian Schwendinger&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Florian held a very informative hands-on presentation and talk on Natural language processing (NLP).&lt;/p&gt;
+&lt;p&gt;You can find the &lt;strong&gt;slides&lt;/strong&gt; &lt;a href=&#34;http://www.viennar.org/slides/grpc.pdf&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;div id=&#34;questions&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Questions&lt;/h3&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+        </item>
+      
     
       
         <item>
@@ -26,7 +57,7 @@
 &lt;p&gt;You can find the &lt;strong&gt;slides&lt;/strong&gt; of his presentation &lt;a href=&#34;http://www.viennar.org/slides/Alteryx%20Corporate%20Intro%20Presentation.pptx&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;div id=&#34;questions&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Questions&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;Do you have scheduling capabilities (for metadata, e.g. &lt;a href=&#34;https://atlas.apache.org/&#34;&gt;Atlas&lt;/a&gt;)?&lt;/strong&gt;&lt;br&gt;
+&lt;p&gt;&lt;strong&gt;Do you have scheduling capabilities (for metadata, e.g. &lt;a href=&#34;https://atlas.apache.org/&#34;&gt;Atlas&lt;/a&gt;)?&lt;/strong&gt;&lt;br&gt;
 Yes - Alteryx has scheduling capabilities server side and on the desktop.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Who is the target audience?&lt;/strong&gt;&lt;br&gt;
 Business Analysts, business users?&lt;/p&gt;
@@ -137,7 +168,7 @@ Finally, Mario showed some time series forecasting examples already discussing d
 &lt;h2&gt;Projects&lt;/h2&gt;
 &lt;p&gt;The following potential projects covering simple time series forecasting examples have been discussed/requested:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Google Trends data (e.g. &lt;em&gt;Influenza&lt;/em&gt;)&lt;/li&gt;
+&lt;li&gt;Google Trends data (e.g. &lt;em&gt;Influenza&lt;/em&gt;)&lt;/li&gt;
 &lt;li&gt;Company data, e.g. Revenues&lt;/li&gt;
 &lt;li&gt;Bike Traffic in Vienna&lt;/li&gt;
 &lt;li&gt;Stock Prices, Volatility (GARCH)&lt;/li&gt;
@@ -179,7 +210,8 @@ require(data.table)
 require(ggplot2)&lt;/code&gt;&lt;/pre&gt;
 &lt;div id=&#34;centrality---what-is-it&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Centrality - What is it?&lt;/h1&gt;
-&lt;p&gt;Network Centrality gives you an idea of how important a vertex/node and edge/link in your network/graph &lt;span class=&#34;math inline&#34;&gt;\(N(V,E)\)&lt;/span&gt; respectively &lt;span class=&#34;math inline&#34;&gt;\(G(N,L)\)&lt;/span&gt; is. Examples:&lt;/p&gt;
+&lt;p&gt;Network Centrality gives you an idea of how important a vertex/node and edge/link in your network/graph &lt;span class=&#34;math inline&#34;&gt;\(N(V,E)\)&lt;/span&gt; respectively &lt;span class=&#34;math inline&#34;&gt;\(G(N,L)\)&lt;/span&gt; is.
+Examples:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Closeness&lt;/li&gt;
 &lt;li&gt;Betweenness&lt;/li&gt;
@@ -189,11 +221,17 @@ require(ggplot2)&lt;/code&gt;&lt;/pre&gt;
 &lt;/ul&gt;
 &lt;p&gt;Some formulas:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Closeness Centrality &lt;span class=&#34;math display&#34;&gt;\[ C^{node}(n) = \frac{1}{\sum_{m \in N \setminus \{n\}}d(n,m)} \]&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;Betweenness centrality &lt;span class=&#34;math display&#34;&gt;\[ B^{node}(n) = \sum_{m\neq o \in N\backslash \{n\} } \frac{\sigma_{mo}(n)}{\sigma_{mo}} \]&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;Node-based Closeness for a link &lt;span class=&#34;math display&#34;&gt;\[ \ddot{C}^{link}(l_{n,m}) = \frac{C^{node}(n) + C^{node}(m)}{2} \]&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;Node-based Betweenness for a link &lt;span class=&#34;math display&#34;&gt;\[ \ddot{B}^{link}(l_{n,m}) = \frac{B^{node}(n) + B^{node}(m)}{2} \]&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;Link-based Betweenness for a link &lt;span class=&#34;math display&#34;&gt;\[ B^{link}(l) = \sum_{n \neq m \in N } \frac{\sigma_{nm}(l)}{\sigma_{nm}} \]&lt;/span&gt; *&lt;span class=&#34;math inline&#34;&gt;\(\sigma\)&lt;/span&gt; is the number of traversing OD relations, and &lt;span class=&#34;math inline&#34;&gt;\(d(n,m)\)&lt;/span&gt; is the distance of the shortest route from &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; to &lt;span class=&#34;math inline&#34;&gt;\(m\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;Closeness Centrality
+&lt;span class=&#34;math display&#34;&gt;\[ C^{node}(n) = \frac{1}{\sum_{m \in N \setminus \{n\}}d(n,m)} \]&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;Betweenness centrality
+&lt;span class=&#34;math display&#34;&gt;\[ B^{node}(n) = \sum_{m\neq o \in N\backslash \{n\} } \frac{\sigma_{mo}(n)}{\sigma_{mo}} \]&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;Node-based Closeness for a link
+&lt;span class=&#34;math display&#34;&gt;\[ \ddot{C}^{link}(l_{n,m}) = \frac{C^{node}(n) + C^{node}(m)}{2} \]&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;Node-based Betweenness for a link
+&lt;span class=&#34;math display&#34;&gt;\[ \ddot{B}^{link}(l_{n,m}) = \frac{B^{node}(n) + B^{node}(m)}{2} \]&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;Link-based Betweenness for a link
+&lt;span class=&#34;math display&#34;&gt;\[ B^{link}(l) = \sum_{n \neq m \in N } \frac{\sigma_{nm}(l)}{\sigma_{nm}} \]&lt;/span&gt;
+*&lt;span class=&#34;math inline&#34;&gt;\(\sigma\)&lt;/span&gt; is the number of traversing OD relations, and &lt;span class=&#34;math inline&#34;&gt;\(d(n,m)\)&lt;/span&gt; is the distance of the shortest route from &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; to &lt;span class=&#34;math inline&#34;&gt;\(m\)&lt;/span&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;What to select, &lt;span class=&#34;math inline&#34;&gt;\(\ddot{B}^{link}(l_{n,m})\)&lt;/span&gt; or &lt;span class=&#34;math inline&#34;&gt;\(B^{link}(l)\)&lt;/span&gt;?&lt;/p&gt;
 &lt;/div&gt;
@@ -219,7 +257,7 @@ bg &amp;lt;- edge_betweenness(g, directed=F)
 plot(g, edge.label = bg)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;http://www.viennar.org/post/20160524_igraph_applications_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;local-vs.global&#34; class=&#34;section level2&#34;&gt;
+&lt;div id=&#34;local-vs.-global&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Local vs. Global&lt;/h2&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;g &amp;lt;- make_graph(c(1, 2, 2, 3,#horizontal connections
                   4,5,5,6,6,7,
@@ -259,7 +297,7 @@ title(&amp;quot;(b) Local Betweenness&amp;quot;, cex.main = cm)&lt;/code&gt;&lt;
 title(&amp;quot;(c) Global Betweenness&amp;quot;, cex.main = cm)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;http://www.viennar.org/post/20160524_igraph_applications_files/figure-html/unnamed-chunk-4-3.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;node-based-vs.link-based-betweenness-for-links&#34; class=&#34;section level2&#34;&gt;
+&lt;div id=&#34;node-based-vs.-link-based-betweenness-for-links&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Node-based vs. link-based Betweenness for Links&lt;/h2&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;g &amp;lt;- make_graph(c(1,2, 2,3, 3,4, 4,5,#horizontal connections
                   6,7, 7,8, 8,9, 9,10,
@@ -329,7 +367,7 @@ title(&amp;quot;(c) Node based Betweenness&amp;quot; ,cex.main=cm)&lt;/code&gt;&
 &lt;p&gt;github project: &lt;a href=&#34;https://github.com/maxar/igraph_testing/blob/master/test_vertex_betweenness_local.R&#34; class=&#34;uri&#34;&gt;https://github.com/maxar/igraph_testing/blob/master/test_vertex_betweenness_local.R&lt;/a&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;require(igraph)
 packageVersion(&amp;quot;igraph&amp;quot;) # my installed version is 1.0.1&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] &amp;#39;1.2.2&amp;#39;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;#39;1.2.4.1&amp;#39;&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;#----------------------------------------------------------------------------------------
 #---------------    EXAMPLE 1    --------------------------------------------------------
 #----------------------------------------------------------------------------------------
@@ -674,7 +712,7 @@ title(&amp;quot;(c) local closeness&amp;quot;, cex.main = cm)&lt;/code&gt;&lt;/p
 &lt;/div&gt;
 &lt;div id=&#34;announcements&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Announcements&lt;/h2&gt;
-&lt;p&gt;The first &lt;a href=&#34;http://budapest.satrdays.org&#34;&gt;satRday&lt;/a&gt; conference is taking place in Budapest on September 3rd 2016. Thanks to sponsor support (e.g. &lt;a href=&#34;R%20Consortium&#34;&gt;https://www.r-consortium.org/&lt;/a&gt;) the conference is quite cheap (10-30€).&lt;/p&gt;
+&lt;p&gt;The first &lt;a href=&#34;http://budapest.satrdays.org&#34;&gt;satRday&lt;/a&gt; conference is taking place in Budapest on September 3rd 2016. Thanks to sponsor support (e.g. &lt;a href=&#34;R%20Consortium&#34;&gt;https://www.r-consortium.org/&lt;/a&gt;) the conference is quite cheap (10-30€).&lt;/p&gt;
 &lt;p&gt;Best,&lt;/p&gt;
 &lt;p&gt;-ViennaR&lt;/p&gt;
 &lt;/div&gt;
@@ -934,7 +972,7 @@ Sounds like a great topic next years first meetup.&lt;/li&gt;
 &lt;li&gt;Show &lt;a href=&#34;http://www.viennar.org/blog/2015/10/30/population-densities-in-vienna&#34;&gt;Population Densities&lt;/a&gt; and &lt;a href=&#34;http://www.viennar.org/blog/2015/11/08/bike-parking-lots-in-vienna&#34;&gt;Bike Parking Lots&lt;/a&gt; in Vienna with nice visualisations (Christian).&lt;/li&gt;
 &lt;li&gt;Parliamentary voting results (input from Mateusz)
 &lt;ul&gt;
-&lt;li&gt;Harvesting data, e.g. &lt;a href=&#34;https://www.data.gv.at/katalog/dataset/1a3c44a8-7361-4dc7-ac0d-6ec19ddba191&#34;&gt;Beschlüsse des Nationalrats&lt;/a&gt; from &lt;a href=&#34;https://www.data.gv.at&#34; class=&#34;uri&#34;&gt;https://www.data.gv.at&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Harvesting data, e.g. &lt;a href=&#34;https://www.data.gv.at/katalog/dataset/1a3c44a8-7361-4dc7-ac0d-6ec19ddba191&#34;&gt;Beschlüsse des Nationalrats&lt;/a&gt; from &lt;a href=&#34;https://www.data.gv.at&#34; class=&#34;uri&#34;&gt;https://www.data.gv.at&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Visualization&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
@@ -1214,7 +1252,7 @@ The following project streams have been selected and coordinators assigned:&lt;/
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;Parliamentary voting results (input from Mateusz)
 &lt;ul&gt;
-&lt;li&gt;Harvesting data, e.g. &lt;a href=&#34;https://www.data.gv.at/katalog/dataset/1a3c44a8-7361-4dc7-ac0d-6ec19ddba191&#34;&gt;Beschlüsse des Nationalrats&lt;/a&gt; from &lt;a href=&#34;https://www.data.gv.at&#34; class=&#34;uri&#34;&gt;https://www.data.gv.at&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Harvesting data, e.g. &lt;a href=&#34;https://www.data.gv.at/katalog/dataset/1a3c44a8-7361-4dc7-ac0d-6ec19ddba191&#34;&gt;Beschlüsse des Nationalrats&lt;/a&gt; from &lt;a href=&#34;https://www.data.gv.at&#34; class=&#34;uri&#34;&gt;https://www.data.gv.at&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Visualization&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;Text mining (Mario)
