@@ -62,9 +62,8 @@ Of course it is much more "elegant" to do these things programmatically as shown
 
 Adjust .Rprofile of the team via distributing a link to a WIN .bat file (placed on network folder), they are supposed to run/double-click. 
 A batch file that writes .Renviron and .Rprofile could look like this. 
-</font> 
 
-```{, eval = FALSE, }
+```{eval = FALSE}
 :: change from home dir to a to NON-UNC path folder since these are NOT much appreciated by WIN+R
 cd C:\Users\%USERNAME%\ 
 copy /v /Y P:\0702_01960721_managedCode\R\setup\Makeconf_i386modified.txt "C:\Program Files\RWin\R-3.4.2\etc\i386\Makeconf"                     
@@ -100,7 +99,6 @@ echo on
 
 @ECHO The Package mirror should now be localCRAN and PACKAGE 'XXXXX' can now be installed via RStudio Packages tab - Install functionality!   
 set /p DUMMY=Hit ENTER to finish ...
-
 ```
 
 Hijack some Network Drive space for a local mini-CRAN 
@@ -108,7 +106,7 @@ Hijack some Network Drive space for a local mini-CRAN
 
 The last lines of the prior file modified the default CRAN mirror(s) via the user .Rprofile to point to a local network drive folder. 
 
-```{}
+```{eval=FALSE}
 echo.>> \\p1at.s-group.cc\0702\USERS\%username%\Daten\.Rprofile
 echo|set /p="pth <- 'DriveLetter:/Path/to/R/localCRAN'">> \\p1at.s-group.cc\0702\USERS\%USERNAME%\Daten\.Rprofile 
 
@@ -120,7 +118,6 @@ echo|set /p="options( repos = c(localCRAN = localCRANuri) )">> \\p1at.s-group.cc
 
 echo.>> \\p1at.s-group.cc\0702\USERS\%username%\Daten\.Rprofile
 echo|set /p="rm(localCRANuri); rm(oldRepos);rm(pth)">> \\p1at.s-group.cc\0702\USERS\%username%\Daten\.Rprofile
-
 ```
 
 Build package for the team and publish it on a 'localCRAN' 
@@ -152,24 +149,23 @@ Misc
 ========================================================
 
 * For github integration: set 'github.com.proxy'     
- <font size="6">
 `$ git config --global http.https://github.com.proxy http://USERNAME:Password@some.proxy.net:PORT` 
-</font>     
 Nevertheless I still have to provide username and password on every github push :-( 
 * Building documentation (Roxygen) only worked if before rebuilding the help pages the prior .Rd files and the NAMESPACE file are deleted. Educated guess -> this is the prominent R/RStudios 'love affair' with WINDOWS network (or UNC) paths.  
+
 
 Misc continued
 ========================================================
 
 * For building the localCRAN the miniCRAN package and its documentation is an excellent tool/resource.      
   One caveat though was to find the correct 'spelling' ie form/definition of the required path to the local CRAN. After hours wasted on all possible slashes and backslash combinations after 'file:' we finally succeeded by dropping all slashes.    
+
 ```{r, eval = FALSE}
 #pth <- '//SERVER/SHARED/GLOBAL/path/to/R/localCRAN'
 pth <- "DriveLetter:/Path/to/R/localCRAN"
 #based on Uwe Ligges and Brian Ripleys answer in http://r.789695.n4.nabble.com/Installing-Packages-from-a-Local-Repository-td4652990.html
 #=> You have to specify the repository as "file:P:/..../..." - this did the trick
 localCRANuri <- paste( 'file:', normalizePath(pth, winslash = '/'), sep = '' )
-
 ```
  
 Q & A 
