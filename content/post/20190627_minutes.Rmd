@@ -1,0 +1,31 @@
+---
+title: Meetup 07-2019 Minutes
+author: Walter
+date: '2019-06-27'
+slug: june-2019-meetup
+categories: []
+tags:
+  - NLP
+  - corporate
+--- 
+
+## R in corporate (busniness) enivroments 
+[**Walter Djuric**](https://www.linkedin.com/in/walterdjuric/)
+
+Walter did a short presentation, on the potential and real life uses of R (and RStudio) in a typical business (ie Accounting) departmentn in a large Austrian financial institution.     
+He discussed common pitfalls (mostly linked to infrastructure problems eg firewalls, non-admin user-rights, AV software, etc) and how thea managed to cope with these challenges (eg local CRAN, Package building for the team, enanced .Rprofiles, etc).   
+
+You can find the **html slides/pages** of his presentation [here](/slides/Alteryx Corporate Intro Presentation.pptx).
+
+### Questions
+
+
+## NLP in R
+[**Florian Schwendinger**](https://www.wu.ac.at/statmath/faculty-staff/faculty/fschwendinger)
+
+Florian held a very informative hands-on presentation and talk on Natural language processing (NLP).  
+
+You can find the **slides** [here](/slides/grpc.pdf).
+
+### Questions
+
