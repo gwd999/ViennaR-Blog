@@ -13,7 +13,7 @@ tags:
 [**Walter Djuric**](https://www.linkedin.com/in/walterdjuric/)
 
 A short presentation, on the potential and real life uses of R (and RStudio) in a typical business (ie Accounting) department in a large Austrian financial institution.     
-Common pitfalls (mostly linked to infrastructure problems eg firewalls, non-admin user-rights, AV software, etc) are discussed and a short overview of tactics for  coping with these challenges is given (eg set up a local CRAN, package building so that team members can use R more efficiently, enhanced .Rprofiles, etc).   
+Common pitfalls (mostly linked to infrastructure problems eg firewalls, non-admin user-rights, AV software, etc) are discussed and a short overview of tactics for  coping with these challenges is given (eg set up a local CRAN, package building so that R newbies can utilize it, enhanced `.Rprofiles`, etc).   
 
 You can find the **html slides/pages** of his presentation [here](/slides/VR-2019-06-27_WDpres.html).
 
