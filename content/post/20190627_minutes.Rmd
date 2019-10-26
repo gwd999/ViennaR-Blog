@@ -1,5 +1,5 @@
 ---
-title: Meetup 07-2019 Minutes
+title: Meetup 06-2019 Minutes
 author: Walter
 date: '2019-06-27'
 slug: june-2019-meetup
@@ -23,7 +23,7 @@ You can find the **html slides/pages** of his presentation [here](/slides/VR-201
 
 Florian held a very informative hands-on presentation and talk on Natural language processing (NLP).  
 
-You can find the **slides** [here](/slides/grpc.pdf).
+You can find the **slides** [here](/slides/NLP_in_R_presentation.pdf).
 
 ### Questions
 
