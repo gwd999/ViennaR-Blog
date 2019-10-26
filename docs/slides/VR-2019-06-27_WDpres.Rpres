@@ -13,7 +13,7 @@ The Environment
 - proxy internet servers   
 - firewalls all over the place 
 - Antivirus (AV) Software (SW) on all workstations  
-- the called 'RWin' SW package (it includes RStudio 1.1.383 and R-3.4.2) available via the IT dept.
+- so called 'RWin' SW package (it includes RStudio 1.1.383 and R-3.4.2) available via the IT dept.
 - 12 users who are proficient in Excel (but usually no VBA or SQL skills) 
 - access to Oracle DBs (via port tunnels - see above regarding firewalls) handled by 1 proficient SQL user  
 - querying MSSQL-SSAS (aka Cubes) via Excel Addin    
@@ -33,13 +33,13 @@ Dealing with the obstacles
 Define http_proxy 
 ========================================================
 
-Immediately - after starting RStudio - type into Console  
+Immediately - after starting RStudio - enter the following into the R Console  
 
 ```{r, eval = FALSE}
 file.edit("~/.Renviron")
 ```
-to create/modify the .Renviron file in your HOME folder. Define the proxy variable, the value of which you can usually find out somewhere in your browsers settings.      
-While at it, also rememeber to request a decent browser (usually Firefox or Chrome will be offered by most IT depts as IE alternatives) from your company's IT dept. 
+then create/modify the .Renviron file in your HOME folder. Define the proxy variable, the value of which you can usually find somewhere in your browsers settings.      
+While at it, also rememeber to request a decent browser (usually Firefox or Chrome will be offered by most IT depts besides IE) from your company's IT dept. 
 
 ```{eval = FALSE}
 http_proxy=proxy-some.proxy.net:PORT
