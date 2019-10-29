@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Vienna R User Group</title>
@@ -12,20 +12,20 @@
     
     
     <item>
-      <title>NLP</title>
-      <link>http://www.viennar.org/tags/nlp/</link>
-      <pubDate>Thu, 27 Jun 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.viennar.org/tags/nlp/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>corporate</title>
       <link>http://www.viennar.org/tags/corporate/</link>
       <pubDate>Thu, 27 Jun 2019 00:00:00 +0000</pubDate>
       
       <guid>http://www.viennar.org/tags/corporate/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>NLP</title>
+      <link>http://www.viennar.org/tags/nlp/</link>
+      <pubDate>Thu, 27 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.viennar.org/tags/nlp/</guid>
       <description></description>
     </item>
     
@@ -57,20 +57,20 @@
     </item>
     
     <item>
-      <title>Text Mining</title>
-      <link>http://www.viennar.org/tags/text-mining/</link>
-      <pubDate>Wed, 24 Feb 2016 22:20:00 +0200</pubDate>
-      
-      <guid>http://www.viennar.org/tags/text-mining/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>rstudy</title>
       <link>http://www.viennar.org/tags/rstudy/</link>
       <pubDate>Wed, 24 Feb 2016 22:20:00 +0200</pubDate>
       
       <guid>http://www.viennar.org/tags/rstudy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Text Mining</title>
+      <link>http://www.viennar.org/tags/text-mining/</link>
+      <pubDate>Wed, 24 Feb 2016 22:20:00 +0200</pubDate>
+      
+      <guid>http://www.viennar.org/tags/text-mining/</guid>
       <description></description>
     </item>
     
