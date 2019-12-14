@@ -1,20 +1,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Vienna R User Group </title>
-    <link>http://www.viennar.org/</link>
+    <link>/</link>
     <language>en-us</language>
     <author>Vienna-R</author>
     <rights>(C) 2019</rights>
-    <updated>2019-06-27 00:00:00 &#43;0000 UTC</updated>
+    <updated>2019-12-14 00:00:00 &#43;0000 UTC</updated>
 
     
       
         <item>
           <title>Posts</title>
-          <link>http://www.viennar.org/post/</link>
-          <pubDate>Thu, 27 Jun 2019 00:00:00 UTC</pubDate>
+          <link>/post/</link>
+          <pubDate>Sat, 14 Dec 2019 00:00:00 UTC</pubDate>
           <author>Vienna-R</author>
-          <guid>http://www.viennar.org/post/</guid>
+          <guid>/post/</guid>
           <description></description>
         </item>
       
