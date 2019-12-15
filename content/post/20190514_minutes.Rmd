@@ -3,10 +3,9 @@ title: "Meetup 2019-05-14"
 author: "Walter D."
 date: '2019-12-14'
 slug: 20190514-Minutes
-tags:
-- Meetup
-- Parallel
-- DL
+tags: 
+- Parallel R 
+- Deep Learning
 categories: []
 ---
 

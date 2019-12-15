@@ -12,29 +12,20 @@
     
     
     <item>
-      <title>DL</title>
-      <link>/tags/dl/</link>
+      <title>Deep Learning</title>
+      <link>/tags/deep-learning/</link>
       <pubDate>Sat, 14 Dec 2019 00:00:00 +0000</pubDate>
       
-      <guid>/tags/dl/</guid>
+      <guid>/tags/deep-learning/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Meetup</title>
-      <link>/tags/meetup/</link>
+      <title>Parallel R</title>
+      <link>/tags/parallel-r/</link>
       <pubDate>Sat, 14 Dec 2019 00:00:00 +0000</pubDate>
       
-      <guid>/tags/meetup/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Parallel</title>
-      <link>/tags/parallel/</link>
-      <pubDate>Sat, 14 Dec 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/parallel/</guid>
+      <guid>/tags/parallel-r/</guid>
       <description></description>
     </item>
     
@@ -71,6 +62,15 @@
       <pubDate>Tue, 12 Feb 2019 00:00:00 +0000</pubDate>
       
       <guid>/tags/tools/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Meetup</title>
+      <link>/tags/meetup/</link>
+      <pubDate>Tue, 22 Nov 2016 13:00:00 +0200</pubDate>
+      
+      <guid>/tags/meetup/</guid>
       <description></description>
     </item>
     

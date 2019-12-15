@@ -6,21 +6,10 @@
     <description>Recent content in Meetup on Vienna R User Group</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 14 Dec 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 22 Nov 2016 13:00:00 +0200</lastBuildDate>
     
 	<atom:link href="/tags/meetup/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Meetup 2019-05-14</title>
-      <link>/blog/2019/12/14/20190514-minutes/</link>
-      <pubDate>Sat, 14 Dec 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/blog/2019/12/14/20190514-minutes/</guid>
-      <description>Easy peasy massive parallel computing in R (Mikkel)Mikkel a member and Co-Organizer of CopenhagenRpaid a short visit to Vienna and before heading to Ennio Moricones (Vienna) concert he showed us around on the functionality of the ‘future’ and ‘furrr’ R packages.
-These provide a framework that make it possible to write code, that works seamlessly on a laptop or on a supercomputer.
-His R-talk showed us how.</description>
-    </item>
     
     <item>
       <title>Meetup 11-2016 Minutes</title>
