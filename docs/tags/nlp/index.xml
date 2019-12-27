@@ -1,23 +1,23 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>NLP on Vienna R User Group</title>
-    <link>/tags/nlp/</link>
+    <link>http://www.viennar.org/tags/nlp/</link>
     <description>Recent content in NLP on Vienna R User Group</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 27 Jun 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/nlp/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://www.viennar.org/tags/nlp/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Meetup 06-2019 Minutes</title>
-      <link>/blog/2019/06/27/june-2019-meetup/</link>
+      <link>http://www.viennar.org/blog/2019/06/27/june-2019-meetup/</link>
       <pubDate>Thu, 27 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>/blog/2019/06/27/june-2019-meetup/</guid>
-      <description>R in corporate enivroments (finance depts.)Walter Djuric
+      <guid>http://www.viennar.org/blog/2019/06/27/june-2019-meetup/</guid>
+      <description>R in corporate enivroments (finance depts.) Walter Djuric
 A short presentation, on the potential and real life uses of R (and RStudio) in a typical business (ie Accounting) department in a large Austrian financial institution.
 Common pitfalls (mostly linked to infrastructure problems eg firewalls, non-admin user-rights, AV software, etc) are discussed and a short overview of tactics for coping with these challenges is given (eg set up a local CRAN, package building so that R newbies can utilize it, enhanced .</description>
     </item>

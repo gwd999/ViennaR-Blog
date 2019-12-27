@@ -1,113 +1,113 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Vienna R User Group</title>
-    <link>/post/</link>
+    <link>http://www.viennar.org/post/</link>
     <description>Recent content in Posts on Vienna R User Group</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 14 Dec 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://www.viennar.org/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Meetup 2019-05-14</title>
-      <link>/blog/2019/12/14/20190514-minutes/</link>
+      <link>http://www.viennar.org/blog/2019/12/14/20190514-minutes/</link>
       <pubDate>Sat, 14 Dec 2019 00:00:00 +0000</pubDate>
       
-      <guid>/blog/2019/12/14/20190514-minutes/</guid>
-      <description>Easy peasy massive parallel computing in R (Mikkel)Mikkel a member and Co-Organizer of CopenhagenRpaid a short visit to Vienna and before heading to Ennio Moricones (Vienna) concert he showed us around on the functionality of the ‘future’ and ‘furrr’ R packages.
+      <guid>http://www.viennar.org/blog/2019/12/14/20190514-minutes/</guid>
+      <description>Easy peasy massive parallel computing in R (Mikkel) Mikkel a member and Co-Organizer of CopenhagenR paid a short visit to Vienna and before heading to Ennio Moricones (Vienna) concert he showed us around on the functionality of the ‘future’ and ‘furrr’ R packages.
 These provide a framework that make it possible to write code, that works seamlessly on a laptop or on a supercomputer.
 His R-talk showed us how.</description>
     </item>
     
     <item>
       <title>Meetup 06-2019 Minutes</title>
-      <link>/blog/2019/06/27/june-2019-meetup/</link>
+      <link>http://www.viennar.org/blog/2019/06/27/june-2019-meetup/</link>
       <pubDate>Thu, 27 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>/blog/2019/06/27/june-2019-meetup/</guid>
-      <description>R in corporate enivroments (finance depts.)Walter Djuric
+      <guid>http://www.viennar.org/blog/2019/06/27/june-2019-meetup/</guid>
+      <description>R in corporate enivroments (finance depts.) Walter Djuric
 A short presentation, on the potential and real life uses of R (and RStudio) in a typical business (ie Accounting) department in a large Austrian financial institution.
 Common pitfalls (mostly linked to infrastructure problems eg firewalls, non-admin user-rights, AV software, etc) are discussed and a short overview of tactics for coping with these challenges is given (eg set up a local CRAN, package building so that R newbies can utilize it, enhanced .</description>
     </item>
     
     <item>
       <title>Meetup 02-2019 Minutes</title>
-      <link>/blog/2019/02/12/february-2019-meetup/</link>
+      <link>http://www.viennar.org/blog/2019/02/12/february-2019-meetup/</link>
       <pubDate>Tue, 12 Feb 2019 00:00:00 +0000</pubDate>
       
-      <guid>/blog/2019/02/12/february-2019-meetup/</guid>
-      <description>Self Service Data Preparation und Data SciencePeter Jeitschko
+      <guid>http://www.viennar.org/blog/2019/02/12/february-2019-meetup/</guid>
+      <description>Self Service Data Preparation und Data Science Peter Jeitschko
 Peter presented Alteryx, a platform built for Business Analysts to master tasks like data management, data cleaning and modelling. The tool is windows only and will be ported to Linux soon. It can connect to multiple data sources and helps Business Analysts to deploy models in production. Finally, Peter also showed a Demo including data ingestion, an example of the Facebook Face API and some community features.</description>
     </item>
     
     <item>
       <title>Meetup 11-2016 Minutes</title>
-      <link>/blog/2016/11/22/meetup-11-2016-minutes/</link>
+      <link>http://www.viennar.org/blog/2016/11/22/meetup-11-2016-minutes/</link>
       <pubDate>Tue, 22 Nov 2016 13:00:00 +0200</pubDate>
       
-      <guid>/blog/2016/11/22/meetup-11-2016-minutes/</guid>
+      <guid>http://www.viennar.org/blog/2016/11/22/meetup-11-2016-minutes/</guid>
       <description>
 
 
-&lt;p&gt;&lt;img src=&#34;/img/deepnet.png&#34; title=&#34;**Deep Neural Network**&#34; alt=&#34;**Deep Neural Network**&#34; border=&#34;0&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.viennar.org/img/deepnet.png&#34; title=&#34;**Deep Neural Network**&#34; alt=&#34;**Deep Neural Network**&#34; border=&#34;0&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Deep learning with R using &lt;strong&gt;mxnet&lt;/strong&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Meetup 10-2016 Minutes</title>
-      <link>/blog/2016/10/19/meetup-10-2016-minutes/</link>
+      <link>http://www.viennar.org/blog/2016/10/19/meetup-10-2016-minutes/</link>
       <pubDate>Wed, 19 Oct 2016 13:00:00 +0200</pubDate>
       
-      <guid>/blog/2016/10/19/meetup-10-2016-minutes/</guid>
+      <guid>http://www.viennar.org/blog/2016/10/19/meetup-10-2016-minutes/</guid>
       <description>
 
 
-&lt;p&gt;&lt;img src=&#34;/img/meetup_201610_small.jpg&#34; title=&#34;**sparklyr**&#34; alt=&#34;**sparklyr**&#34; style=&#39;width:70%;&#39; border=&#34;0&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.viennar.org/img/meetup_201610_small.jpg&#34; title=&#34;**sparklyr**&#34; alt=&#34;**sparklyr**&#34; style=&#39;width:70%;&#39; border=&#34;0&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;A &lt;strong&gt;sparklyr&lt;/strong&gt; introduction by Roland Boubela.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Meetup 09-2016 Minutes</title>
-      <link>/blog/2016/09/27/meetup-09-2016-minutes/</link>
+      <link>http://www.viennar.org/blog/2016/09/27/meetup-09-2016-minutes/</link>
       <pubDate>Tue, 27 Sep 2016 13:00:00 +0200</pubDate>
       
-      <guid>/blog/2016/09/27/meetup-09-2016-minutes/</guid>
+      <guid>http://www.viennar.org/blog/2016/09/27/meetup-09-2016-minutes/</guid>
       <description>
 
 
-&lt;p&gt;&lt;img src=&#34;/img/meetup_201609_small.jpg&#34; title=&#34;**Brainstorm Forecasting**&#34; alt=&#34;**Brainstorm Forecasting**&#34; style=&#39;width:70%;&#39; border=&#34;0&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.viennar.org/img/meetup_201609_small.jpg&#34; title=&#34;**Brainstorm Forecasting**&#34; alt=&#34;**Brainstorm Forecasting**&#34; style=&#39;width:70%;&#39; border=&#34;0&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;A brainstorming session about forecasting time series in R.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>igraph Applications for Transportation Networks</title>
-      <link>/blog/2016/08/24/igraph-applications-for-transportation-networks/</link>
+      <link>http://www.viennar.org/blog/2016/08/24/igraph-applications-for-transportation-networks/</link>
       <pubDate>Wed, 24 Aug 2016 22:20:00 +0200</pubDate>
       
-      <guid>/blog/2016/08/24/igraph-applications-for-transportation-networks/</guid>
+      <guid>http://www.viennar.org/blog/2016/08/24/igraph-applications-for-transportation-networks/</guid>
       <description>Materials from Max Leodolters talk in May covering the igraph package.
-require(igraph)require(data.table)require(ggplot2)Centrality - What is it?Network Centrality gives you an idea of how important a vertex/node and edge/link in your network/graph \(N(V,E)\) respectively \(G(N,L)\) is.Examples:
-ClosenessBetweennessEigenvaluedegree…Some formulas:
-Closeness Centrality\[ C^{node}(n) = \frac{1}{\sum_{m \in N \setminus \{n\}}d(n,m)} \]Betweenness centrality\[ B^{node}(n) = \sum_{m\neq o \in N\backslash \{n\} } \frac{\sigma_{mo}(n)}{\sigma_{mo}} \]Node-based Closeness for a link\[ \ddot{C}^{link}(l_{n,m}) = \frac{C^{node}(n) + C^{node}(m)}{2} \]Node-based Betweenness for a link\[ \ddot{B}^{link}(l_{n,m}) = \frac{B^{node}(n) + B^{node}(m)}{2} \]Link-based Betweenness for a link\[ B^{link}(l) = \sum_{n \neq m \in N } \frac{\sigma_{nm}(l)}{\sigma_{nm}} \]*\(\sigma\) is the number of traversing OD relations, and \(d(n,m)\) is the distance of the shortest route from \(n\) to \(m\)What to select, \(\ddot{B}^{link}(l_{n,m})\) or \(B^{link}(l)\)?</description>
+require(igraph) require(data.table) require(ggplot2) Centrality - What is it? Network Centrality gives you an idea of how important a vertex/node and edge/link in your network/graph \(N(V,E)\) respectively \(G(N,L)\) is. Examples:
+ Closeness Betweenness Eigenvalue degree …  Some formulas:
+ Closeness Centrality \[ C^{node}(n) = \frac{1}{\sum_{m \in N \setminus \{n\}}d(n,m)} \] Betweenness centrality \[ B^{node}(n) = \sum_{m\neq o \in N\backslash \{n\} } \frac{\sigma_{mo}(n)}{\sigma_{mo}} \] Node-based Closeness for a link \[ \ddot{C}^{link}(l_{n,m}) = \frac{C^{node}(n) + C^{node}(m)}{2} \] Node-based Betweenness for a link \[ \ddot{B}^{link}(l_{n,m}) = \frac{B^{node}(n) + B^{node}(m)}{2} \] Link-based Betweenness for a link \[ B^{link}(l) = \sum_{n \neq m \in N } \frac{\sigma_{nm}(l)}{\sigma_{nm}} \] *\(\sigma\) is the number of traversing OD relations, and \(d(n,m)\) is the distance of the shortest route from \(n\) to \(m\)  What to select, \(\ddot{B}^{link}(l_{n,m})\) or \(B^{link}(l)\)?</description>
     </item>
     
     <item>
       <title>Meetup 06-2016 Minutes</title>
-      <link>/blog/2016/06/28/meetup-06-2016-minutes/</link>
+      <link>http://www.viennar.org/blog/2016/06/28/meetup-06-2016-minutes/</link>
       <pubDate>Tue, 28 Jun 2016 13:00:00 +0200</pubDate>
       
-      <guid>/blog/2016/06/28/meetup-06-2016-minutes/</guid>
+      <guid>http://www.viennar.org/blog/2016/06/28/meetup-06-2016-minutes/</guid>
       <description>
 
 
 &lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;/img/sun.png&#34; alt=&#34;SummerOfCode&#34; /&gt;
+&lt;img src=&#34;http://www.viennar.org/img/sun.png&#34; alt=&#34;SummerOfCode&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;SummerOfCode&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;The last meetup before the summer break concluded the igraph session with a talk by Rainer. Mario summed up his impressions from the R/Finance 2016 conference.&lt;/p&gt;
@@ -116,15 +116,15 @@ require(igraph)require(data.table)require(ggplot2)Centrality - What is it?Ne
     
     <item>
       <title>Meetup 05-2016 Minutes</title>
-      <link>/blog/2016/05/24/meetup-05-2016-minutes/</link>
+      <link>http://www.viennar.org/blog/2016/05/24/meetup-05-2016-minutes/</link>
       <pubDate>Tue, 24 May 2016 13:00:00 +0200</pubDate>
       
-      <guid>/blog/2016/05/24/meetup-05-2016-minutes/</guid>
+      <guid>http://www.viennar.org/blog/2016/05/24/meetup-05-2016-minutes/</guid>
       <description>
 
 
 &lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;/img/igraph.jpeg&#34; alt=&#34;IGraph&#34; /&gt;
+&lt;img src=&#34;http://www.viennar.org/img/igraph.jpeg&#34; alt=&#34;IGraph&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;IGraph&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;This meetup extensively covered the &lt;strong&gt;igraph&lt;/strong&gt; package with talks by Florian Sobieczky and Max Leodolter.&lt;/p&gt;
@@ -133,15 +133,15 @@ require(igraph)require(data.table)require(ggplot2)Centrality - What is it?Ne
     
     <item>
       <title>Meetup 04-2016 Minutes</title>
-      <link>/blog/2016/05/06/meetup-04-2016-minutes/</link>
+      <link>http://www.viennar.org/blog/2016/05/06/meetup-04-2016-minutes/</link>
       <pubDate>Fri, 06 May 2016 13:00:00 +0200</pubDate>
       
-      <guid>/blog/2016/05/06/meetup-04-2016-minutes/</guid>
+      <guid>http://www.viennar.org/blog/2016/05/06/meetup-04-2016-minutes/</guid>
       <description>
 
 
 &lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;/img/wordcloudtm.png&#34; alt=&#34;Wordcloud&#34; /&gt;
+&lt;img src=&#34;http://www.viennar.org/img/wordcloudtm.png&#34; alt=&#34;Wordcloud&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;Wordcloud&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;This meetup included an extensive Text Mining in R session with an &lt;em&gt;Introduction to&lt;/em&gt; &lt;strong&gt;tm&lt;/strong&gt; by Ingo Feinerer and a talk about &lt;em&gt;Text Mining with Hadoop&lt;/em&gt; by Stefan Theussl.&lt;/p&gt;
@@ -150,14 +150,14 @@ require(igraph)require(data.table)require(ggplot2)Centrality - What is it?Ne
     
     <item>
       <title>Wordcloud Wienerwald</title>
-      <link>/blog/2016/02/24/wordcloud-wienerwald/</link>
+      <link>http://www.viennar.org/blog/2016/02/24/wordcloud-wienerwald/</link>
       <pubDate>Wed, 24 Feb 2016 22:20:00 +0200</pubDate>
       
-      <guid>/blog/2016/02/24/wordcloud-wienerwald/</guid>
+      <guid>http://www.viennar.org/blog/2016/02/24/wordcloud-wienerwald/</guid>
       <description>
 
 
-&lt;p&gt;&lt;img src=&#34;/img/wordcloudwienerwald.png&#34; title=&#34;**Wordcloud** \
+&lt;p&gt;&lt;img src=&#34;http://www.viennar.org/img/wordcloudwienerwald.png&#34; title=&#34;**Wordcloud** \
 *Ödön von Horvath - Geschichten aus dem Wienerwald*&#34; alt=&#34;**Wordcloud** \
 *Ödön von Horvath - Geschichten aus dem Wienerwald*&#34; style=&#39;width:70%;&#39; border=&#34;0&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;After a very nice hands-on introduction in yesterday’s Vienna R meetup meeting from Mario Annau, I created an example of textmining ending with a wordcloud. As the blog is called ViennaR, I chose to use a play strongly related to Vienna - Ödön von Horváth - Geschichten aus dem Wienerwald.
@@ -166,36 +166,36 @@ require(igraph)require(data.table)require(ggplot2)Centrality - What is it?Ne
     
     <item>
       <title>Meetup 02-2016 Minutes</title>
-      <link>/blog/2016/02/22/meetup-02-2016-minutes/</link>
+      <link>http://www.viennar.org/blog/2016/02/22/meetup-02-2016-minutes/</link>
       <pubDate>Mon, 22 Feb 2016 13:00:00 +0200</pubDate>
       
-      <guid>/blog/2016/02/22/meetup-02-2016-minutes/</guid>
+      <guid>http://www.viennar.org/blog/2016/02/22/meetup-02-2016-minutes/</guid>
       <description>
 
 
-&lt;p&gt;This meeting included an introductory tutorial by Mario covering &lt;strong&gt;tm&lt;/strong&gt; and sentiment anaylsis. The slides are available &lt;a href=&#34;/slides/tm101_slides.pdf&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This meeting included an introductory tutorial by Mario covering &lt;strong&gt;tm&lt;/strong&gt; and sentiment anaylsis. The slides are available &lt;a href=&#34;http://www.viennar.org/slides/tm101_slides.pdf&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Meetup 01-2016 Minutes</title>
-      <link>/blog/2016/02/03/meetup-01-2016-minutes/</link>
+      <link>http://www.viennar.org/blog/2016/02/03/meetup-01-2016-minutes/</link>
       <pubDate>Wed, 03 Feb 2016 13:00:00 +0200</pubDate>
       
-      <guid>/blog/2016/02/03/meetup-01-2016-minutes/</guid>
+      <guid>http://www.viennar.org/blog/2016/02/03/meetup-01-2016-minutes/</guid>
       <description>
 
 
-&lt;p&gt;The goal of this tutorial was to demonstrate how to use Apache &lt;a href=&#34;https://spark.apache.org/docs/1.5.2/sparkr.html&#34;&gt;SparkR&lt;/a&gt; for analyzing large-scale datasets in R. For demo purposes data extracted from the Bitcoin blockchain were used to produce a time series plot similar to &lt;a href=&#34;/img/blockchain_transactions.png&#34;&gt;this&lt;/a&gt; one.&lt;/p&gt;
+&lt;p&gt;The goal of this tutorial was to demonstrate how to use Apache &lt;a href=&#34;https://spark.apache.org/docs/1.5.2/sparkr.html&#34;&gt;SparkR&lt;/a&gt; for analyzing large-scale datasets in R. For demo purposes data extracted from the Bitcoin blockchain were used to produce a time series plot similar to &lt;a href=&#34;http://www.viennar.org/img/blockchain_transactions.png&#34;&gt;this&lt;/a&gt; one.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Meetup 11-2015 Minutes</title>
-      <link>/blog/2015/11/25/meetup-11-2015-minutes/</link>
+      <link>http://www.viennar.org/blog/2015/11/25/meetup-11-2015-minutes/</link>
       <pubDate>Wed, 25 Nov 2015 21:00:00 +0200</pubDate>
       
-      <guid>/blog/2015/11/25/meetup-11-2015-minutes/</guid>
+      <guid>http://www.viennar.org/blog/2015/11/25/meetup-11-2015-minutes/</guid>
       <description>
 
 
@@ -205,10 +205,10 @@ require(igraph)require(data.table)require(ggplot2)Centrality - What is it?Ne
     
     <item>
       <title>Meetup 11-2015</title>
-      <link>/blog/2015/11/22/meetup-11-2015/</link>
+      <link>http://www.viennar.org/blog/2015/11/22/meetup-11-2015/</link>
       <pubDate>Sun, 22 Nov 2015 21:00:00 +0200</pubDate>
       
-      <guid>/blog/2015/11/22/meetup-11-2015/</guid>
+      <guid>http://www.viennar.org/blog/2015/11/22/meetup-11-2015/</guid>
       <description>
 
 
@@ -218,10 +218,10 @@ require(igraph)require(data.table)require(ggplot2)Centrality - What is it?Ne
     
     <item>
       <title>Bike Parking Lots in Vienna</title>
-      <link>/blog/2015/11/08/bike-parking-lots-in-vienna/</link>
+      <link>http://www.viennar.org/blog/2015/11/08/bike-parking-lots-in-vienna/</link>
       <pubDate>Sun, 08 Nov 2015 22:20:00 +0200</pubDate>
       
-      <guid>/blog/2015/11/08/bike-parking-lots-in-vienna/</guid>
+      <guid>http://www.viennar.org/blog/2015/11/08/bike-parking-lots-in-vienna/</guid>
       <description>
 
 
@@ -236,10 +236,10 @@ require(igraph)require(data.table)require(ggplot2)Centrality - What is it?Ne
     
     <item>
       <title>Population Densities in Vienna</title>
-      <link>/blog/2015/10/30/population-densities-in-vienna/</link>
+      <link>http://www.viennar.org/blog/2015/10/30/population-densities-in-vienna/</link>
       <pubDate>Fri, 30 Oct 2015 22:20:00 +0200</pubDate>
       
-      <guid>/blog/2015/10/30/population-densities-in-vienna/</guid>
+      <guid>http://www.viennar.org/blog/2015/10/30/population-densities-in-vienna/</guid>
       <description>
 
 
@@ -255,15 +255,15 @@ require(igraph)require(data.table)require(ggplot2)Centrality - What is it?Ne
     
     <item>
       <title>Meetup 10-2015 Minutes, Kick-Off!</title>
-      <link>/blog/2015/10/21/meetup-10-2015-minutes-kick-off/</link>
+      <link>http://www.viennar.org/blog/2015/10/21/meetup-10-2015-minutes-kick-off/</link>
       <pubDate>Wed, 21 Oct 2015 21:00:00 +0200</pubDate>
       
-      <guid>/blog/2015/10/21/meetup-10-2015-minutes-kick-off/</guid>
+      <guid>http://www.viennar.org/blog/2015/10/21/meetup-10-2015-minutes-kick-off/</guid>
       <description>
 
 
 &lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;/img/Kickoff-Charlie-Brown.gif&#34; alt=&#34;Kick-Off&#34; /&gt;
+&lt;img src=&#34;http://www.viennar.org/img/Kickoff-Charlie-Brown.gif&#34; alt=&#34;Kick-Off&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;Kick-Off&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;After a fruitful discussion regarding the future direction of the R User Group just a little summary of the &lt;strong&gt;HOT&lt;/strong&gt; topics. The discussion started with a very nice and detailed introduction of new &lt;em&gt;ViennaR&lt;/em&gt; participants and was followed by an interesting and—as expected and encouraged—controversial discussion about project goals, project management and topics.&lt;/p&gt;
@@ -272,10 +272,10 @@ require(igraph)require(data.table)require(ggplot2)Centrality - What is it?Ne
     
     <item>
       <title>Meetup 10-2015</title>
-      <link>/blog/2015/10/20/meetup-10-2015/</link>
+      <link>http://www.viennar.org/blog/2015/10/20/meetup-10-2015/</link>
       <pubDate>Tue, 20 Oct 2015 21:31:57 +0200</pubDate>
       
-      <guid>/blog/2015/10/20/meetup-10-2015/</guid>
+      <guid>http://www.viennar.org/blog/2015/10/20/meetup-10-2015/</guid>
       <description>
 
 
