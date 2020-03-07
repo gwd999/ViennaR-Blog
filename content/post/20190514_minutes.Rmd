@@ -1,5 +1,5 @@
 ---
-title: "Meetup 2019-05-14"
+title: "Meetup 2019-05-14 Minutes"
 author: "Walter D."
 date: '2019-06-14'
 slug: may-2019-meetup
