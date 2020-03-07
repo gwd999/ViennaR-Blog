@@ -2,102 +2,102 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Vienna R User Group</title>
-    <link>http://www.viennar.org/tags/</link>
+    <link>/tags/</link>
     <description>Recent content in Tags on Vienna R User Group</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 05 Mar 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://www.viennar.org/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>corporate</title>
-      <link>http://www.viennar.org/tags/corporate/</link>
+      <link>/tags/corporate/</link>
       <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://www.viennar.org/tags/corporate/</guid>
+      <guid>/tags/corporate/</guid>
       <description></description>
     </item>
     
     <item>
       <title>serverless</title>
-      <link>http://www.viennar.org/tags/serverless/</link>
+      <link>/tags/serverless/</link>
       <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://www.viennar.org/tags/serverless/</guid>
+      <guid>/tags/serverless/</guid>
       <description></description>
     </item>
     
     <item>
       <title>NLP</title>
-      <link>http://www.viennar.org/tags/nlp/</link>
+      <link>/tags/nlp/</link>
       <pubDate>Thu, 27 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://www.viennar.org/tags/nlp/</guid>
+      <guid>/tags/nlp/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Deep Learning</title>
-      <link>http://www.viennar.org/tags/deep-learning/</link>
+      <link>/tags/deep-learning/</link>
       <pubDate>Fri, 14 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://www.viennar.org/tags/deep-learning/</guid>
+      <guid>/tags/deep-learning/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Parallel R</title>
-      <link>http://www.viennar.org/tags/parallel-r/</link>
+      <link>/tags/parallel-r/</link>
       <pubDate>Fri, 14 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://www.viennar.org/tags/parallel-r/</guid>
+      <guid>/tags/parallel-r/</guid>
       <description></description>
     </item>
     
     <item>
       <title>tools</title>
-      <link>http://www.viennar.org/tags/tools/</link>
+      <link>/tags/tools/</link>
       <pubDate>Tue, 12 Feb 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://www.viennar.org/tags/tools/</guid>
+      <guid>/tags/tools/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Meetup</title>
-      <link>http://www.viennar.org/tags/meetup/</link>
+      <link>/tags/meetup/</link>
       <pubDate>Tue, 22 Nov 2016 13:00:00 +0200</pubDate>
       
-      <guid>http://www.viennar.org/tags/meetup/</guid>
+      <guid>/tags/meetup/</guid>
       <description></description>
     </item>
     
     <item>
       <title>rstudy</title>
-      <link>http://www.viennar.org/tags/rstudy/</link>
+      <link>/tags/rstudy/</link>
       <pubDate>Wed, 24 Feb 2016 22:20:00 +0200</pubDate>
       
-      <guid>http://www.viennar.org/tags/rstudy/</guid>
+      <guid>/tags/rstudy/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Text Mining</title>
-      <link>http://www.viennar.org/tags/text-mining/</link>
+      <link>/tags/text-mining/</link>
       <pubDate>Wed, 24 Feb 2016 22:20:00 +0200</pubDate>
       
-      <guid>http://www.viennar.org/tags/text-mining/</guid>
+      <guid>/tags/text-mining/</guid>
       <description></description>
     </item>
     
     <item>
       <title>OpenGovernmentVienna</title>
-      <link>http://www.viennar.org/tags/opengovernmentvienna/</link>
+      <link>/tags/opengovernmentvienna/</link>
       <pubDate>Sun, 08 Nov 2015 22:20:00 +0200</pubDate>
       
-      <guid>http://www.viennar.org/tags/opengovernmentvienna/</guid>
+      <guid>/tags/opengovernmentvienna/</guid>
       <description></description>
     </item>
     

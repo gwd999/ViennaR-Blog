@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Text Mining on Vienna R User Group</title>
-    <link>http://www.viennar.org/tags/text-mining/</link>
+    <link>/tags/text-mining/</link>
     <description>Recent content in Text Mining on Vienna R User Group</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 24 Feb 2016 22:20:00 +0200</lastBuildDate>
     
-	<atom:link href="http://www.viennar.org/tags/text-mining/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/text-mining/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Wordcloud Wienerwald</title>
-      <link>http://www.viennar.org/blog/2016/02/24/wordcloud-wienerwald/</link>
+      <link>/blog/2016/02/24/wordcloud-wienerwald/</link>
       <pubDate>Wed, 24 Feb 2016 22:20:00 +0200</pubDate>
       
-      <guid>http://www.viennar.org/blog/2016/02/24/wordcloud-wienerwald/</guid>
+      <guid>/blog/2016/02/24/wordcloud-wienerwald/</guid>
       <description>
 
 
-&lt;p&gt;&lt;img src=&#34;http://www.viennar.org/img/wordcloudwienerwald.png&#34; title=&#34;**Wordcloud** \
+&lt;p&gt;&lt;img src=&#34;/img/wordcloudwienerwald.png&#34; title=&#34;**Wordcloud** \
 *Ödön von Horvath - Geschichten aus dem Wienerwald*&#34; alt=&#34;**Wordcloud** \
 *Ödön von Horvath - Geschichten aus dem Wienerwald*&#34; style=&#39;width:70%;&#39; border=&#34;0&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;After a very nice hands-on introduction in yesterday’s Vienna R meetup meeting from Mario Annau, I created an example of textmining ending with a wordcloud. As the blog is called ViennaR, I chose to use a play strongly related to Vienna - Ödön von Horváth - Geschichten aus dem Wienerwald.
