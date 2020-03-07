@@ -1,7 +1,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Vienna R User Group </title>
-    <link>/</link>
+    <link>http://www.viennar.org/</link>
     <language>en-us</language>
     <author>Vienna-R</author>
     <rights>(C) 2020</rights>
@@ -11,10 +11,10 @@
       
         <item>
           <title>Posts</title>
-          <link>/post/</link>
+          <link>http://www.viennar.org/post/</link>
           <pubDate>Thu, 05 Mar 2020 00:00:00 UTC</pubDate>
           <author>Vienna-R</author>
-          <guid>/post/</guid>
+          <guid>http://www.viennar.org/post/</guid>
           <description></description>
         </item>
       

@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>rstudy on Vienna R User Group</title>
-    <link>/tags/rstudy/</link>
+    <link>http://www.viennar.org/tags/rstudy/</link>
     <description>Recent content in rstudy on Vienna R User Group</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 24 Feb 2016 22:20:00 +0200</lastBuildDate>
     
-	<atom:link href="/tags/rstudy/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://www.viennar.org/tags/rstudy/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Wordcloud Wienerwald</title>
-      <link>/blog/2016/02/24/wordcloud-wienerwald/</link>
+      <link>http://www.viennar.org/blog/2016/02/24/wordcloud-wienerwald/</link>
       <pubDate>Wed, 24 Feb 2016 22:20:00 +0200</pubDate>
       
-      <guid>/blog/2016/02/24/wordcloud-wienerwald/</guid>
+      <guid>http://www.viennar.org/blog/2016/02/24/wordcloud-wienerwald/</guid>
       <description>
 
 
-&lt;p&gt;&lt;img src=&#34;/img/wordcloudwienerwald.png&#34; title=&#34;**Wordcloud** \
+&lt;p&gt;&lt;img src=&#34;http://www.viennar.org/img/wordcloudwienerwald.png&#34; title=&#34;**Wordcloud** \
 *Ödön von Horvath - Geschichten aus dem Wienerwald*&#34; alt=&#34;**Wordcloud** \
 *Ödön von Horvath - Geschichten aus dem Wienerwald*&#34; style=&#39;width:70%;&#39; border=&#34;0&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;After a very nice hands-on introduction in yesterday’s Vienna R meetup meeting from Mario Annau, I created an example of textmining ending with a wordcloud. As the blog is called ViennaR, I chose to use a play strongly related to Vienna - Ödön von Horváth - Geschichten aus dem Wienerwald.
@@ -29,10 +29,10 @@
     
     <item>
       <title>Bike Parking Lots in Vienna</title>
-      <link>/blog/2015/11/08/bike-parking-lots-in-vienna/</link>
+      <link>http://www.viennar.org/blog/2015/11/08/bike-parking-lots-in-vienna/</link>
       <pubDate>Sun, 08 Nov 2015 22:20:00 +0200</pubDate>
       
-      <guid>/blog/2015/11/08/bike-parking-lots-in-vienna/</guid>
+      <guid>http://www.viennar.org/blog/2015/11/08/bike-parking-lots-in-vienna/</guid>
       <description>
 
 
@@ -47,10 +47,10 @@
     
     <item>
       <title>Population Densities in Vienna</title>
-      <link>/blog/2015/10/30/population-densities-in-vienna/</link>
+      <link>http://www.viennar.org/blog/2015/10/30/population-densities-in-vienna/</link>
       <pubDate>Fri, 30 Oct 2015 22:20:00 +0200</pubDate>
       
-      <guid>/blog/2015/10/30/population-densities-in-vienna/</guid>
+      <guid>http://www.viennar.org/blog/2015/10/30/population-densities-in-vienna/</guid>
       <description>
 
 

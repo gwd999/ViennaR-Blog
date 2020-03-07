@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>OpenGovernmentVienna on Vienna R User Group</title>
-    <link>/tags/opengovernmentvienna/</link>
+    <link>http://www.viennar.org/tags/opengovernmentvienna/</link>
     <description>Recent content in OpenGovernmentVienna on Vienna R User Group</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 08 Nov 2015 22:20:00 +0200</lastBuildDate>
     
-	<atom:link href="/tags/opengovernmentvienna/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://www.viennar.org/tags/opengovernmentvienna/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Bike Parking Lots in Vienna</title>
-      <link>/blog/2015/11/08/bike-parking-lots-in-vienna/</link>
+      <link>http://www.viennar.org/blog/2015/11/08/bike-parking-lots-in-vienna/</link>
       <pubDate>Sun, 08 Nov 2015 22:20:00 +0200</pubDate>
       
-      <guid>/blog/2015/11/08/bike-parking-lots-in-vienna/</guid>
+      <guid>http://www.viennar.org/blog/2015/11/08/bike-parking-lots-in-vienna/</guid>
       <description>
 
 
@@ -31,10 +31,10 @@
     
     <item>
       <title>Population Densities in Vienna</title>
-      <link>/blog/2015/10/30/population-densities-in-vienna/</link>
+      <link>http://www.viennar.org/blog/2015/10/30/population-densities-in-vienna/</link>
       <pubDate>Fri, 30 Oct 2015 22:20:00 +0200</pubDate>
       
-      <guid>/blog/2015/10/30/population-densities-in-vienna/</guid>
+      <guid>http://www.viennar.org/blog/2015/10/30/population-densities-in-vienna/</guid>
       <description>
 
 
