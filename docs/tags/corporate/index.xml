@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>corporate on Vienna R User Group</title>
-    <link>http://www.viennar.org/tags/corporate/</link>
+    <link>/tags/corporate/</link>
     <description>Recent content in corporate on Vienna R User Group</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 05 Mar 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://www.viennar.org/tags/corporate/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/corporate/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Meetup 2020-02-25</title>
-      <link>http://www.viennar.org/blog/2020/03/05/february-2020-meetup/</link>
+      <link>/blog/2020/03/05/february-2020-meetup/</link>
       <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://www.viennar.org/blog/2020/03/05/february-2020-meetup/</guid>
+      <guid>/blog/2020/03/05/february-2020-meetup/</guid>
       <description>For the first 2020 meetup we gathered in late February, just days before R’s official 20 year birthday.
 The great location this time was IBM Austria’s headoffice in the heart of Vienna and drinks and snacks were generously provided by the hosts.
 TALK ONE (twice Thomas and Rudolf)The first presentation was held by IBM’s own (and ViennaR meetup member) Thomas [Strehl], Thomas [Weinrich] and Rudolf [Pailer].
@@ -25,10 +25,10 @@ The talk focused on application of the CRISP-DM approach for putting ML models (
     
     <item>
       <title>Meetup 2019-06-27</title>
-      <link>http://www.viennar.org/blog/2019/06/27/june-2019-meetup/</link>
+      <link>/blog/2019/06/27/june-2019-meetup/</link>
       <pubDate>Thu, 27 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://www.viennar.org/blog/2019/06/27/june-2019-meetup/</guid>
+      <guid>/blog/2019/06/27/june-2019-meetup/</guid>
       <description>R in corporate enivroments (finance depts.)Walter Djuric
 A short presentation, on the potential and real life uses of R (and RStudio) in a typical business (ie Accounting) department in a large Austrian financial institution.
 Common pitfalls (mostly linked to infrastructure problems eg firewalls, non-admin user-rights, AV software, etc) are discussed and a short overview of tactics for coping with these challenges is given (eg set up a local CRAN, package building so that R newbies can utilize it, enhanced .</description>
