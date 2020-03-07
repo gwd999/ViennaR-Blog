@@ -1,40 +1,30 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://www.viennar.org/tags/deep-learning/</loc>
-    <lastmod>2019-12-14T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+    <loc>http://www.viennar.org/tags/corporate/</loc>
+    <lastmod>2020-03-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://www.viennar.org/blog/2019/12/14/20190514-minutes/</loc>
-    <lastmod>2019-12-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://www.viennar.org/tags/parallel-r/</loc>
-    <lastmod>2019-12-14T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+    <loc>http://www.viennar.org/blog/2020/03/05/february-2020-meetup/</loc>
+    <lastmod>2020-03-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>http://www.viennar.org/post/</loc>
-    <lastmod>2019-12-14T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+    <lastmod>2020-03-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.viennar.org/tags/serverless/</loc>
+    <lastmod>2020-03-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>http://www.viennar.org/tags/</loc>
-    <lastmod>2019-12-14T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.viennar.org/</loc>
-    <lastmod>2019-12-14T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+    <lastmod>2020-03-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -45,13 +35,21 @@
   <url>
     <loc>http://www.viennar.org/tags/nlp/</loc>
     <lastmod>2019-06-27T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://www.viennar.org/tags/corporate/</loc>
-    <lastmod>2019-06-27T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+    <loc>http://www.viennar.org/tags/deep-learning/</loc>
+    <lastmod>2019-06-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.viennar.org/blog/2019/06/14/may-2019-meetup/</loc>
+    <lastmod>2019-06-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.viennar.org/tags/parallel-r/</loc>
+    <lastmod>2019-06-14T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -60,21 +58,13 @@
   </url>
   
   <url>
-    <loc>http://www.viennar.org/tags/serverless/</loc>
-    <lastmod>2019-02-12T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>http://www.viennar.org/tags/tools/</loc>
     <lastmod>2019-02-12T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>http://www.viennar.org/tags/meetup/</loc>
     <lastmod>2016-11-22T13:00:00+02:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -118,20 +108,23 @@
   </url>
   
   <url>
-    <loc>http://www.viennar.org/tags/text-mining/</loc>
-    <lastmod>2016-02-24T22:20:00+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.viennar.org/blog/2016/02/24/wordcloud-wienerwald/</loc>
-    <lastmod>2016-02-24T22:20:00+02:00</lastmod>
+    <loc>http://www.viennar.org/</loc>
+    <lastmod>2016-05-05T21:48:51-07:00</lastmod>
   </url>
   
   <url>
     <loc>http://www.viennar.org/tags/rstudy/</loc>
     <lastmod>2016-02-24T22:20:00+02:00</lastmod>
-    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.viennar.org/tags/text-mining/</loc>
+    <lastmod>2016-02-24T22:20:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.viennar.org/blog/2016/02/24/wordcloud-wienerwald/</loc>
+    <lastmod>2016-02-24T22:20:00+02:00</lastmod>
   </url>
   
   <url>
@@ -162,7 +155,6 @@
   <url>
     <loc>http://www.viennar.org/tags/opengovernmentvienna/</loc>
     <lastmod>2015-11-08T22:20:00+02:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
