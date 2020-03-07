@@ -1,8 +1,8 @@
 ---
 title: "Meetup 2019-05-14"
 author: "Walter D."
-date: '2019-12-14'
-slug: 20190514-Minutes
+date: '2019-06-14'
+slug: may-2019-meetup
 tags: 
 - Parallel R 
 - Deep Learning

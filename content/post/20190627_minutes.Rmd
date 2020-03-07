@@ -1,5 +1,5 @@
 ---
-title: Meetup 06-2019 Minutes
+title: Meetup 2019-06-27
 author: Walter
 date: '2019-06-27'
 slug: june-2019-meetup
