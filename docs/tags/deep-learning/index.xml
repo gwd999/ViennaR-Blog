@@ -1,23 +1,23 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Deep Learning on Vienna R User Group</title>
-    <link>/tags/deep-learning/</link>
+    <link>http://www.viennar.org/tags/deep-learning/</link>
     <description>Recent content in Deep Learning on Vienna R User Group</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 14 Jun 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/deep-learning/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://www.viennar.org/tags/deep-learning/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Meetup 2019-05-14 Minutes</title>
-      <link>/blog/2019/06/14/may-2019-meetup/</link>
+      <link>http://www.viennar.org/blog/2019/06/14/may-2019-meetup/</link>
       <pubDate>Fri, 14 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>/blog/2019/06/14/may-2019-meetup/</guid>
-      <description>Easy peasy massive parallel computing in R (Mikkel)Mikkel a member and Co-Organizer of CopenhagenRpaid a short visit to Vienna and before heading to Ennio Moricones (Vienna) concert he showed us around on the functionality of the ‘future’ and ‘furrr’ R packages.
+      <guid>http://www.viennar.org/blog/2019/06/14/may-2019-meetup/</guid>
+      <description>Easy peasy massive parallel computing in R (Mikkel) Mikkel a member and Co-Organizer of CopenhagenR paid a short visit to Vienna and before heading to Ennio Moricones (Vienna) concert he showed us around on the functionality of the ‘future’ and ‘furrr’ R packages.
 These provide a framework that make it possible to write code, that works seamlessly on a laptop or on a supercomputer.
 His R-talk showed us how.</description>
     </item>
