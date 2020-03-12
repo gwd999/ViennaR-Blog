@@ -20,20 +20,18 @@
 
 &lt;p&gt;For the first 2020 meetup we gathered in late February, just days before R’s official 20 year birthday.&lt;br /&gt;
 The great location this time was &lt;a href=&#34;https://www.ibm.com/at-de&#34;&gt;IBM Austria’s headoffice&lt;/a&gt; in the heart of Vienna and drinks and snacks were generously provided by the hosts.&lt;/p&gt;
-&lt;div id=&#34;talk-one-twice-thomas-and-rudolf&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;TALK ONE (twice Thomas and Rudolf)&lt;/h3&gt;
-&lt;p&gt;The first presentation was held by IBM’s own (and &lt;a href=&#34;https://www.meetup.com/ViennaR/&#34;&gt;ViennaR meetup&lt;/a&gt; member) &lt;a href=&#34;https://at.linkedin.com/in/strehl-thomas-122867110&#34;&gt;Thomas [Strehl]&lt;/a&gt;, &lt;a href=&#34;https://www.xing.com/profile/Thomas_Weinrich3&#34;&gt;Thomas [Weinrich]&lt;/a&gt; and &lt;a href=&#34;https://at.linkedin.com/in/rudolfpailer&#34;&gt;Rudolf [Pailer]&lt;/a&gt;.&lt;br /&gt;
-The talk focused on application of the CRISP-DM approach for putting ML models (CRSIPML) in R into production. The slides, which include an introduction to CRISPML via a real life business case can be found &lt;a href=&#34;http://www.viennar.org/slides/REnterprise-Deck_20200227.pdf&#34;&gt;here&lt;/a&gt;.&lt;br /&gt;
-You can also check out the recording of their talk&lt;/p&gt;
+&lt;div id=&#34;talk-one-thomas-thomas-and-rudolf&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;TALK ONE (Thomas, Thomas and Rudolf)&lt;/h3&gt;
+&lt;p&gt;The first presentation was held by IBM’s own (and &lt;a href=&#34;https://www.meetup.com/ViennaR/&#34;&gt;ViennaR meetup&lt;/a&gt; member) &lt;a href=&#34;https://at.linkedin.com/in/strehl-thomas-122867110&#34;&gt;Thomas [Strehl]&lt;/a&gt;, &lt;a href=&#34;https://www.xing.com/profile/Thomas_Weinrich3&#34;&gt;Thomas [Weinrich]&lt;/a&gt; and &lt;a href=&#34;https://at.linkedin.com/in/rudolfpailer&#34;&gt;Rudolf [Pailer]&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The talk focused on how R based machine learning can be brought into an enterprise environment. Starting from organizational and security related challenges, the industry proven CRSIP-DM model was used as a workhorse to apply MLOps principles to a REST API based machine learning architecture. The CRISPML sample implementation demonstrated rshiny and plumber docker images deployed to a kubernetes cluster on a tekton pipeline, and a performance testing setup including k6/loadimpact, influxdb and grafana. The slides including screenshots of the demo can be found at &lt;a href=&#34;http://www.viennar.org/slides/REnterprise-Deck_20200227.pdf&#34;&gt;REnterprise&lt;/a&gt;.&lt;/p&gt;
 &lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/IFmBX3LEvMI&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;
 &lt;/iframe&gt;
 &lt;/div&gt;
 &lt;div id=&#34;talk-two-mario&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;TALK TWO (Mario)&lt;/h3&gt;
-&lt;p&gt;The second speaker was (&lt;a href=&#34;https://www.quantargo.com&#34;&gt;Quantargo’s&lt;/a&gt; and &lt;a href=&#34;https://www.meetup.com/ViennaR/&#34;&gt;ViennaR meetup&lt;/a&gt; Co-Organizer) &lt;a href=&#34;https://www.linkedin.com/in/mario-annau-a68b2056/&#34;&gt;Mario [Annau]&lt;/a&gt;.&lt;br /&gt;
-Mario introduced us to a different approach towards R in production.&lt;br /&gt;
-Where the colleagues form IBM focused on the classic (CI/CD) build pipeline and tools, Mario was showing RStudio PRO’s solutions, which basically cover the deployment process via one push button functionality.&lt;br /&gt;
-He finished his round with a gentle introduction to Lambda R functions (so called &lt;a href=&#34;https://www.quantargo.com/qbits&#34;&gt;‘QBits’&lt;/a&gt;) to deploy R functions based on serverless technologies within seconds.&lt;/p&gt;
+&lt;p&gt;The second speaker was &lt;a href=&#34;https://www.linkedin.com/in/mario-annau-a68b2056/&#34;&gt;Mario Annau&lt;/a&gt; (Founder and CEO of &lt;a href=&#34;https://www.quantargo.com&#34;&gt;Quantargo&lt;/a&gt;). Mario introduced us to a different approach towards R in production without the need for Docker containers.&lt;br /&gt;
+His first solution he was showing was &lt;a href=&#34;https://rstudio.com/products/connect&#34;&gt;RStudio Connect&lt;/a&gt; which also covers the deployment process via one push button functionality from the &lt;a href=&#34;https://rstudio.com/products/rstudio/download&#34;&gt;RStudio Editor&lt;/a&gt;.&lt;br /&gt;
+He finished his talk with a gentle introduction to &lt;a href=&#34;https://www.quantargo.com/qbits&#34;&gt;QBits&lt;/a&gt; to deploy R functions based on serverless technologies within seconds.&lt;/p&gt;
 &lt;p&gt;Thanks again everyone for attending and IBM for being such great hosts. Hope to see you all again soon at our next Meetup in &lt;a href=&#34;https://www.meetup.com/ViennaR/events/269180461&#34;&gt;March&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 </description>
