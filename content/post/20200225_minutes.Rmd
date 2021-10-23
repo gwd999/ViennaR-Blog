@@ -1,0 +1,32 @@
+---
+title: "Meetup 2020-02-25 Minutes"
+author: "Walter"
+date: '2020-03-05'
+slug: february-2020-meetup
+tags:
+- serverless
+- corporate
+- production
+- deployment
+categories: []
+---
+
+For the first 2020 meetup we gathered in late February, just days before R's official 20 year birthday.      
+The great location this time was [IBM Austria's headoffice](https://www.ibm.com/at-de) in the heart of Vienna and drinks and snacks were generously provided by the hosts.         
+
+      
+### TALK ONE (Thomas, Thomas and Rudolf)
+ 
+The first presentation was held by IBM's own (and [ViennaR meetup](https://www.meetup.com/ViennaR/) member) [Thomas [Strehl]](https://at.linkedin.com/in/strehl-thomas-122867110), [Thomas [Weinrich]](https://www.xing.com/profile/Thomas_Weinrich3) and [Rudolf [Pailer]](https://at.linkedin.com/in/rudolfpailer).
+ 
+The talk focused on how R based machine learning can be brought into an enterprise environment. Starting from organizational and security related challenges, the industry proven CRSIP-DM model was used as a workhorse to apply MLOps principles to a REST API based machine learning architecture. The CRISPML sample implementation demonstrated rshiny and plumber docker images deployed to a kubernetes cluster on a tekton pipeline, and a performance testing setup including k6/loadimpact, influxdb and grafana. The slides including screenshots of the demo can be found at [REnterprise](/slides/REnterprise-Deck_20200227.pdf).
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/IFmBX3LEvMI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### TALK TWO (Mario)
+The second speaker was [Mario Annau](https://www.linkedin.com/in/mario-annau-a68b2056/) (Founder and CEO of [Quantargo](https://www.quantargo.com)). Mario introduced us to a different approach towards R in production without the need for Docker containers.    
+His first solution he was showing was [RStudio Connect](https://rstudio.com/products/connect) which also covers the deployment process via one push button functionality from the [RStudio Editor](https://rstudio.com/products/rstudio/download).     
+He finished his talk with a gentle introduction to [QBits](https://www.quantargo.com/qbits) to deploy R functions based on serverless technologies within seconds.
+      
+Thanks again everyone for attending and IBM for being such great hosts. Hope to see you all again soon at our next Meetup in [March](https://www.meetup.com/ViennaR/events/269180461).
+

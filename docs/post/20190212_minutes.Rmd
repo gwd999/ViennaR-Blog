@@ -1,0 +1,56 @@
+---
+title: Meetup 02-2019 Minutes
+author: Mario
+date: '2019-02-12'
+slug: february-2019-meetup
+categories: []
+tags:
+  - serverless
+  - tools
+--- 
+
+## Self Service Data Preparation und Data Science
+[**Peter Jeitschko**](https://www.linkedin.com/in/peter-jeitschko-3aa02179)
+
+Peter presented Alteryx, a platform built for Business Analysts to master tasks like data management, data cleaning and modelling. The tool is windows only and will be ported to Linux soon. It can connect to multiple data sources and helps Business Analysts to deploy models in production. Finally, Peter also showed a Demo including data ingestion, an example of the Facebook Face API and some community features.
+
+You can find the **slides** of his presentation [here](/slides/Alteryx Corporate Intro Presentation.pptx).
+
+### Questions
+
+**Do you have scheduling capabilities (for metadata, e.g. [Atlas](https://atlas.apache.org/))?**<br>
+Yes - Alteryx has scheduling capabilities server side and on the desktop.
+
+**Who is the target audience?**<br>
+Business Analysts, business users?
+
+**How does it scale to millions of rows? Does it run in parallel?**<br>
+Yes, to many CPU's -> Large Server
+
+**Which language is behind Alteryx/ what is running behind the scenes?**<br>
+C++?
+
+**How much?**<br>
+€5195 per user per year, see also https://www.alteryx.com/products/platform-details/pricing
+
+**Who are the competitors?**<br>
+[Knime](https://www.knime.com) (Open Source), [Dataiku](https://www.dataiku.com)
+
+## grpc + xmlrpc in R
+[**Florian Schwendinger**](https://www.wu.ac.at/statmath/faculty-staff/faculty/fschwendinger)
+
+Florian presented the package gRPC to interface the popular RPC framework, see also https://github.com/nfultz/grpc. The reason to use gRPC instead of REST APIs is performance since messages are sent via [protobuf](http://dirk.eddelbuettel.com/code/rprotobuf.html) instead of JSON.
+
+You can find the **slides** [here](/slides/grpc.pdf).
+
+## Serverless Computing with AWS for data science
+[**Christoph Bodner**](https://www.linkedin.com/in/christoph-bodner) and [**Thomas Laber**](https://www.linkedin.com/in/thomas-laber)
+
+Christoph and Thomas presented a way to use R within AWS lambda functions for model deployment - thus making R functions serverless. The reasons for using lambda functions is no administration, scalability and pay per user schemes (GB/secs) allowing for fast turnarounds.
+
+However, they also mentioned limitations and challenges deploying R as lambda functions including memory and space limits and suggested using managed container services as alternatives. 
+
+Below the materials of their presentation:
+
+- **Slides**: [Serverless Computing](/slides/Serverless Computing.pdf)
+- **Article**: https://medium.com/bakdata/running-r-on-aws-lambda-9d40643551a6

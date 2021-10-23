@@ -1,0 +1,30 @@
+---
+title: "Meetup 2019-05-14 Minutes"
+author: "Walter D."
+date: '2019-06-14'
+slug: may-2019-meetup
+tags: 
+- Parallel R 
+- Deep Learning
+categories: []
+---
+
+## Easy peasy massive parallel computing in R (Mikkel) 
+
+Mikkel a member and Co-Organizer of CopenhagenR 
+paid a short visit to Vienna and before heading to Ennio Moricones (Vienna) concert he showed us around on the functionality of the 'future' and 'furrr' R packages.  
+These provide a framework that make it possible to write code, that works seamlessly on a laptop or on a supercomputer.    
+His R-talk showed us how.   
+We ran through a concrete example. You can find a fork of his docker  project at ViennaR's github repo [easy_peasy](https://github.com/ViennaR/easy_peasy).  
+
+
+## Evaluating Austrias social housing program (Resul) 
+
+In his presentation, he showed example of applied microeconomics (utility functions) using modern statistical methods (deep learning models), to evaluate Austrian social housing programs (gemeindewohnung and genossenschaftswohnung). 
+
+Estimating the equivalent-variation measures for 282 Austrian households living in social housing using EU-SILC data for the year 2008.   
+Household preferences were represented by a Cobb-Douglas utility function whose parametrization was based on the rent-to-income ratios. The market values of the subsidized housing units were obtained using a hedonic regression which he estimated by a deep learning model, based on attributes of the units contained in the data. 
+This was one of the first times that Austrian social housing got  evaluated this way. Data impoutation was done via [mice](https://cran.r-project.org/web/packages/mice/index.html) algorithm (ie using the R package with the same name). 
+The results are interesting for anyone living in a rented dwelling in Austria. The detailed presentation is available [here](/slides/How_to_measure_tenant_s_benefits_in_Austrian_social_housing_programs_using_R_.pdf). 
+
+

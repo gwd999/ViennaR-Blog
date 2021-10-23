@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>igraph on Vienna R User Group</title>
+    <link>/tags/igraph/</link>
+    <description>Recent content in igraph on Vienna R User Group</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 24 Aug 2016 22:20:00 +0200</lastBuildDate>
+    
+	<atom:link href="/tags/igraph/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>igraph Applications for Transportation Networks</title>
+      <link>/blog/2016/08/24/igraph-applications-for-transportation-networks/</link>
+      <pubDate>Wed, 24 Aug 2016 22:20:00 +0200</pubDate>
+      
+      <guid>/blog/2016/08/24/igraph-applications-for-transportation-networks/</guid>
+      <description>&lt;p&gt;Materials from Max Leodolters talk in May covering the &lt;strong&gt;igraph&lt;/strong&gt;
+package.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;require(igraph)
+require(data.table)
+require(ggplot2)
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

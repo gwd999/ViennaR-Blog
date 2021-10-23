@@ -1,0 +1,195 @@
+<style>
+.small-code pre code {
+  font-size: 1em;
+}
+</style>
+
+R in challenging environments      (WINdows...corporate)
+========================================================
+author: Walter (Djuric)   
+date: 2019-06-27
+autosize: true
+#font-import: http://fonts.googleapis.com/css?family=Risque
+#font-family: 'Risque'
+font-family: 'Helvetica'
+
+
+The Environment
+========================================================
+
+- WINDOWS 10 Enterprise (1803) 
+- proxy internet servers   
+- firewalls all over the place 
+- Antivirus (AV) Software (SW) on all workstations  
+- so called 'RWin' SW package (it includes RStudio 1.1.383 and R-3.4.2) available via the IT dept.
+- 12 users who are proficient in Excel (but usually no VBA or SQL skills) 
+- access to Oracle DBs (via port tunnels - see above regarding firewalls) handled by 1 proficient SQL user  
+- querying MSSQL-SSAS (aka Cubes) via Excel Addin    
+
+
+Dealing with the obstacles 
+========================================================
+
+### - the OS -> we will have to live with     
+### - Internet Proxy -> ~/.Renviron 
+### - modify R/etc/.../Makeconf 
+### - enhance the .Rprofile of (your) colleagues -> ~/.Rprofile
+### - build a dedicated 'Accounting' utilities package on a network drive incl. local CRAN repo 
+### - Misc 
+
+
+Define http_proxy 
+========================================================
+
+Immediately - after starting RStudio - enter the following into the R Console  
+
+```{r, eval = FALSE}
+file.edit("~/.Renviron")
+```
+then create/modify the .Renviron file in your HOME folder. Define the proxy variable, the value of which you can usually find somewhere in your browsers settings.      
+While at it, also rememeber to request a decent browser (usually Firefox or Chrome will be offered by most IT depts besides IE) from your company's IT dept. 
+
+```{eval = FALSE}
+http_proxy=some-proxy.net:PORT
+```
+
+Change BINPREF in Makeconf
+========================================================
+
+Go to  ```R.home()/etc/i386|x64/Makeconf```  and     
+
+look/search for the BINPREF definition (ie the Rtools path) and change that accordingly to fit the company R_HOME setup,     
+
+otherwise installing from source will become a pain in the neck.      
+
+Of course it is much more "elegant" to do these things programmatically as shown in the next slide. 
+
+Modify .Rprofile via .bat 
+========================================================
+class: small-code
+Adjust the .Rprofile files of the team memebers via distributing a link to a WIN .bat file (placed on network folder), they are supposed to run/double-click. 
+A batch file that writes .Renviron and .Rprofile could look like this.
+```{sh, eval=FALSE}
+:: change from home dir to a to NON-UNC path folder since these are NOT much appreciated by WIN+R
+cd C:\Users\%USERNAME%\ 
+copy /v /Y X:\SomePathTo_CodeRepo\R\setup\Makeconf_i386modified.txt "C:\Program Files\RWin\R-X.y.z\etc\i386\Makeconf"                     
+:: copy predefined modified Makeconf files into the R_HOME Program Files folder
+copy /v /Y X:\SomePathTo_CodeRepo\R\setup\Makeconf_x64modified.txt "C:\Program Files\RWin\R-X.y.z\etc\x64\Makeconf" 
+:: extend PATH to include the Rtools34 installed in lines above if it is not included yet SET PATH="C:\Program Files\Rtools\bin;C:\Program Files\Rtools\gcc-4.6.3;C:\Program Files\Rtools\mingw_32\bin";%PATH% 
+SET R_TOOLS="C:\PROGRA~1\Rtools"  
+:: set ORACLE client lib variables 
+SET OCI_INC=C:\PROGRA~2\Oracle\product\version0\CLIENT~1\oci\include
+SET OCI_LIB32=C:\PROGRA~2\Oracle\product\version\CLIENT~1\bin              
+:: delete any prior content of .Renviron 
+break>\\someServerShare\USERS\%username%\Data\.Renviron
+:: now set up the proxy details 
+@echo http_proxy=some-proxy.net:PORT> 
+```
+
+Modify .Rprofile via .bat (cont.)
+========================================================
+class: small-code 
+```{sh, eval=FALSE}
+\\SomeServerShareDrive\USERS\%username%\Data\.Renviron
+:: delete prior content of .Rprofile 
+break>\\SomServerShare2\USERS\%username%\Data\.Rprofile
+echo off
+:: a Sys.sleep work-around to manage 'cannot move from temporary folder error' ... usually b/c of AV-SW 
+echo|set /p="trace(utils:::unpackPkgZip, quote(Sys.sleep(2)), at = which(grepl("Sys.sleep", body(utils:::unpackPkgZip), fixed = TRUE)))">\\SomeServerShareDrive\USERS\%username%\Data\.Rprofile
+echo.>> \\SomeServerShareDrive\USERS\%username%\Data\.Rprofile
+echo|set /p="oldRepos <- getOption("repos")">>\\SomeServerShareDrive\USERS\%username%\Data\.Rprofile
+echo.>> \\SomeServerShareDrive\USERS\%username%\Data\.Rprofile
+echo|set /p="pth <- 'DriveLetter:/Path/to/R/localCRAN'>>\\SomeServerShareDrive\USERS\%username%\Data\.Rprofile
+echo.>> \\SomeServerShareDrive\USERS\%username%\Data\.Rprofile
+echo|set /p="localCRANuri <- paste( 'file:', normalizePath(pth, winslash = '/'), sep = '' )">>\\SomeServerShareDrive\USERS\%username%\Data\.Rprofile
+echo.>> \\SomeServerShareDrive\USERS\%username%\Data\.Rprofile
+echo|set /p="options( repos = c(localCRAN = localCRANuri) )else options( repos = c(localCRAN = localCRANuri) )">> #\\SomeServerShare\USERS\%username%\Data\.Rprofile 
+ echo.>> \\SomeServerShareDrive\USERS\%username%\Data\.Rprofile
+ echo|set /p="rm(localCRANuri); rm(pth)">>\\SomeServerShareDrive\USERS\%username%\Data\.Rprofile
+echo on
+@ECHO The Package mirror should now be localCRAN and PACKAGE 'XXXXX' can now be installed via RStudio Packages tab - Install functionality!   
+set /p DUMMY=Hit ENTER to finish ...
+```
+
+'unable to move temporary installation' during package install
+========================================================
+Sometimes AV-SW will react with hostility during package installation ie block the attempt to move the library after building it (from the temporary folder) to the packages library - if things are done "too quickly".  
+You can avoid this behaviour by taking a little longer than the usual `Sys.sleep(0.5)` during that process (at least in R-3.4.x versions). 
+To achieve this a one-liner taken from [Stackoverflow](https://stackoverflow.com/questions/5700505/windows-7-update-packages-problem-unable-to-move-temporary-installation/46037327#46037327) is also included in the modified `.Rprofile` (above). 
+```{r}
+trace(utils:::unpackPkgZip, quote(Sys.sleep(2)), at = which(grepl("Sys.sleep", body(utils:::unpackPkgZip), fixed = TRUE))) 
+```
+
+Hijack some Network Drive space for a local mini-CRAN 
+========================================================
+class: small-code 
+The last few lines of the .bat file modify the default CRAN mirror(s) via the user .Rprofile to point to a local CRAN on a network drive (folder). 
+
+```{sh, eval=FALSE}
+echo.>> \\SomeServerShare\USERS\%username%\Data\.Rprofile
+echo|set /p="pth <- 'DriveLetter:/Path/to/R/localCRAN'">> \\SomeServerShare\USERS\%USERNAME%\Data\.Rprofile 
+
+echo.>> \\SomeServerShare\USERS\%username%\Data\.Rprofile
+echo|set /p="localCRANuri <- paste( 'file:', normalizePath(pth, winslash = '/'), sep = '' )">> \\SomeServerShare\USERS\%USERNAME%\Data\.Rprofile
+
+echo.>> \\SomeServerShare\USERS\%username%\Data\.Rprofile
+echo|set /p="options( repos = c(localCRAN = localCRANuri) )">> \\SomeServerShare\USERS\%username%\Data\.Rprofile 
+
+echo.>> \\SomeServerShare\USERS\%username%\Data\.Rprofile
+echo|set /p="rm(localCRANuri); rm(oldRepos);rm(pth)">> \\SomeServerShare\USERS\%username%\Data\.Rprofile
+```
+
+Build package for the team and publish it on a 'localCRAN' 
+========================================================
+After the "infrastructure" is set up, build a package to wrap a lot of nice R functions into one-liners - respectively build some functions that mainly call regular functions with a lot of predefined defaults, eg `write.csv` defaults to the Users HOME directory as the saving location for .csv's, etc.     
+
+***Package development challenges:***     
+
+* The firewall ports are user specific - this was solved via RCurl ie overwriting the standard (ie standard setup) PORT config (this usually needs to happen once after every new package install or update) via scraping the PORT Gateway homepage on the intranet (in the background) once the user runs certain package-functions.   
+* A lot of SQL had to be included in the PACKAGE/inst folder that is being dynamically modified with wrapper function parameters (or defaults), since team members are only SQL beginners at best.    
+
+
+Package dev challenges continued
+========================================================
+
+* Part of the R code is a function to write  (via `writeLines`) a .psm1 (powershell) module on the fly to the users HOME/WindowsPowershell (%userprofile%\WindowsPowershell) folder. This PS module deals with CUBE connections (ADOMD connections/clients/objects) for the MDX queries and fetches the resulting .csv (from a temp folder) into R again.    
+* Again a lot of MDX queries included in the PACKAGE/inst folder.  
+* Included / Build "RDComClient" into localCRAN in order to be able to send Outlook Emails from within R. 
+
+
+Package dev challenges continued (R/RStudio specific)
+========================================================
+
+* If your package source is on a windows network drive avoid rebuilding documentation (RStudio -> Roxygen) for (source and binary) builds (file 'NAMESPACE' not readable or permission errors). Change this under 
+Tools >> Project Options >> Build/Tools -> Generate documentation with Roxygen - Configure. Usually explicitly run `devtools::document()` before building.   
+* Potentially avoid upgrading to RStudio 1.2 or higher, since as of the time of writing this RStudio > 1.1 does not support 32-bit R (anymore), BUT a lot of corporate environments do NOT support/include 64-bit drivers out of the box in their setup YET (ie usually 32-bit Office, Oracle drivers, etc.). 
+
+
+Misc 
+========================================================
+
+* For github integration: set 'github.com.proxy'     
+`$ git config --global http.https://github.com.proxy http://USERNAME:Password@some-proxy.net:PORT` 
+Nevertheless I still have to provide username and password on every github push :-( 
+* Building documentation (Roxygen) only worked if before rebuilding the help pages the prior .Rd files and the NAMESPACE file are deleted. Educated guess -> this is the prominent R/RStudios 'love affair' with WINDOWS network (or UNC) paths.  
+
+
+Misc continued
+========================================================
+
+* For building the localCRAN the miniCRAN package and its documentation is an excellent tool/resource.      
+  One caveat though was to find the correct 'spelling' ie form/definition of the required path to the local CRAN. After hours wasted on all possible slashes and backslash combinations after 'file:' we finally succeeded by dropping all slashes.    
+
+```{r, eval = FALSE}
+#pth <- '//SERVER/SHARED/GLOBAL/path/to/R/localCRAN'
+pth <- "DriveLetter:/Path/to/R/localCRAN"
+#based on Uwe Ligges and Brian Ripleys answer in http://r.789695.n4.nabble.com/Installing-Packages-from-a-Local-Repository-td4652990.html
+#=> You have to specify the repository as "file:P:/..../..." - this did the trick
+localCRANuri <- paste( 'file:', normalizePath(pth, winslash = '/'), sep = '' )
+```
+ 
+Q & A 
+========================================================
+
+Thank you for your attention -> see you in autumn!  
+

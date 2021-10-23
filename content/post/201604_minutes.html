@@ -1,0 +1,49 @@
+---
+title: "Meetup 04-2016 Minutes"
+description: "April 2016 Meetup Minutes - Text Mining Session with Ingo and Stefan"
+tags: [ "Meetup" ]
+date: "2016-05-06T13:00:00+02:00"
+---
+
+
+
+<div class="figure">
+<img src="/img/wordcloudtm.png" alt="Wordcloud" />
+<p class="caption">Wordcloud</p>
+</div>
+<p>This meetup included an extensive Text Mining in R session with an <em>Introduction to</em> <strong>tm</strong> by Ingo Feinerer and a talk about <em>Text Mining with Hadoop</em> by Stefan Theussl.</p>
+<!--more-->
+<p>After a creative break for the last month Ingo and Stefan gave great talks covering <strong>tm</strong> in greater detail after the brief introduction in February.</p>
+<div id="ingo-feinerer-introduction-to-tm" class="section level2">
+<h2>Ingo Feinerer: Introduction to <strong>tm</strong></h2>
+<p>Ingo started right away with a nice bottom-up introduction covering <strong>tm</strong>’s building blocks like Sources, Readers and Corpora. The creation of Document-TermMatrices was also motivated with a small clustering example for 3 documents.</p>
+<p>CRAN Package <a href="https://cran.r-project.org/web/packages/tm/index.html">Link</a>
+Package <a href="https://cran.r-project.org/web/packages/tm/vignettes/tm.pdf">Vignette</a></p>
+<p>The word cloud shown above was created from the <strong>tm</strong> package vignette as follows:</p>
+<pre class="r"><code>library(tm)
+library(wordcloud)
+uri &lt;- sprintf(&quot;file://%s&quot;, system.file(file.path(&quot;doc&quot;, &quot;tm.pdf&quot;), package = &quot;tm&quot;))
+stopifnot(all(file.exists(Sys.which(c(&quot;pdfinfo&quot;, &quot;pdftotext&quot;)))))
+corp &lt;- Corpus(URISource(uri), readerControl = list(reader = readPDF))  
+tmvignette &lt;- paste(content(corp[[1]]), collapse = &quot;\n&quot;)
+vigclean &lt;- stripWhitespace(removePunctuation(removeNumbers(tmvignette)))
+vigclean &lt;- removeWords(vigclean, stopwords())
+wordcloud(vigclean)</code></pre>
+</div>
+<div id="stefan-theussl-text-mining-with-hadoop" class="section level2">
+<h2>Stefan Theussl: Text Mining with Hadoop</h2>
+<p>Stefan gave a solution to the problem when things (i.e. text corpora) get big using a set of Hadoop R-packages he created in collaboration with Ingo.</p>
+<p>CRAN packages:</p>
+<ul>
+<li><a href="https://cran.r-project.org/web/packages/DSL/index.html"><strong>DSL</strong></a></li>
+<li><a href="https://cran.r-project.org/web/packages/tm.plugin.dc/index.html"><strong>tm.plugin.dc</strong></a></li>
+<li><a href="https://cran.r-project.org/web/packages/hive/index.html"><strong>hive</strong></a></li>
+</ul>
+<p>Documentation:</p>
+<ul>
+<li><a href="https://cran.r-project.org/web/packages/DSL/vignettes/DSL.pdf"><strong>DSL</strong></a></li>
+<li><a href="http://www.jstatsoft.org/v51/i05">A tm Plug-In for Distributed Text Mining in R</a></li>
+</ul>
+<p>Best,</p>
+<p>-ViennaR</p>
+</div>

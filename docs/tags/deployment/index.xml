@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>deployment on Vienna R User Group</title>
+    <link>http://www.viennar.org/tags/deployment/</link>
+    <description>Recent content in deployment on Vienna R User Group</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 05 Mar 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://www.viennar.org/tags/deployment/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Meetup 2020-02-25 Minutes</title>
+      <link>http://www.viennar.org/blog/2020/03/05/february-2020-meetup/</link>
+      <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.viennar.org/blog/2020/03/05/february-2020-meetup/</guid>
+      <description>For the first 2020 meetup we gathered in late February, just days before R’s official 20 year birthday.
+The great location this time was IBM Austria’s headoffice in the heart of Vienna and drinks and snacks were generously provided by the hosts.
+TALK ONE (Thomas, Thomas and Rudolf) The first presentation was held by IBM’s own (and ViennaR meetup member) Thomas [Strehl], Thomas [Weinrich] and Rudolf [Pailer].
+The talk focused on how R based machine learning can be brought into an enterprise environment.</description>
+    </item>
+    
+  </channel>
+</rss>
